@@ -614,12 +614,12 @@ class TagExchangeOP {
 		///	</summary>
 		TagExchangeOP(MPI_Comm communicator, 
 					  const std::vector< std::vector<Tag> > & vecAllBlobTags){
-			this->_vecAllBlobTags = vecAllBlobTags;
+			this->_vecAllBlobTags = std::move(vecAllBlobTags);
 			this->m_comm = communicator;
 			//Initialize the size for the sendTags:
 			sendTags.resize(2);
-			sendTags[0].resize(_vecAllBlobTags[0].size());
-			sendTags[1].resize(_vecAllBlobTags[_vecAllBlobTags.size()-1].size());
+			sendTags[0].reserve(_vecAllBlobTags[0].size());
+			sendTags[1].reserve(_vecAllBlobTags[_vecAllBlobTags.size() - 1].size());
 
 			//Initialize the size for the recvTags:
 			recvTags.resize(2);
@@ -654,7 +654,22 @@ class TagExchangeOP {
 		~TagExchangeOP(){
 			MPI_Type_free(&MPI_Tag_type);
 			MPIrequests.clear();
+			MPIrequests.shrink_to_fit();
+		
 			MPIstatuses.clear();
+			MPIstatuses.shrink_to_fit();
+		
+			_vecAllBlobTags.clear();
+			_vecAllBlobTags.shrink_to_fit();
+		
+			exchangedvecAllBlobTags.clear();
+			exchangedvecAllBlobTags.shrink_to_fit();
+		
+			sendTags.clear();
+			sendTags.shrink_to_fit();
+		
+			recvTags.clear();
+			recvTags.shrink_to_fit();
 		}
 
 		///	<summary>
