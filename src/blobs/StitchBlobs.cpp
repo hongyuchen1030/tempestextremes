@@ -22,6 +22,7 @@
 #include "CoordTransforms.h"
 #include "BlobUtilities.h"
 #include <cmath>
+#include <numeric> 
 
 #include "CommandLine.h"
 #include "Exception.h"
@@ -240,7 +241,7 @@ class TagCollectiveOP {
 		///		Constructor that will read in std::vector< std::vector<Tag>> vecAllBlobTags and MPI communicator
 		///		It will also create the derived MPI_Datatype for Tag and commit it.
 		///	</summary>	
-		TagCollectiveOP(MPI_Comm communicator, std::vector<std::vector<Tag>>&& vecAllBlobTags)
+		TagCollectiveOP(MPI_Comm communicator, const std::vector<std::vector<Tag>>& vecAllBlobTags)
         : m_comm(communicator), _vecAllBlobTags(std::move(vecAllBlobTags)) {
 			this->serializedFlag = 0;
 			int rank, size;
@@ -464,8 +465,8 @@ class TagCollectiveOP {
 				arrayScatterCounts_index = vecScatterCounts_index;
 				
 				// Compute displacements using efficient prefix sum
-				std::exclusive_scan(vecScatterCounts.begin(), vecScatterCounts.end(), arrayScatterDisplacements.begin(), 0);
-				std::exclusive_scan(vecScatterCounts_index.begin(), vecScatterCounts_index.end(), arrayScatterDisplacements_index.begin(), 0);
+				std::partial_sum(vecScatterCounts.begin(), vecScatterCounts.end() - 1, arrayScatterDisplacements.begin() + 1);
+				std::partial_sum(vecScatterCounts_index.begin(), vecScatterCounts_index.end() - 1, arrayScatterDisplacements_index.begin() + 1);
 				
 				//-------------------Scatter---------------------------
 				// For Tags
@@ -1263,7 +1264,6 @@ class BlobsExchangeOp {
 					int startIndx = recvBlobsIndx[dir][i];
 					int endIndx = std::min(recvBlobsIndx[dir][i + 1], static_cast<int>(recvBlobs[dir].size()));
 
-					curSet.reserve(endIndx - startIndx);
 					for (int j = startIndx; j < endIndx; j++) {
 						curSet.insert(recvBlobs[dir][j]);
 					}
@@ -1937,7 +1937,7 @@ class MapGraphGatherOp {
 		///		the input communicator and multimapTagGraph
 		///		And also construct the derived MPI_Datatype for Tag and commit it.
 		///	</summary>
-		MapGraphGatherOp(MPI_Comm communicator, MapGraph&& multimapTagGraph) 
+		MapGraphGatherOp(MPI_Comm communicator, const MapGraph& multimapTagGraph)
 		: m_comm(communicator), _multimapTagGraph(std::move(multimapTagGraph)) {}
 	
 
