@@ -1,0 +1,341 @@
+--------------------------------------------------------------------------------
+Profile data file 'xtmemory.0.kcg' (creator: xtree-1)
+--------------------------------------------------------------------------------
+Profiled target:  ./bin/StitchBlobs --in_list ./test/ERA5_AR_test/ERA5_AR_files.txt --out_list ./test/ERA5_AR_test/ERA5_AR_SB_files.txt --min_overlap_prev 25.0 --max_overlap_prev 100.0 --min_overlap_next 25.0 --max_overlap_next 100.0 --latname latitude --lonname longitude --var AR_binary_ (PID 1543772)
+Events recorded:  curB curBk totB totBk totFdB totFdBk
+Events shown:     curB curBk totB totBk totFdB totFdBk
+Event sort order: curB curBk totB totBk totFdB totFdBk
+Thresholds:       99 0 0 0 0 0
+Include dirs:     
+User annotated:   
+Auto-annotation:  on
+
+--------------------------------------------------------------------------------
+curB            curBk          totB                 totBk              totFdB               totFdBk            
+--------------------------------------------------------------------------------
+45,324 (100.0%) 2,247 (100.0%) 615,625,283 (100.0%) 3,594,821 (100.0%) 615,579,959 (100.0%) 3,592,574 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+curB            curBk          totB                 totBk              totFdB               totFdBk             file:function
+--------------------------------------------------------------------------------
+45,324 (100.0%) 2,247 (100.0%) 348,483,234 (56.61%) 3,210,564 (89.31%) 349,989,293 (56.86%) 3,234,863 (90.04%)  src/blobs/StitchBlobs.cpp:main
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: src/blobs/StitchBlobs.cpp
+--------------------------------------------------------------------------------
+curB            curBk          totB                 totBk              totFdB               totFdBk            
+
+-- line 647 ----------------------------------------
+     .              .                    .                  .                    .                  .           	// Time variable units
+     .              .                    .                  .                    .                  .           	std::string strOutTimeUnits;
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	// Verbose output
+     .              .                    .                  .                    .                  .           	bool fVerbose;
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	// Parse the command line
+     .              .                    .                  .                    .                  .           	BeginCommandLine()
+     0              0                   96 ( 0.00%)         2 ( 0.00%)           0                  0           		CommandLineString(strInputFile, "in", "");
+     0              0                  104 ( 0.00%)         2 ( 0.00%)           8 ( 0.00%)         1 ( 0.00%)  		CommandLineString(strInputFileList, "in_list", "");
+     0              0                  120 ( 0.00%)         2 ( 0.00%)          16 ( 0.00%)         1 ( 0.00%)  		CommandLineString(strConnectivity, "in_connect", "");
+     0              0                   88 ( 0.00%)         1 ( 0.00%)           0                  0           		CommandLineBool(fDiagonalConnectivity, "diag_connect");
+     0              0                  152 ( 0.00%)         2 ( 0.00%)          32 ( 0.00%)         1 ( 0.00%)  		CommandLineString(strOutputFile, "out", "");
+     0              0                   88 ( 0.00%)         1 ( 0.00%)           0                  0           		CommandLineString(strOutputFileList, "out_list", "");
+     0              0                   88 ( 0.00%)         1 ( 0.00%)           0                  0           		CommandLineString(strVariable, "var", "binary_tag");
+     0              0                   88 ( 0.00%)         1 ( 0.00%)           0                  0           		CommandLineString(strOutputVariable, "outvar", "object_id");
+     0              0                  216 ( 0.00%)         2 ( 0.00%)          64 ( 0.00%)         1 ( 0.00%)  		CommandLineInt(nMinBlobSize, "minsize", 1);
+     0              0                   88 ( 0.00%)         1 ( 0.00%)           0                  0           		CommandLineString(strMinTime, "mintime", "1");
+     0              0                   88 ( 0.00%)         1 ( 0.00%)           0                  0           		CommandLineBool(fTagOnly, "tagonly");
+     0              0                  153 ( 0.00%)         4 ( 0.00%)          34 ( 0.00%)         2 ( 0.00%)  		CommandLineDoubleD(dMinPercentOverlapPrev, "min_overlap_prev", 0.0, "(%)")
+     0              0                  153 ( 0.00%)         4 ( 0.00%)          34 ( 0.00%)         2 ( 0.00%)  		CommandLineDoubleD(dMaxPercentOverlapPrev, "max_overlap_prev", 100.0, "(%)")
+     0              0                  153 ( 0.00%)         4 ( 0.00%)          34 ( 0.00%)         2 ( 0.00%)  		CommandLineDoubleD(dMinPercentOverlapNext, "min_overlap_next", 0.0, "(%)")
+     0              0                  153 ( 0.00%)         4 ( 0.00%)          34 ( 0.00%)         2 ( 0.00%)  		CommandLineDoubleD(dMaxPercentOverlapNext, "max_overlap_next", 100.0, "(%)")
+     0              0                   88 ( 0.00%)         1 ( 0.00%)           0                  0           		CommandLineDouble(dMergeDistDeg, "merge_dist", 0.0); 
+     0              0                  459 ( 0.00%)         6 ( 0.00%)         184 ( 0.00%)         3 ( 0.00%)  		CommandLineStringD(strRestrictRegion, "restrict_region", "", "(lat0,lat1,lon0,lon1,count)");
+     0              0                   88 ( 0.00%)         1 ( 0.00%)           0                  0           		CommandLineBool(fRegional, "regional");
+     0              0                   88 ( 0.00%)         1 ( 0.00%)           0                  0           		CommandLineDouble(dMinLatDeg, "minlat", -90.0);
+     0              0                   88 ( 0.00%)         1 ( 0.00%)           0                  0           		CommandLineDouble(dMaxLatDeg, "maxlat", 90.0);
+     0              0                   88 ( 0.00%)         1 ( 0.00%)           0                  0           		CommandLineDouble(dMinLonDeg, "minlon", 0.0);
+     0              0                   88 ( 0.00%)         1 ( 0.00%)           0                  0           		CommandLineDouble(dMaxLonDeg, "maxlon", 360.0);
+     0              0                   88 ( 0.00%)         1 ( 0.00%)           0                  0           		CommandLineBool(fFlatten, "flatten");
+     0              0                   88 ( 0.00%)         1 ( 0.00%)           0                  0           		CommandLineString(strLatitudeName, "latname","lat");
+     0              0                   88 ( 0.00%)         1 ( 0.00%)           0                  0           		CommandLineString(strLongitudeName, "lonname","lon");
+     0              0                   88 ( 0.00%)         1 ( 0.00%)           0                  0           		CommandLineString(strOutTimeUnits,"outtimeunits","");
+     0              0                   88 ( 0.00%)         1 ( 0.00%)           0                  0           		CommandLineString(strThresholdCmd, "thresholdcmd", "");
+     0              0                   88 ( 0.00%)         1 ( 0.00%)           0                  0           		CommandLineBool(fVerbose, "verbose");
+     .              .                    .                  .                    .                  .           
+     0              0                  158 ( 0.00%)         4 ( 0.00%)          79 ( 0.00%)         2 ( 0.00%)  		ParseCommandLine(argc, argv);
+     0              0                1,024 ( 0.00%)         1 ( 0.00%)       2,903 ( 0.00%)        35 ( 0.00%)  	EndCommandLine(argv)
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	AnnounceBanner();
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	// Create Variable registry
+     0              0                1,792 ( 0.00%)        32 ( 0.00%)           0                  0           	VariableRegistry varreg;
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	// Check input
+     .              .                    .                  .                    .                  .           	if ((strInputFile == "") && (strInputFileList == "")) {
+     .              .                    .                  .                    .                  .           		_EXCEPTIONT("No input file (--in) or (--in_list) specified");
+     .              .                    .                  .                    .                  .           	}
+     .              .                    .                  .                    .                  .           	if ((strInputFile != "") && (strInputFileList != "")) {
+     .              .                    .                  .                    .                  .           		_EXCEPTIONT("Only one of input file (--in) or (--in_list) allowed");
+     .              .                    .                  .                    .                  .           	}
+-- line 698 ----------------------------------------
+-- line 706 ----------------------------------------
+     .              .                    .                  .                    .                  .           	}
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	// Check variable
+     .              .                    .                  .                    .                  .           	if (strVariable == "") {
+     .              .                    .                  .                    .                  .           		_EXCEPTIONT("No variable name (--var) specified");
+     .              .                    .                  .                    .                  .           	}
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	// Register variable
+     0              0                  208 ( 0.00%)         2 ( 0.00%)           0                  0           	int varix = varreg.FindOrRegister(strVariable);
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	// Check output variable
+     .              .                    .                  .                    .                  .           	if (strOutputVariable.length() == 0) {
+     .              .                    .                  .                    .                  .           		strOutputVariable = strVariable + "tag";
+     .              .                    .                  .                    .                  .           	}
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	// Input file list
+     .              .                    .                  .                    .                  .           	FilenameList vecInputFiles;
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	if (strInputFile != "") {
+     .              .                    .                  .                    .                  .           		vecInputFiles.push_back(strInputFile);
+     .              .                    .                  .                    .                  .           	}
+     .              .                    .                  .                    .                  .           	if (strInputFileList != "") {
+     0              0               83,176 ( 0.01%)       385 ( 0.01%)      25,128 ( 0.00%)        12 ( 0.00%)  		vecInputFiles.FromFile(strInputFileList, false);
+     .              .                    .                  .                    .                  .           	}
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	int nFiles = vecInputFiles.size();
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	// Output file list
+     .              .                    .                  .                    .                  .           	FilenameList vecOutputFiles;
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	if (strOutputFile != "") {
+     .              .                    .                  .                    .                  .           		vecOutputFiles.push_back(strOutputFile);
+     .              .                    .                  .                    .                  .           	}
+     .              .                    .                  .                    .                  .           	if (strOutputFileList != "") {
+     0              0               86,905 ( 0.01%)       385 ( 0.01%)      25,138 ( 0.00%)        12 ( 0.00%)  		vecOutputFiles.FromFile(strOutputFileList, false);
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           		if (vecOutputFiles.size() != vecInputFiles.size()) {
+     .              .                    .                  .                    .                  .           			_EXCEPTION2("Mismatch in number of rows of --in_list (%lu) and --out_list (%lu)",
+     .              .                    .                  .                    .                  .           				vecInputFiles.size(), vecOutputFiles.size());
+     .              .                    .                  .                    .                  .           		}
+     .              .                    .                  .                    .                  .           	}
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	// Parse --mintime
+-- line 748 ----------------------------------------
+-- line 856 ----------------------------------------
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	// No connectivity file; check for latitude/longitude dimension
+     .              .                    .                  .                    .                  .           	} else {
+     .              .                    .                  .                    .                  .           		AnnounceStartBlock("No connectivity file specified");
+     .              .                    .                  .                    .                  .           		Announce("Attempting to generate latitude-longitude grid from data file");
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           		// Load in the benchmark file
+     .              .                    .                  .                    .                  .           		NcFileVector vecNcFiles;
+   121 ( 0.27%)     6 ( 0.27%)     694,056 ( 0.11%)       265 ( 0.01%)       9,669 ( 0.00%)       195 ( 0.01%)  		vecNcFiles.ParseFromString(vecInputFiles[0]);
+     .              .                    .                  .                    .                  .           		_ASSERT(vecNcFiles.size() > 0);
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           		if (vecNcFiles.size() < 1) {
+     .              .                    .                  .                    .                  .           			_EXCEPTIONT("No data files specified; unable to generate grid");
+     .              .                    .                  .                    .                  .           		}
+     .              .                    .                  .                    .                  .           
+     0              0           78,923,834 (12.82%) 3,114,745 (86.65%)  12,477,562 ( 2.03%) 2,076,496 (57.80%)  		grid.GenerateLatitudeLongitude(
+     .              .                    .                  .                    .                  .           			vecNcFiles[0],
+     .              .                    .                  .                    .                  .           			strLatitudeName,
+     .              .                    .                  .                    .                  .           			strLongitudeName,
+     .              .                    .                  .                    .                  .           			fRegional,
+     .              .                    .                  .                    .                  .           			fDiagonalConnectivity);
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           		_ASSERT(grid.m_nGridDim.size() == 2);
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           		AnnounceEndBlock("Done");
+     0              0                    0                  0              688,130 ( 0.11%)       125 ( 0.00%)  	}
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	// Check for area
+     .              .                    .                  .                    .                  .           	if (!grid.HasAreas()) {
+     .              .                    .                  .                    .                  .           		_EXCEPTIONT("SimpleGrid has no area information (needed for StitchBlobs)");
+     .              .                    .                  .                    .                  .           	}
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	// Get time dimension over all files
+     .              .                    .                  .                    .                  .           	// strOutTimeUnits is either predetermined or set at the command line
+     .              .                    .                  .                    .                  .           	AnnounceStartBlock("Concatenating times");
+     .              .                    .                  .                    .                  .           	NcType nctypeTime;
+     .              .                    .                  .                    .                  .           	std::vector< std::pair<int, int> > vecGlobalTimeIxToFileTimeIx;
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	std::vector< std::vector<Time> > vecGlobalTimes;
+     0              0                8,928 ( 0.00%)         1 ( 0.00%)           0                  0           	vecGlobalTimes.resize(vecOutputFiles.size());
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	for (int f = 0; f < vecInputFiles.size(); f++){
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           		// Load in the benchmark file
+     .              .                    .                  .                    .                  .           		NcFileVector vecNcFiles;
+45,012 (99.31%) 2,232 (99.33%) 257,945,568 (41.90%)    90,676 ( 2.52%)   3,457,392 ( 0.56%)    68,356 ( 1.90%)  		vecNcFiles.ParseFromString(vecInputFiles[f]);
+     .              .                    .                  .                    .                  .           		_ASSERT(vecNcFiles.size() > 0);
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           		// Get the time variable
+     0              0                8,184 ( 0.00%)       744 ( 0.02%)       8,184 ( 0.00%)       744 ( 0.02%)  		NcVar * varTime = vecNcFiles[0]->get_var("time");
+     .              .                    .                  .                    .                  .           		if (varTime == NULL) {
+     .              .                    .                  .                    .                  .           			_EXCEPTION1("File \"%s\" does not contain \"time\" variable",
+     .              .                    .                  .                    .                  .           				vecNcFiles.GetFilename(0).c_str());
+     .              .                    .                  .                    .                  .           		}
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           		nctypeTime = varTime->type();
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           		// Get time units (if not specified on command line)
+     .              .                    .                  .                    .                  .           		if (strOutTimeUnits == "") {
+    38 ( 0.08%)     2 ( 0.09%)          65 ( 0.00%)         4 ( 0.00%)          27 ( 0.00%)         2 ( 0.00%)  			NcAtt * attTime = varTime->get_att("units");
+     .              .                    .                  .                    .                  .           			if (attTime == NULL) {
+     .              .                    .                  .                    .                  .           				_EXCEPTION1("File \"%s\" missing \"time:units\" attribute",
+     .              .                    .                  .                    .                  .           					vecNcFiles.GetFilename(0).c_str());
+     .              .                    .                  .                    .                  .           			}
+     .              .                    .                  .                    .                  .           
+    32 ( 0.07%)     1 ( 0.04%)         208 ( 0.00%)        10 ( 0.00%)         156 ( 0.00%)        10 ( 0.00%)  			strOutTimeUnits = attTime->as_string(0);
+     .              .                    .                  .                    .                  .           		}
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           		// Load in CF-compliant time data
+     .              .                    .                  .                    .                  .           		const NcTimeDimension & vecTimes = vecNcFiles.GetNcTimeDimension(0);
+     .              .                    .                  .                    .                  .           		if (vecTimes.size() == 0) {
+     .              .                    .                  .                    .                  .           			_EXCEPTION1("WARNING: File group does not contain any time data (%s)",
+     .              .                    .                  .                    .                  .           				vecInputFiles[f].c_str());
+     .              .                    .                  .                    .                  .           		}
+-- line 929 ----------------------------------------
+-- line 938 ----------------------------------------
+     .              .                    .                  .                    .                  .           		if (vecOutputFiles.size() == 1) {
+     .              .                    .                  .                    .                  .           			for (int t = 0; t < vecTimes.size(); t++) {
+     .              .                    .                  .                    .                  .           				int iGlobalTime = vecGlobalTimes[0].size();
+     .              .                    .                  .                    .                  .           				vecGlobalTimes[0].push_back(vecTimes[t]);
+     .              .                    .                  .                    .                  .           				vecGlobalTimeIxToFileTimeIx.push_back( std::pair<int,int>(0,iGlobalTime) );
+     .              .                    .                  .                    .                  .           			}
+     .              .                    .                  .                    .                  .           		} else {
+     .              .                    .                  .                    .                  .           			for (int t = 0; t < vecTimes.size(); t++) {
+     0              0            2,656,080 ( 0.43%)     2,976 ( 0.08%)   1,322,832 ( 0.21%)     2,604 ( 0.07%)  				vecGlobalTimes[f].push_back(vecTimes[t]);
+     0              0            1,048,568 ( 0.17%)        17 ( 0.00%)     524,280 ( 0.09%)        16 ( 0.00%)  				vecGlobalTimeIxToFileTimeIx.push_back( std::pair<int,int>(f,t) );
+     .              .                    .                  .                    .                  .           			}
+     .              .                    .                  .                    .                  .           		}
+     0              0                    0                  0          255,984,360 (41.58%)    46,500 ( 1.29%)  	}
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	int nGlobalTimes = 0;
+     .              .                    .                  .                    .                  .           	for (int f = 0; f < vecGlobalTimes.size(); f++) {
+     .              .                    .                  .                    .                  .           		nGlobalTimes += vecGlobalTimes[f].size();
+     .              .                    .                  .                    .                  .           	}
+     .              .                    .                  .                    .                  .           	_ASSERT(nGlobalTimes > 0);
+     .              .                    .                  .                    .                  .           	_ASSERT(nGlobalTimes == vecGlobalTimeIxToFileTimeIx.size());
+     .              .                    .                  .                    .                  .           
+-- line 958 ----------------------------------------
+-- line 962 ----------------------------------------
+     .              .                    .                  .                    .                  .           	// Build the set of nodes at each time contained in each blob
+     .              .                    .                  .                    .                  .           	///////////////////////////////////////////////////////////////////////////
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	// Build blobs at each time level
+     .              .                    .                  .                    .                  .           	AnnounceStartBlock("Building blob set at each time level");
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	// Set of nodes at each time contained in each blob
+     .              .                    .                  .                    .                  .           	std::vector< std::vector<IndicatorSet> > vecAllBlobs;
+     0              0            1,087,008 ( 0.18%)         1 ( 0.00%)           0                  0           	vecAllBlobs.resize(nGlobalTimes);
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	// Bounding boxes at each time for each blob
+     .              .                    .                  .                    .                  .           	std::vector< std::vector< LatLonBox<double> > > vecAllBlobBoxesDeg;
+     0              0            1,087,008 ( 0.18%)         1 ( 0.00%)           0                  0           	vecAllBlobBoxesDeg.resize(nGlobalTimes);
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	// Time index across all files
+     .              .                    .                  .                    .                  .           	int iTime = 0;
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	// Loop through all files
+     .              .                    .                  .                    .                  .           	for (int f = 0; f < nFiles; f++) {
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           		// Clear existing data in the register
+     .              .                    .                  .                    .                  .           		varreg.UnloadAllGridData();
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           		// Load in the benchmark file
+     .              .                    .                  .                    .                  .           		NcFileVector vecNcFiles;
+   121 ( 0.27%)     6 ( 0.27%)     693,456 ( 0.11%)       246 ( 0.01%)       9,348 ( 0.00%)       186 ( 0.01%)  		vecNcFiles.ParseFromString(vecInputFiles[f]);
+     .              .                    .                  .                    .                  .           		_ASSERT(vecNcFiles.size() > 0);
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           		// Number of times in this input file
+     0              0                   22 ( 0.00%)         2 ( 0.00%)          22 ( 0.00%)         2 ( 0.00%)  		NcDim * dimTimeInput = vecNcFiles[0]->get_dim("time");
+     .              .                    .                  .                    .                  .           		if (dimTimeInput == NULL) {
+     .              .                    .                  .                    .                  .           			_EXCEPTION1("No dimension \"time\" in file \"%s\"",
+     .              .                    .                  .                    .                  .           				vecNcFiles.GetFilename(0).c_str());
+     .              .                    .                  .                    .                  .           		}
+     0              0                   96 ( 0.00%)         8 ( 0.00%)       2,400 ( 0.00%)        16 ( 0.00%)  		int nLocalTimes = dimTimeInput->size();
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           		// Loop through all times
+     .              .                    .                  .                    .                  .           		for (int t = 0; t < nLocalTimes; t++, iTime++) {
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           			// Get the current patch vector
+     .              .                    .                  .                    .                  .           			std::vector<IndicatorSet> & vecBlobs = vecAllBlobs[iTime];
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           			std::vector< LatLonBox<double> > & vecBlobBoxesDeg = vecAllBlobBoxesDeg[iTime];
+-- line 1004 ----------------------------------------
+-- line 1011 ----------------------------------------
+     .              .                    .                  .                    .                  .           			// New announcement block for timestep
+     .              .                    .                  .                    .                  .           			if (vecGlobalTimes.size() == 1) {
+     .              .                    .                  .                    .                  .           				_ASSERT((iTime >= 0) && (iTime < vecGlobalTimes[0].size()));
+     .              .                    .                  .                    .                  .           				AnnounceStartBlock("Time %i (%s)", iTime,
+     .              .                    .                  .                    .                  .           					vecGlobalTimes[0][iTime].ToString().c_str());
+     .              .                    .                  .                    .                  .           			} else {
+     .              .                    .                  .                    .                  .           				_ASSERT((t >= 0) && (t < vecGlobalTimes[f].size()));
+     .              .                    .                  .                    .                  .           				AnnounceStartBlock("Time %i (%s)", iTime,
+     0              0                   20 ( 0.00%)         1 ( 0.00%)          20 ( 0.00%)         1 ( 0.00%)  					vecGlobalTimes[f][t].ToString().c_str());
+     .              .                    .                  .                    .                  .           			}
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           			// Load the search variable data
+     .              .                    .                  .                    .                  .           			Variable & var = varreg.Get(varix);
+     .              .                    .                  .                    .                  .           			vecNcFiles.SetConstantTimeIx(t);
+     0              0            4,153,318 ( 0.67%)         6 ( 0.00%)          52 ( 0.00%)         2 ( 0.00%)  			var.LoadGridData(varreg, vecNcFiles, grid);
+     .              .                    .                  .                    .                  .           			const DataArray1D<float> & dataIndicator = var.GetData();
+     .              .                    .                  .                    .                  .           /*
+     .              .                    .                  .                    .                  .           			float dChecksum = 0.0;
+     .              .                    .                  .                    .                  .           			for (int i = 0; i < dataState.GetRows(); i++) {
+     .              .                    .                  .                    .                  .           				dChecksum += dataState[i];
+     .              .                    .                  .                    .                  .           			}
+     .              .                    .                  .                    .                  .           			std::cout << dChecksum << std::endl;
+     .              .                    .                  .                    .                  .           */
+-- line 1033 ----------------------------------------
+-- line 1382 ----------------------------------------
+     .              .                    .                  .                    .                  .           						vecBlobBoxesDeg[p].lon[1]);
+     .              .                    .                  .                    .                  .           				}
+     .              .                    .                  .                    .                  .           			}
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           			AnnounceEndBlock(NULL);
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           			AnnounceEndBlock("Done");
+     .              .                    .                  .                    .                  .           		}
+     0              0                    0                  0              688,130 ( 0.11%)       125 ( 0.00%)  	}
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	AnnounceEndBlock("Done");
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	///////////////////////////////////////////////////////////////////////////
+     .              .                    .                  .                    .                  .           	// Stitch blobs together in time using graph search
+     .              .                    .                  .                    .                  .           	///////////////////////////////////////////////////////////////////////////
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	AnnounceStartBlock("Assign local tags to each blob");
+-- line 1398 ----------------------------------------
+-- line 2042 ----------------------------------------
+     .              .                    .                  .                    .                  .           		// Write to file
+     .              .                    .                  .                    .                  .           		varData->set_cur(t, 0, 0);
+     .              .                    .                  .                    .                  .           		varData->put(&(dataBlobTag[0][0]), 1, nLat, nLon);
+     .              .                    .                  .                    .                  .           	}
+     .              .                    .                  .                    .                  .           */
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           	AnnounceBanner();
+     .              .                    .                  .                    .                  .           
+     0              0                    0                  0           74,762,526 (12.15%) 1,039,402 (28.93%)  } catch(Exception & e) {
+     0              0                  209 ( 0.00%)         2 ( 0.00%)         209 ( 0.00%)         2 ( 0.00%)  	Announce(e.ToString().c_str());
+     0              0                    0                  0                  306 ( 0.00%)         3 ( 0.00%)  }
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           #if defined(TEMPEST_MPIOMP)
+     .              .                    .                  .                    .                  .           	// Deinitialize MPI
+     .              .                    .                  .                    .                  .           	MPI_Finalize();
+     .              .                    .                  .                    .                  .           #endif
+     .              .                    .                  .                    .                  .           
+     .              .                    .                  .                    .                  .           }
+     .              .                    .                  .                    .                  .           
+-- line 2060 ----------------------------------------
+
+--------------------------------------------------------------------------------
+curB            curBk          totB                 totBk              totFdB               totFdBk            
+--------------------------------------------------------------------------------
+45,324 (100.0%) 2,247 (100.0%) 348,483,234 (56.61%) 3,210,564 (89.31%) 349,989,293 (56.86%) 3,234,863 (90.04%)  events annotated
+

@@ -1,0 +1,749 @@
+--------------------------------------------------------------------------------
+Profile data file 'xtmemory_serial.0.kcg' (creator: xtree-1)
+--------------------------------------------------------------------------------
+Profiled target:  ./bin/StitchBlobs_serial --in_list ./test/ERA5_AR_test/ERA5_AR_files_short.txt --out_list ./test/ERA5_AR_test/ERA5_AR_SB_files_short.txt --min_overlap_prev 25.0 --max_overlap_prev 100.0 --min_overlap_next 25.0 --max_overlap_next 100.0 --latname latitude --lonname longitude --var AR_binary_tag (PID 1622551)
+Events recorded:  curB curBk totB totBk totFdB totFdBk
+Events shown:     curB curBk totB totBk totFdB totFdBk
+Event sort order: curB curBk totB totBk totFdB totFdBk
+Thresholds:       99 0 0 0 0 0
+Include dirs:     
+User annotated:   
+Auto-annotation:  on
+
+--------------------------------------------------------------------------------
+curB             curBk        totB                    totBk                totFdB                  totFdBk              
+--------------------------------------------------------------------------------
+111,871 (100.0%) 943 (100.0%) 14,594,206,669 (100.0%) 166,607,173 (100.0%) 14,594,094,798 (100.0%) 166,606,230 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+curB             curBk        totB                    totBk                totFdB                  totFdBk               file:function
+--------------------------------------------------------------------------------
+111,871 (100.0%) 943 (100.0%) 13,250,224,349 (90.79%) 138,951,834 (83.40%) 12,318,956,815 (84.41%) 115,638,231 (69.41%)  src/blobs/StitchBlobs_serial.cpp:main
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: src/blobs/StitchBlobs_serial.cpp
+--------------------------------------------------------------------------------
+curB             curBk        totB                   totBk               totFdB                 totFdBk             
+
+-- line 540 ----------------------------------------
+      .            .                      .                   .                      .                   .           };
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           ///////////////////////////////////////////////////////////////////////////////
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           int main(int argc, char** argv) {
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           #if defined(TEMPEST_MPIOMP)
+      .            .                      .                   .                      .                   .           	// Initialize MPI
+105,199 (94.04%) 616 (65.32%)    24,070,377 ( 0.16%)        833 ( 0.00%)        45,721 ( 0.00%)        115 ( 0.00%)  	MPI_Init(&argc, &argv);
+      .            .                      .                   .                      .                   .           #endif
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	NcError error(NcError::silent_nonfatal);
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           try {
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           #if defined(TEMPEST_MPIOMP)
+      .            .                      .                   .                      .                   .           	// Throw an error if this executable is being run in parallel
+-- line 556 ----------------------------------------
+-- line 647 ----------------------------------------
+      .            .                      .                   .                      .                   .           	// Time variable units
+      .            .                      .                   .                      .                   .           	std::string strOutTimeUnits;
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	// Verbose output
+      .            .                      .                   .                      .                   .           	bool fVerbose;
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	// Parse the command line
+      .            .                      .                   .                      .                   .           	BeginCommandLine()
+      0            0                     96 ( 0.00%)          2 ( 0.00%)             0                   0           		CommandLineString(strInputFile, "in", "");
+      0            0                    104 ( 0.00%)          2 ( 0.00%)             8 ( 0.00%)          1 ( 0.00%)  		CommandLineString(strInputFileList, "in_list", "");
+      0            0                    120 ( 0.00%)          2 ( 0.00%)            16 ( 0.00%)          1 ( 0.00%)  		CommandLineString(strConnectivity, "in_connect", "");
+      0            0                     88 ( 0.00%)          1 ( 0.00%)             0                   0           		CommandLineBool(fDiagonalConnectivity, "diag_connect");
+      0            0                    152 ( 0.00%)          2 ( 0.00%)            32 ( 0.00%)          1 ( 0.00%)  		CommandLineString(strOutputFile, "out", "");
+      0            0                     88 ( 0.00%)          1 ( 0.00%)             0                   0           		CommandLineString(strOutputFileList, "out_list", "");
+      0            0                     88 ( 0.00%)          1 ( 0.00%)             0                   0           		CommandLineString(strVariable, "var", "binary_tag");
+      0            0                     88 ( 0.00%)          1 ( 0.00%)             0                   0           		CommandLineString(strOutputVariable, "outvar", "object_id");
+      0            0                    216 ( 0.00%)          2 ( 0.00%)            64 ( 0.00%)          1 ( 0.00%)  		CommandLineInt(nMinBlobSize, "minsize", 1);
+      0            0                     88 ( 0.00%)          1 ( 0.00%)             0                   0           		CommandLineString(strMinTime, "mintime", "1");
+      0            0                     88 ( 0.00%)          1 ( 0.00%)             0                   0           		CommandLineBool(fTagOnly, "tagonly");
+      0            0                    153 ( 0.00%)          4 ( 0.00%)            34 ( 0.00%)          2 ( 0.00%)  		CommandLineDoubleD(dMinPercentOverlapPrev, "min_overlap_prev", 0.0, "(%)")
+      0            0                    153 ( 0.00%)          4 ( 0.00%)            34 ( 0.00%)          2 ( 0.00%)  		CommandLineDoubleD(dMaxPercentOverlapPrev, "max_overlap_prev", 100.0, "(%)")
+      0            0                    153 ( 0.00%)          4 ( 0.00%)            34 ( 0.00%)          2 ( 0.00%)  		CommandLineDoubleD(dMinPercentOverlapNext, "min_overlap_next", 0.0, "(%)")
+      0            0                    153 ( 0.00%)          4 ( 0.00%)            34 ( 0.00%)          2 ( 0.00%)  		CommandLineDoubleD(dMaxPercentOverlapNext, "max_overlap_next", 100.0, "(%)")
+      0            0                     88 ( 0.00%)          1 ( 0.00%)             0                   0           		CommandLineDouble(dMergeDistDeg, "merge_dist", 0.0); 
+      0            0                    459 ( 0.00%)          6 ( 0.00%)           184 ( 0.00%)          3 ( 0.00%)  		CommandLineStringD(strRestrictRegion, "restrict_region", "", "(lat0,lat1,lon0,lon1,count)");
+      0            0                     88 ( 0.00%)          1 ( 0.00%)             0                   0           		CommandLineBool(fRegional, "regional");
+      0            0                     88 ( 0.00%)          1 ( 0.00%)             0                   0           		CommandLineDouble(dMinLatDeg, "minlat", -90.0);
+      0            0                     88 ( 0.00%)          1 ( 0.00%)             0                   0           		CommandLineDouble(dMaxLatDeg, "maxlat", 90.0);
+      0            0                     88 ( 0.00%)          1 ( 0.00%)             0                   0           		CommandLineDouble(dMinLonDeg, "minlon", 0.0);
+      0            0                     88 ( 0.00%)          1 ( 0.00%)             0                   0           		CommandLineDouble(dMaxLonDeg, "maxlon", 360.0);
+      0            0                     88 ( 0.00%)          1 ( 0.00%)             0                   0           		CommandLineBool(fFlatten, "flatten");
+      0            0                     88 ( 0.00%)          1 ( 0.00%)             0                   0           		CommandLineString(strLatitudeName, "latname","lat");
+      0            0                     88 ( 0.00%)          1 ( 0.00%)             0                   0           		CommandLineString(strLongitudeName, "lonname","lon");
+      0            0                     88 ( 0.00%)          1 ( 0.00%)             0                   0           		CommandLineString(strOutTimeUnits,"outtimeunits","");
+      0            0                     88 ( 0.00%)          1 ( 0.00%)             0                   0           		CommandLineString(strThresholdCmd, "thresholdcmd", "");
+      0            0                     88 ( 0.00%)          1 ( 0.00%)             0                   0           		CommandLineBool(fVerbose, "verbose");
+      .            .                      .                   .                      .                   .           
+      0            0                    182 ( 0.00%)          4 ( 0.00%)            91 ( 0.00%)          2 ( 0.00%)  		ParseCommandLine(argc, argv);
+      0            0                  7,528 ( 0.00%)         28 ( 0.00%)         2,903 ( 0.00%)         35 ( 0.00%)  	EndCommandLine(argv)
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	AnnounceBanner();
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	// Create Variable registry
+      0            0                  1,792 ( 0.00%)         32 ( 0.00%)             0                   0           	VariableRegistry varreg;
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	// Check input
+      .            .                      .                   .                      .                   .           	if ((strInputFile == "") && (strInputFileList == "")) {
+      .            .                      .                   .                      .                   .           		_EXCEPTIONT("No input file (--in) or (--in_list) specified");
+      .            .                      .                   .                      .                   .           	}
+      .            .                      .                   .                      .                   .           	if ((strInputFile != "") && (strInputFileList != "")) {
+      .            .                      .                   .                      .                   .           		_EXCEPTIONT("Only one of input file (--in) or (--in_list) allowed");
+      .            .                      .                   .                      .                   .           	}
+-- line 698 ----------------------------------------
+-- line 706 ----------------------------------------
+      .            .                      .                   .                      .                   .           	}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	// Check variable
+      .            .                      .                   .                      .                   .           	if (strVariable == "") {
+      .            .                      .                   .                      .                   .           		_EXCEPTIONT("No variable name (--var) specified");
+      .            .                      .                   .                      .                   .           	}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	// Register variable
+      0            0                    248 ( 0.00%)          2 ( 0.00%)             0                   0           	int varix = varreg.FindOrRegister(strVariable);
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	// Check output variable
+      .            .                      .                   .                      .                   .           	if (strOutputVariable.length() == 0) {
+      .            .                      .                   .                      .                   .           		strOutputVariable = strVariable + "tag";
+      .            .                      .                   .                      .                   .           	}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	// Input file list
+      .            .                      .                   .                      .                   .           	FilenameList vecInputFiles;
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	if (strInputFile != "") {
+      .            .                      .                   .                      .                   .           		vecInputFiles.push_back(strInputFile);
+      .            .                      .                   .                      .                   .           	}
+      .            .                      .                   .                      .                   .           	if (strInputFileList != "") {
+      0            0                 83,313 ( 0.00%)         49 ( 0.00%)        79,089 ( 0.00%)         12 ( 0.00%)  		vecInputFiles.FromFile(strInputFileList, false);
+      .            .                      .                   .                      .                   .           	}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	int nFiles = vecInputFiles.size();
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	// Output file list
+      .            .                      .                   .                      .                   .           	FilenameList vecOutputFiles;
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	if (strOutputFile != "") {
+      .            .                      .                   .                      .                   .           		vecOutputFiles.push_back(strOutputFile);
+      .            .                      .                   .                      .                   .           	}
+      .            .                      .                   .                      .                   .           	if (strOutputFileList != "") {
+      0            0                 81,934 ( 0.00%)         37 ( 0.00%)        79,054 ( 0.00%)         11 ( 0.00%)  		vecOutputFiles.FromFile(strOutputFileList, false);
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		if (vecOutputFiles.size() != vecInputFiles.size()) {
+      .            .                      .                   .                      .                   .           			_EXCEPTION2("Mismatch in number of rows of --in_list (%lu) and --out_list (%lu)",
+      .            .                      .                   .                      .                   .           				vecInputFiles.size(), vecOutputFiles.size());
+      .            .                      .                   .                      .                   .           		}
+      .            .                      .                   .                      .                   .           	}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	// Parse --mintime
+-- line 748 ----------------------------------------
+-- line 856 ----------------------------------------
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	// No connectivity file; check for latitude/longitude dimension
+      .            .                      .                   .                      .                   .           	} else {
+      .            .                      .                   .                      .                   .           		AnnounceStartBlock("No connectivity file specified");
+      .            .                      .                   .                      .                   .           		Announce("Attempting to generate latitude-longitude grid from data file");
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		// Load in the benchmark file
+      .            .                      .                   .                      .                   .           		NcFileVector vecNcFiles;
+    121 ( 0.11%)   6 ( 0.64%)       760,012 ( 0.01%)        272 ( 0.00%)        75,429 ( 0.00%)        199 ( 0.00%)  		vecNcFiles.ParseFromString(vecInputFiles[0]);
+      .            .                      .                   .                      .                   .           		_ASSERT(vecNcFiles.size() > 0);
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		if (vecNcFiles.size() < 1) {
+      .            .                      .                   .                      .                   .           			_EXCEPTIONT("No data files specified; unable to generate grid");
+      .            .                      .                   .                      .                   .           		}
+      .            .                      .                   .                      .                   .           
+      0            0             78,923,834 ( 0.54%)  3,114,745 ( 1.87%)    12,477,562 ( 0.09%)  2,076,496 ( 1.25%)  		grid.GenerateLatitudeLongitude(
+      .            .                      .                   .                      .                   .           			vecNcFiles[0],
+      .            .                      .                   .                      .                   .           			strLatitudeName,
+      .            .                      .                   .                      .                   .           			strLongitudeName,
+      .            .                      .                   .                      .                   .           			fRegional,
+      .            .                      .                   .                      .                   .           			fDiagonalConnectivity);
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		_ASSERT(grid.m_nGridDim.size() == 2);
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		AnnounceEndBlock("Done");
+      0            0                      0                   0                688,130 ( 0.00%)        125 ( 0.00%)  	}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	// Check for area
+      .            .                      .                   .                      .                   .           	if (!grid.HasAreas()) {
+      .            .                      .                   .                      .                   .           		_EXCEPTIONT("SimpleGrid has no area information (needed for StitchBlobs)");
+      .            .                      .                   .                      .                   .           	}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	// Get time dimension over all files
+      .            .                      .                   .                      .                   .           	// strOutTimeUnits is either predetermined or set at the command line
+      .            .                      .                   .                      .                   .           	AnnounceStartBlock("Concatenating times");
+      .            .                      .                   .                      .                   .           	NcType nctypeTime;
+      .            .                      .                   .                      .                   .           	std::vector< std::pair<int, int> > vecGlobalTimeIxToFileTimeIx;
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	std::vector< std::vector<Time> > vecGlobalTimes;
+      0            0                    288 ( 0.00%)          1 ( 0.00%)             0                   0           	vecGlobalTimes.resize(vecOutputFiles.size());
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	for (int f = 0; f < vecInputFiles.size(); f++){
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		// Load in the benchmark file
+      .            .                      .                   .                      .                   .           		NcFileVector vecNcFiles;
+  1,452 ( 1.30%)  72 ( 7.64%)     9,112,200 ( 0.06%)      3,009 ( 0.00%)       900,720 ( 0.01%)      2,256 ( 0.00%)  		vecNcFiles.ParseFromString(vecInputFiles[f]);
+      .            .                      .                   .                      .                   .           		_ASSERT(vecNcFiles.size() > 0);
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		// Get the time variable
+      0            0                    264 ( 0.00%)         24 ( 0.00%)           264 ( 0.00%)         24 ( 0.00%)  		NcVar * varTime = vecNcFiles[0]->get_var("time");
+      .            .                      .                   .                      .                   .           		if (varTime == NULL) {
+      .            .                      .                   .                      .                   .           			_EXCEPTION1("File \"%s\" does not contain \"time\" variable",
+      .            .                      .                   .                      .                   .           				vecNcFiles.GetFilename(0).c_str());
+      .            .                      .                   .                      .                   .           		}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		nctypeTime = varTime->type();
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		// Get time units (if not specified on command line)
+      .            .                      .                   .                      .                   .           		if (strOutTimeUnits == "") {
+     38 ( 0.03%)   2 ( 0.21%)            65 ( 0.00%)          4 ( 0.00%)            27 ( 0.00%)          2 ( 0.00%)  			NcAtt * attTime = varTime->get_att("units");
+      .            .                      .                   .                      .                   .           			if (attTime == NULL) {
+      .            .                      .                   .                      .                   .           				_EXCEPTION1("File \"%s\" missing \"time:units\" attribute",
+      .            .                      .                   .                      .                   .           					vecNcFiles.GetFilename(0).c_str());
+      .            .                      .                   .                      .                   .           			}
+      .            .                      .                   .                      .                   .           
+     32 ( 0.03%)   1 ( 0.11%)           208 ( 0.00%)         10 ( 0.00%)           156 ( 0.00%)         10 ( 0.00%)  			strOutTimeUnits = attTime->as_string(0);
+      .            .                      .                   .                      .                   .           		}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		// Load in CF-compliant time data
+      .            .                      .                   .                      .                   .           		const NcTimeDimension & vecTimes = vecNcFiles.GetNcTimeDimension(0);
+      .            .                      .                   .                      .                   .           		if (vecTimes.size() == 0) {
+      .            .                      .                   .                      .                   .           			_EXCEPTION1("WARNING: File group does not contain any time data (%s)",
+      .            .                      .                   .                      .                   .           				vecInputFiles[f].c_str());
+      .            .                      .                   .                      .                   .           		}
+-- line 929 ----------------------------------------
+-- line 938 ----------------------------------------
+      .            .                      .                   .                      .                   .           		if (vecOutputFiles.size() == 1) {
+      .            .                      .                   .                      .                   .           			for (int t = 0; t < vecTimes.size(); t++) {
+      .            .                      .                   .                      .                   .           				int iGlobalTime = vecGlobalTimes[0].size();
+      .            .                      .                   .                      .                   .           				vecGlobalTimes[0].push_back(vecTimes[t]);
+      .            .                      .                   .                      .                   .           				vecGlobalTimeIxToFileTimeIx.push_back( std::pair<int,int>(0,iGlobalTime) );
+      .            .                      .                   .                      .                   .           			}
+      .            .                      .                   .                      .                   .           		} else {
+      .            .                      .                   .                      .                   .           			for (int t = 0; t < vecTimes.size(); t++) {
+      0            0                 85,680 ( 0.00%)         96 ( 0.00%)        42,672 ( 0.00%)         84 ( 0.00%)  				vecGlobalTimes[f].push_back(vecTimes[t]);
+      0            0                 32,760 ( 0.00%)         12 ( 0.00%)        16,376 ( 0.00%)         11 ( 0.00%)  				vecGlobalTimeIxToFileTimeIx.push_back( std::pair<int,int>(f,t) );
+      .            .                      .                   .                      .                   .           			}
+      .            .                      .                   .                      .                   .           		}
+      0            0                      0                   0              8,257,560 ( 0.06%)      1,500 ( 0.00%)  	}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	int nGlobalTimes = 0;
+      .            .                      .                   .                      .                   .           	for (int f = 0; f < vecGlobalTimes.size(); f++) {
+      .            .                      .                   .                      .                   .           		nGlobalTimes += vecGlobalTimes[f].size();
+      .            .                      .                   .                      .                   .           	}
+      .            .                      .                   .                      .                   .           	_ASSERT(nGlobalTimes > 0);
+      .            .                      .                   .                      .                   .           	_ASSERT(nGlobalTimes == vecGlobalTimeIxToFileTimeIx.size());
+      .            .                      .                   .                      .                   .           
+-- line 958 ----------------------------------------
+-- line 962 ----------------------------------------
+      .            .                      .                   .                      .                   .           	// Build the set of nodes at each time contained in each blob
+      .            .                      .                   .                      .                   .           	///////////////////////////////////////////////////////////////////////////
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	// Build blobs at each time level
+      .            .                      .                   .                      .                   .           	AnnounceStartBlock("Building blob set at each time level");
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	// Set of nodes at each time contained in each blob
+      .            .                      .                   .                      .                   .           	std::vector< std::vector<IndicatorSet> > vecAllBlobs;
+      0            0                 35,136 ( 0.00%)          1 ( 0.00%)             0                   0           	vecAllBlobs.resize(nGlobalTimes);
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	// Bounding boxes at each time for each blob
+      .            .                      .                   .                      .                   .           	std::vector< std::vector< LatLonBox<double> > > vecAllBlobBoxesDeg;
+      0            0                 35,136 ( 0.00%)          1 ( 0.00%)             0                   0           	vecAllBlobBoxesDeg.resize(nGlobalTimes);
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	// Time index across all files
+      .            .                      .                   .                      .                   .           	int iTime = 0;
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	// Loop through all files
+      .            .                      .                   .                      .                   .           	for (int f = 0; f < nFiles; f++) {
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		// Clear existing data in the register
+      .            .                      .                   .                      .                   .           		varreg.UnloadAllGridData();
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		// Load in the benchmark file
+      .            .                      .                   .                      .                   .           		NcFileVector vecNcFiles;
+  1,452 ( 1.30%)  72 ( 7.64%)     9,110,352 ( 0.06%)      2,976 ( 0.00%)       900,720 ( 0.01%)      2,256 ( 0.00%)  		vecNcFiles.ParseFromString(vecInputFiles[f]);
+      .            .                      .                   .                      .                   .           		_ASSERT(vecNcFiles.size() > 0);
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		// Number of times in this input file
+      0            0                    264 ( 0.00%)         24 ( 0.00%)           264 ( 0.00%)         24 ( 0.00%)  		NcDim * dimTimeInput = vecNcFiles[0]->get_dim("time");
+      .            .                      .                   .                      .                   .           		if (dimTimeInput == NULL) {
+      .            .                      .                   .                      .                   .           			_EXCEPTION1("No dimension \"time\" in file \"%s\"",
+      .            .                      .                   .                      .                   .           				vecNcFiles.GetFilename(0).c_str());
+      .            .                      .                   .                      .                   .           		}
+      0            0                  1,152 ( 0.00%)         96 ( 0.00%)        28,800 ( 0.00%)        192 ( 0.00%)  		int nLocalTimes = dimTimeInput->size();
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		// Loop through all times
+      .            .                      .                   .                      .                   .           		for (int t = 0; t < nLocalTimes; t++, iTime++) {
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			// Get the current patch vector
+      .            .                      .                   .                      .                   .           			std::vector<IndicatorSet> & vecBlobs = vecAllBlobs[iTime];
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			std::vector< LatLonBox<double> > & vecBlobBoxesDeg = vecAllBlobBoxesDeg[iTime];
+-- line 1004 ----------------------------------------
+-- line 1011 ----------------------------------------
+      .            .                      .                   .                      .                   .           			// New announcement block for timestep
+      .            .                      .                   .                      .                   .           			if (vecGlobalTimes.size() == 1) {
+      .            .                      .                   .                      .                   .           				_ASSERT((iTime >= 0) && (iTime < vecGlobalTimes[0].size()));
+      .            .                      .                   .                      .                   .           				AnnounceStartBlock("Time %i (%s)", iTime,
+      .            .                      .                   .                      .                   .           					vecGlobalTimes[0][iTime].ToString().c_str());
+      .            .                      .                   .                      .                   .           			} else {
+      .            .                      .                   .                      .                   .           				_ASSERT((t >= 0) && (t < vecGlobalTimes[f].size()));
+      .            .                      .                   .                      .                   .           				AnnounceStartBlock("Time %i (%s)", iTime,
+      0            0                 29,280 ( 0.00%)      1,464 ( 0.00%)        29,280 ( 0.00%)      1,464 ( 0.00%)  					vecGlobalTimes[f][t].ToString().c_str());
+      .            .                      .                   .                      .                   .           			}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			// Load the search variable data
+      .            .                      .                   .                      .                   .           			Variable & var = varreg.Get(varix);
+      .            .                      .                   .                      .                   .           			vecNcFiles.SetConstantTimeIx(t);
+      0            0          7,601,306,248 (52.08%)     74,665 ( 0.04%) 7,597,968,624 (52.06%)     73,199 ( 0.04%)  			var.LoadGridData(varreg, vecNcFiles, grid);
+      .            .                      .                   .                      .                   .           			const DataArray1D<float> & dataIndicator = var.GetData();
+      .            .                      .                   .                      .                   .           /*
+      .            .                      .                   .                      .                   .           			float dChecksum = 0.0;
+      .            .                      .                   .                      .                   .           			for (int i = 0; i < dataState.GetRows(); i++) {
+      .            .                      .                   .                      .                   .           				dChecksum += dataState[i];
+      .            .                      .                   .                      .                   .           			}
+      .            .                      .                   .                      .                   .           			std::cout << dChecksum << std::endl;
+      .            .                      .                   .                      .                   .           */
+-- line 1033 ----------------------------------------
+-- line 1074 ----------------------------------------
+      .            .                      .                   .                      .                   .           					setIndicators.insert(i);
+      .            .                      .                   .                      .                   .           				}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			// Insert all detected locations into set
+      .            .                      .                   .                      .                   .           			// (no bounds checking)
+      .            .                      .                   .                      .                   .           			} else {
+      .            .                      .                   .                      .                   .           				for (int i = 0; i < grid.GetSize(); i++) {
+      .            .                      .                   .                      .                   .           					if (dataIndicator[i] != 0.0f) {
+      0            0          1,104,058,720 ( 7.57%) 27,601,468 (16.57%)             0                   0           						setIndicators.insert(i);
+      .            .                      .                   .                      .                   .           					}
+      .            .                      .                   .                      .                   .           				}
+      .            .                      .                   .                      .                   .           			}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			Announce("Finding blobs (%i tagged points)", setIndicators.size());
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			// Backup of original indicator set
+      0            0                782,040 ( 0.01%)     19,551 ( 0.01%)             0                   0           			IndicatorSet setIndicatorsBackup = setIndicators;
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			// Rejections due to insufficient node count
+      .            .                      .                   .                      .                   .           			int nRejectedMinSize = 0;
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			// Rejections due to a given threshold
+      .            .                      .                   .                      .                   .           			DataArray1D<int> nRejectedThreshold(vecThresholdOp.size());
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			// Find all contiguous patches
+      .            .                      .                   .                      .                   .           			for (; setIndicators.size() != 0;) {
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           				// Next starting location
+      .            .                      .                   .                      .                   .           				int ixNode = *(setIndicators.begin());
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           				// Current patch
+      .            .                      .                   .                      .                   .           				int ixBlob = vecBlobs.size();
+      0            0              1,177,056 ( 0.01%)      5,965 ( 0.00%)       553,392 ( 0.00%)      4,501 ( 0.00%)  				vecBlobs.resize(ixBlob+1);
+      0            0              1,177,056 ( 0.01%)      5,965 ( 0.00%)       553,392 ( 0.00%)      4,501 ( 0.00%)  				vecBlobBoxesDeg.resize(ixBlob+1, LatLonBox<double>(fRegional));
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           				if (dMergeDistDeg > 0.0) {
+      .            .                      .                   .                      .                   .           					vecBlobPerimeters.resize(ixBlob+1);
+      .            .                      .                   .                      .                   .           					vecBlobTrees.resize(ixBlob+1);
+      .            .                      .                   .                      .                   .           					vecBlobTrees[ixBlob] = kd_create(3);
+      .            .                      .                   .                      .                   .           				}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           				// Initialize bounding box
+-- line 1115 ----------------------------------------
+-- line 1117 ----------------------------------------
+      .            .                      .                   .                      .                   .           				boxDeg.lat[0] = RadToDeg(grid.m_dLat[ixNode]);
+      .            .                      .                   .                      .                   .           				boxDeg.lat[1] = RadToDeg(grid.m_dLat[ixNode]);
+      .            .                      .                   .                      .                   .           				boxDeg.lon[0] = LonDegToStandardRange(RadToDeg(grid.m_dLon[ixNode]));
+      .            .                      .                   .                      .                   .           				boxDeg.lon[1] = LonDegToStandardRange(RadToDeg(grid.m_dLon[ixNode]));
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           				//printf("=================================== BLOB %i\n", ixBlob);
+      .            .                      .                   .                      .                   .           				// Find all connecting nodes in patch
+      .            .                      .                   .                      .                   .           				IndicatorSet setNeighbors;
+      0            0                396,360 ( 0.00%)      9,909 ( 0.01%)             0                   0           				setNeighbors.insert(ixNode);
+      .            .                      .                   .                      .                   .           				while (setNeighbors.size() != 0) {
+      .            .                      .                   .                      .                   .           					ixNode = *(setNeighbors.begin());
+      0            0                      0                   0          3,216,784,640 (22.04%) 80,419,616 (48.27%)  					setNeighbors.erase(setNeighbors.begin());
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           					// This node is already included in the blob
+      .            .                      .                   .                      .                   .           					if (vecBlobs[ixBlob].find(ixNode) != vecBlobs[ixBlob].end()) {
+      .            .                      .                   .                      .                   .           						//printf("..%i already in set\n", ixNode);
+      .            .                      .                   .                      .                   .           						continue;
+      .            .                      .                   .                      .                   .           					}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           					// This node has not been tagged
+      .            .                      .                   .                      .                   .           					IndicatorSetIterator iterIndicator = setIndicators.find(ixNode);
+      .            .                      .                   .                      .                   .           					if (iterIndicator == setIndicators.end()) {
+      .            .                      .                   .                      .                   .           						//printf("..%i has not been tagged\n", ixNode);
+      .            .                      .                   .                      .                   .           						continue;
+      .            .                      .                   .                      .                   .           					}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           					// Remove this from the set of available indicators
+      0            0                      0                   0          1,104,058,720 ( 7.57%) 27,601,468 (16.57%)  					setIndicators.erase(iterIndicator);
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           					// Insert the node into the blob
+      0            0          1,104,058,720 ( 7.57%) 27,601,468 (16.57%)             0                   0           					vecBlobs[ixBlob].insert(ixNode);
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           					// Update bounding box
+      .            .                      .                   .                      .                   .           					boxDeg.insert(
+      .            .                      .                   .                      .                   .           						RadToDeg(grid.m_dLat[ixNode]),
+      .            .                      .                   .                      .                   .           						LonDegToStandardRange(RadToDeg(grid.m_dLon[ixNode])));
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           					// Insert neighbors
+      .            .                      .                   .                      .                   .           					bool fPerimeter = false;
+-- line 1155 ----------------------------------------
+-- line 1162 ----------------------------------------
+      .            .                      .                   .                      .                   .           						//} else {
+      .            .                      .                   .                      .                   .           						//	printf("\n");
+      .            .                      .                   .                      .                   .           						//}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           						// Perimeter point
+      .            .                      .                   .                      .                   .           						if (setIndicatorsBackup.find(ixNeighbor) == setIndicatorsBackup.end()) {
+      .            .                      .                   .                      .                   .           							fPerimeter = true;
+      .            .                      .                   .                      .                   .           						} else {
+      0            0          3,216,388,280 (22.04%) 80,409,707 (48.26%)             0                   0           							setNeighbors.insert(ixNeighbor);
+      .            .                      .                   .                      .                   .           						}
+      .            .                      .                   .                      .                   .           					}
+      .            .                      .                   .                      .                   .           					if (fPerimeter && (vecBlobPerimeters.size() != 0)) {
+      .            .                      .                   .                      .                   .           						vecBlobPerimeters[ixBlob].insert(ixNode);
+      .            .                      .                   .                      .                   .           						double dX, dY, dZ;
+      .            .                      .                   .                      .                   .           						RLLtoXYZ_Rad(
+      .            .                      .                   .                      .                   .           							grid.m_dLon[ixNode],
+      .            .                      .                   .                      .                   .           							grid.m_dLat[ixNode],
+      .            .                      .                   .                      .                   .           							dX, dY, dZ);
+      .            .                      .                   .                      .                   .           						kd_insert3(vecBlobTrees[ixBlob], dX, dY, dZ, NULL);
+      .            .                      .                   .                      .                   .           					}
+      .            .                      .                   .                      .                   .           				}
+      .            .                      .                   .                      .                   .           			}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			// setIndicatorsBackup no longer needed
+      0            0                      0                   0            173,521,120 ( 1.19%)  4,338,028 ( 2.60%)  			setIndicatorsBackup.clear();
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			// Merge blobs
+      .            .                      .                   .                      .                   .           			if (vecBlobTrees.size() != 0) {
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           				AnnounceStartBlock("Merging blobs (from %lu blobs)", vecBlobs.size());
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           				Announce("Building merge graph");
+      .            .                      .                   .                      .                   .           
+-- line 1194 ----------------------------------------
+-- line 1382 ----------------------------------------
+      .            .                      .                   .                      .                   .           						vecBlobBoxesDeg[p].lon[1]);
+      .            .                      .                   .                      .                   .           				}
+      .            .                      .                   .                      .                   .           			}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			AnnounceEndBlock(NULL);
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			AnnounceEndBlock("Done");
+      .            .                      .                   .                      .                   .           		}
+      0            0                      0                   0              8,257,560 ( 0.06%)      1,500 ( 0.00%)  	}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	AnnounceEndBlock("Done");
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	///////////////////////////////////////////////////////////////////////////
+      .            .                      .                   .                      .                   .           	// Stitch blobs together in time using graph search
+      .            .                      .                   .                      .                   .           	///////////////////////////////////////////////////////////////////////////
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	AnnounceStartBlock("Assign local tags to each blob");
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	// Tags for each blob at each time slice
+      .            .                      .                   .                      .                   .           	std::vector< std::vector<Tag> > vecAllBlobTags;
+      0            0                 35,136 ( 0.00%)          1 ( 0.00%)             0                   0           	vecAllBlobTags.resize(nGlobalTimes);
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	// Next available patch tag
+      .            .                      .                   .                      .                   .           	Tag tagNextBlob(1, 0);
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	// Give blob tags to the initial set of blobs
+      .            .                      .                   .                      .                   .           	std::set<Tag> setAllTags;
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	for (int t = 0; t < nGlobalTimes; t++) {
+      0            0                118,908 ( 0.00%)      1,464 ( 0.00%)             0                   0           		vecAllBlobTags[t].resize(vecAllBlobs[t].size());
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		tagNextBlob.id = 0;
+      .            .                      .                   .                      .                   .           		for (int p = 0; p < vecAllBlobTags[t].size(); p++) {
+      .            .                      .                   .                      .                   .           			vecAllBlobTags[t][p] = tagNextBlob;
+      0            0                475,632 ( 0.00%)      9,909 ( 0.01%)             0                   0           			setAllTags.insert(tagNextBlob);
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			tagNextBlob.id++;
+      .            .                      .                   .                      .                   .           		}
+      .            .                      .                   .                      .                   .           		tagNextBlob.time++;
+      .            .                      .                   .                      .                   .           	}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	AnnounceEndBlock("Done");
+      .            .                      .                   .                      .                   .           
+-- line 1424 ----------------------------------------
+-- line 1449 ----------------------------------------
+      .            .                      .                   .                      .                   .           			_ASSERT(iFileLocal < vecGlobalTimes.size());
+      .            .                      .                   .                      .                   .           			if (iTimeLocal >= vecGlobalTimes[iFileLocal].size()) {
+      .            .                      .                   .                      .                   .           				iTimeLocal = 0;
+      .            .                      .                   .                      .                   .           				iFileLocal++;
+      .            .                      .                   .                      .                   .           				_ASSERT(iFileLocal < vecGlobalTimes.size());
+      .            .                      .                   .                      .                   .           			}
+      .            .                      .                   .                      .                   .           			_ASSERT(iTimeLocal < vecGlobalTimes[iFileLocal].size());
+      .            .                      .                   .                      .                   .           			Announce("Time %i (%s)", t,
+      0            0                 29,260 ( 0.00%)      1,463 ( 0.00%)        29,260 ( 0.00%)      1,463 ( 0.00%)  				vecGlobalTimes[iFileLocal][iTimeLocal].ToString().c_str());
+      .            .                      .                   .                      .                   .           		}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		// Get the current blob vector
+      .            .                      .                   .                      .                   .           		const std::vector<Tag> & vecPrevBlobTags = vecAllBlobTags[t-1];
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		std::vector<Tag> & vecBlobTags = vecAllBlobTags[t];
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		const std::vector<IndicatorSet> & vecPrevBlobs = vecAllBlobs[t-1];
+-- line 1465 ----------------------------------------
+-- line 1582 ----------------------------------------
+      .            .                      .                   .                      .                   .           						if (fInRestrictRegion) {
+      .            .                      .                   .                      .                   .           							setRestrictRegion.insert(vecBlobTags[p]);
+      .            .                      .                   .                      .                   .           							break;
+      .            .                      .                   .                      .                   .           						}
+      .            .                      .                   .                      .                   .           					}
+      .            .                      .                   .                      .                   .           				}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           				// Insert bidirectional edge in graph
+      0            0                496,384 ( 0.00%)      8,864 ( 0.01%)             0                   0           				multimapTagGraph.insert(
+      .            .                      .                   .                      .                   .           					std::pair<Tag, Tag>(
+      .            .                      .                   .                      .                   .           						vecBlobTags[p], vecPrevBlobTags[q]));
+      .            .                      .                   .                      .                   .           
+      0            0                496,384 ( 0.00%)      8,864 ( 0.01%)             0                   0           				multimapTagGraph.insert(
+      .            .                      .                   .                      .                   .           					std::pair<Tag, Tag>(
+      .            .                      .                   .                      .                   .           						vecPrevBlobTags[q], vecBlobTags[p]));
+      .            .                      .                   .                      .                   .           			}
+      .            .                      .                   .                      .                   .           		}
+      .            .                      .                   .                      .                   .           	}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	AnnounceEndBlock("Done");
+      .            .                      .                   .                      .                   .           
+-- line 1602 ----------------------------------------
+-- line 1610 ----------------------------------------
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	std::set<Tag>::const_iterator iterTag = setAllTags.begin();
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	for (; iterTag != setAllTags.end(); iterTag++) {
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		std::set<Tag> setTagsVisited;
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		std::set<Tag> setTagsToVisit;
+      0            0                475,632 ( 0.00%)      9,909 ( 0.01%)             0                   0           		setTagsToVisit.insert(*iterTag);
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		Tag tagMinimum = *iterTag;
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		// Check if this tag is already part of an explored component
+      .            .                      .                   .                      .                   .           		if (mapEquivalentTags.find(*iterTag) != mapEquivalentTags.end()) {
+      .            .                      .                   .                      .                   .           			continue;
+      .            .                      .                   .                      .                   .           		}
+      .            .                      .                   .                      .                   .           
+-- line 1626 ----------------------------------------
+-- line 1638 ----------------------------------------
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			// Out of tags to visit; done
+      .            .                      .                   .                      .                   .           			if (setTagsToVisit.size() == 0) {
+      .            .                      .                   .                      .                   .           				break;
+      .            .                      .                   .                      .                   .           			}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			// Get next tag to visit
+      .            .                      .                   .                      .                   .           			Tag tagNext = *(setTagsToVisit.begin());
+      0            0                      0                   0                901,056 ( 0.01%)     18,772 ( 0.01%)  			setTagsToVisit.erase(setTagsToVisit.begin());
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			// Verify we haven't visited this tag already
+      .            .                      .                   .                      .                   .           			if (setTagsVisited.find(tagNext) != setTagsVisited.end()) {
+      .            .                      .                   .                      .                   .           				continue;
+      .            .                      .                   .                      .                   .           			}
+      0            0                475,632 ( 0.00%)      9,909 ( 0.01%)             0                   0           			setTagsVisited.insert(tagNext);
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			// Check minimum tag
+      .            .                      .                   .                      .                   .           			if (tagNext < tagMinimum) {
+      .            .                      .                   .                      .                   .           				tagMinimum = tagNext;
+      .            .                      .                   .                      .                   .           			}
+      .            .                      .                   .                      .                   .           
+      0            0                387,120 ( 0.00%)      9,678 ( 0.01%)             0                   0           			setBlobTimes.insert(tagNext.time);
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			if (setRestrictRegion.find(tagNext) != setRestrictRegion.end()) {
+      .            .                      .                   .                      .                   .           				setBlobTimesInRestrictRegion.insert(tagNext.time);
+      .            .                      .                   .                      .                   .           			}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			// Get edges from this node
+      .            .                      .                   .                      .                   .           			std::pair<MapGraphIterator, MapGraphIterator> iterGraphEdges
+      .            .                      .                   .                      .                   .           				= multimapTagGraph.equal_range(tagNext);
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			MapGraphIterator iter = iterGraphEdges.first;
+      .            .                      .                   .                      .                   .           			for (; iter != iterGraphEdges.second; iter++) {
+      0            0                850,560 ( 0.01%)     17,720 ( 0.01%)             0                   0           				setTagsToVisit.insert(iter->second);
+      .            .                      .                   .                      .                   .           			}
+      .            .                      .                   .                      .                   .           		}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		// Apply filters to the blob
+      .            .                      .                   .                      .                   .           		bool fAcceptBlob = true;
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		// Filter on RestrictRegion count for this global_id
+      .            .                      .                   .                      .                   .           		if (opRestrictRegion.IsActive()) {
+-- line 1679 ----------------------------------------
+-- line 1711 ----------------------------------------
+      .            .                      .                   .                      .                   .           		} else {
+      .            .                      .                   .                      .                   .           			tagMinimum.global_id = 0;
+      .            .                      .                   .                      .                   .           			nTotalBlobCount--;
+      .            .                      .                   .                      .                   .           		}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		// Refer all tags in component to minimum tag
+      .            .                      .                   .                      .                   .           		std::set<Tag>::const_iterator iterTagsVisited = setTagsVisited.begin();
+      .            .                      .                   .                      .                   .           		for (; iterTagsVisited != setTagsVisited.end(); iterTagsVisited++) {
+      0            0                554,904 ( 0.00%)      9,909 ( 0.01%)             0                   0           			mapEquivalentTags.insert(
+      .            .                      .                   .                      .                   .           				std::pair<Tag,Tag>(*iterTagsVisited, tagMinimum));
+      .            .                      .                   .                      .                   .           		}
+      0            0                      0                   0              1,232,808 ( 0.01%)     27,197 ( 0.02%)  	}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	AnnounceEndBlock("Done");
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	// Merge blobs at each time step with equivalent tags
+      .            .                      .                   .                      .                   .           	AnnounceStartBlock("Reassign blob tags");
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	for (int t = 0; t < nGlobalTimes; t++) {
+      .            .                      .                   .                      .                   .           
+-- line 1730 ----------------------------------------
+-- line 1846 ----------------------------------------
+      .            .                      .                   .                      .                   .           	// Output results
+      .            .                      .                   .                      .                   .           	///////////////////////////////////////////////////////////////////////////
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	AnnounceStartBlock("Output blobs");
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	{
+      .            .                      .                   .                      .                   .           		// Load in the benchmark file
+      .            .                      .                   .                      .                   .           		NcFileVector vecNcFiles;
+    121 ( 0.11%)   6 ( 0.64%)       759,244 ( 0.01%)        250 ( 0.00%)        75,108 ( 0.00%)        190 ( 0.00%)  		vecNcFiles.ParseFromString(vecInputFiles[0]);
+      .            .                      .                   .                      .                   .           		_ASSERT(vecNcFiles.size() > 0);
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		// Loop through all output files
+      .            .                      .                   .                      .                   .           		_ASSERT(vecOutputFiles.size() == vecGlobalTimes.size());
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		int iGlobalTimeIx = 0;
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		for (int f = 0; f < vecOutputFiles.size(); f++) {
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			Announce("Writing file \"%s\"", vecOutputFiles[f].c_str());
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			// Open output file
+      0            0              1,440,792 ( 0.01%)        830 ( 0.00%)        12,264 ( 0.00%)        180 ( 0.00%)  			NcFile ncOutput(vecOutputFiles[f].c_str(), NcFile::Replace);
+      .            .                      .                   .                      .                   .           			if (!ncOutput.is_valid()) {
+      .            .                      .                   .                      .                   .           				_EXCEPTION1("Unable to open output file \"%s\"",
+      .            .                      .                   .                      .                   .           					vecOutputFiles[f].c_str());
+      .            .                      .                   .                      .                   .           			}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			// Output time dimension
+      .            .                      .                   .                      .                   .           			int nLocalTimes = vecGlobalTimes[f].size();
+      .            .                      .                   .                      .                   .           
+      0            0                  2,172 ( 0.00%)        108 ( 0.00%)           264 ( 0.00%)         24 ( 0.00%)  			NcDim * dimOutputTime = ncOutput.add_dim("time", nLocalTimes);
+      .            .                      .                   .                      .                   .           			if (dimOutputTime == NULL) {
+      .            .                      .                   .                      .                   .           				_EXCEPTIONT("Unable to create dimension \"time\" in output");
+      .            .                      .                   .                      .                   .           			}
+      .            .                      .                   .                      .                   .           			NcVar * varOutputTime =
+      0            0                269,664 ( 0.00%)        264 ( 0.00%)           264 ( 0.00%)         24 ( 0.00%)  				ncOutput.add_var("time", ncDouble, dimOutputTime);
+      .            .                      .                   .                      .                   .           
+      0            0                 11,712 ( 0.00%)         12 ( 0.00%)             0                   0           			DataArray1D<double> dOutputTimes(nLocalTimes);
+      .            .                      .                   .                      .                   .           			for (int t = 0; t < vecGlobalTimes[f].size(); t++) {
+      .            .                      .                   .                      .                   .           				dOutputTimes[t] =
+      0            0                 29,280 ( 0.00%)      1,464 ( 0.00%)        29,280 ( 0.00%)      1,464 ( 0.00%)  					vecGlobalTimes[f][t].GetCFCompliantUnitsOffsetDouble(strOutTimeUnits);
+      .            .                      .                   .                      .                   .           			}
+      .            .                      .                   .                      .                   .           
+      0            0                  1,716 ( 0.00%)         84 ( 0.00%)           564 ( 0.00%)         24 ( 0.00%)  			varOutputTime->add_att("long_name","time");
+      0            0                  1,704 ( 0.00%)         84 ( 0.00%)           324 ( 0.00%)         24 ( 0.00%)  			varOutputTime->add_att("units",strOutTimeUnits.c_str());
+      0            0                  1,692 ( 0.00%)         84 ( 0.00%)           504 ( 0.00%)         24 ( 0.00%)  			varOutputTime->add_att("calendar",vecGlobalTimes[f][0].GetCalendarName().c_str());
+      .            .                      .                   .                      .                   .           
+      0            0                    288 ( 0.00%)         48 ( 0.00%)         7,200 ( 0.00%)         60 ( 0.00%)  			varOutputTime->put(&(dOutputTimes[0]), nLocalTimes);
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			// Create output variable
+      .            .                      .                   .                      .                   .           			NcDim * dimOut0 = NULL;
+      .            .                      .                   .                      .                   .           			NcDim * dimOut1 = NULL;
+      .            .                      .                   .                      .                   .           			NcVar * varTagOut = NULL;
+      .            .                      .                   .                      .                   .           
+  3,456 ( 3.09%) 168 (17.82%)     1,043,724 ( 0.01%)      2,064 ( 0.00%)       225,144 ( 0.00%)      1,296 ( 0.00%)  			PrepareBlobOutputVar(
+      .            .                      .                   .                      .                   .           				*(vecNcFiles[0]),
+      .            .                      .                   .                      .                   .           				ncOutput,
+      .            .                      .                   .                      .                   .           				vecOutputFiles[f],
+      .            .                      .                   .                      .                   .           				grid,
+      .            .                      .                   .                      .                   .           				strOutputVariable,
+      .            .                      .                   .                      .                   .           				strLatitudeName,
+      .            .                      .                   .                      .                   .           				strLongitudeName,
+      .            .                      .                   .                      .                   .           				ncInt,
+-- line 1908 ----------------------------------------
+-- line 1919 ----------------------------------------
+      .            .                      .                   .                      .                   .           			if (dimOut0 != NULL) {
+      .            .                      .                   .                      .                   .           				nDimOutSize0 = dimOut0->size();
+      .            .                      .                   .                      .                   .           			}
+      .            .                      .                   .                      .                   .           			if (dimOut1 != NULL) {
+      .            .                      .                   .                      .                   .           				nDimOutSize1 = dimOut1->size();
+      .            .                      .                   .                      .                   .           			}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			// Write all time steps
+      0            0             49,835,520 ( 0.34%)         12 ( 0.00%)             0                   0           			DataArray1D<int> dataBlobTag(grid.GetSize());
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			for (int t = 0; t < nLocalTimes; t++) {
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           				dataBlobTag.Zero();
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           				_ASSERT(iGlobalTimeIx + t < vecAllBlobTags.size());
+      .            .                      .                   .                      .                   .           				_ASSERT(iGlobalTimeIx + t < vecAllBlobs.size());
+      .            .                      .                   .                      .                   .           	
+-- line 1935 ----------------------------------------
+-- line 1960 ----------------------------------------
+      .            .                      .                   .                      .                   .           				}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           				// Write to file
+      .            .                      .                   .                      .                   .           				if (grid.DimCount() == 1) {
+      .            .                      .                   .                      .                   .           					varTagOut->set_cur(t, 0);
+      .            .                      .                   .                      .                   .           					varTagOut->put(&(dataBlobTag[0]), 1, nDimOutSize0);
+      .            .                      .                   .                      .                   .           				} else {
+      .            .                      .                   .                      .                   .           					varTagOut->set_cur(t, 0);
+      0            0                 37,360 ( 0.00%)      5,933 ( 0.00%)       868,560 ( 0.01%)      5,916 ( 0.00%)  					varTagOut->put(&(dataBlobTag[0]), 1, nDimOutSize0, nDimOutSize1);
+      .            .                      .                   .                      .                   .           				}
+      .            .                      .                   .                      .                   .           			}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			// Update global time index
+      .            .                      .                   .                      .                   .           			iGlobalTimeIx += nLocalTimes;
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           			// Close the output file
+      0            0                      0                   0              2,523,192 ( 0.02%)      2,316 ( 0.00%)  			ncOutput.close();
+      .            .                      .                   .                      .                   .           
+      0            0                      0                   0             49,847,232 ( 0.34%)         24 ( 0.00%)  		}
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		AnnounceEndBlock("Done");
+      0            0                      0                   0                688,130 ( 0.00%)        125 ( 0.00%)  	}
+      .            .                      .                   .                      .                   .           /*
+      .            .                      .                   .                      .                   .           	// Copy variable attributes from first input file
+      .            .                      .                   .                      .                   .           	{
+      .            .                      .                   .                      .                   .           		NcFile ncInput(vecInputFiles[0].c_str());
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           		NcVar * varLat = ncInput.get_var(strLatitudeName.c_str());
+      .            .                      .                   .                      .                   .           		NcVar * varLon = ncInput.get_var(strLongitudeName.c_str());
+      .            .                      .                   .                      .                   .           
+-- line 1989 ----------------------------------------
+-- line 2042 ----------------------------------------
+      .            .                      .                   .                      .                   .           		// Write to file
+      .            .                      .                   .                      .                   .           		varData->set_cur(t, 0, 0);
+      .            .                      .                   .                      .                   .           		varData->put(&(dataBlobTag[0][0]), 1, nLat, nLon);
+      .            .                      .                   .                      .                   .           	}
+      .            .                      .                   .                      .                   .           */
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           	AnnounceBanner();
+      .            .                      .                   .                      .                   .           
+      0            0                      0                   0             72,488,599 ( 0.50%)  1,049,254 ( 0.63%)  } catch(Exception & e) {
+      .            .                      .                   .                      .                   .           	Announce(e.ToString().c_str());
+      .            .                      .                   .                      .                   .           }
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           #if defined(TEMPEST_MPIOMP)
+      .            .                      .                   .                      .                   .           	// Deinitialize MPI
+      0            0             40,674,101 ( 0.28%)        439 ( 0.00%)    64,704,356 ( 0.44%)      2,208 ( 0.00%)  	MPI_Finalize();
+      .            .                      .                   .                      .                   .           #endif
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           }
+      .            .                      .                   .                      .                   .           
+      .            .                      .                   .                      .                   .           ///////////////////////////////////////////////////////////////////////////////
+
+--------------------------------------------------------------------------------
+curB             curBk        totB                    totBk                totFdB                  totFdBk              
+--------------------------------------------------------------------------------
+111,871 (100.0%) 943 (100.0%) 13,250,224,349 (90.79%) 138,951,834 (83.40%) 12,318,956,815 (84.41%) 115,638,231 (69.41%)  events annotated
+

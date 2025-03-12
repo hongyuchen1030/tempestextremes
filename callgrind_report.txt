@@ -1,0 +1,1234 @@
+--------------------------------------------------------------------------------
+Profile data file 'xtmemory_serial.0.kcg' (creator: xtree-1)
+--------------------------------------------------------------------------------
+Profiled target:  ./bin/StitchBlobs --in_list ./test/ERA5_AR_test/ERA5_AR_files.txt --out_list ./test/ERA5_AR_test/ERA5_AR_SB_files.txt --min_overlap_prev 25.0 --max_overlap_prev 100.0 --min_overlap_next 25.0 --max_overlap_next 100.0 --latname latitude --lonname longitude --var AR_binary_tag (PID 426146)
+Events recorded:  curB curBk totB totBk totFdB totFdBk
+Events shown:     curB curBk totB totBk totFdB totFdBk
+Event sort order: curB curBk totB totBk totFdB totFdBk
+Thresholds:       99 0 0 0 0 0
+Include dirs:     
+User annotated:   
+Auto-annotation:  on
+
+--------------------------------------------------------------------------------
+curB                curBk            totB                totBk              totFdB             totFdBk            
+--------------------------------------------------------------------------------
+64,891,129 (100.0%) 814,282 (100.0%) 74,780,852 (100.0%) 2,434,751 (100.0%) 9,889,723 (100.0%) 1,620,469 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+curB                curBk            totB                totBk              totFdB             totFdBk             file:function
+--------------------------------------------------------------------------------
+63,623,863 (98.05%) 810,580 (99.55%) 73,402,933 (98.16%) 2,430,287 (99.82%) 9,781,299 (98.90%) 1,619,710 (99.95%)  src/blobs/StitchBlobs.cpp:main
+62,808,224 (96.79%) 809,720 (99.44%) 72,525,062 (96.98%) 2,429,163 (99.77%) 9,717,974 (98.26%) 1,619,443 (99.94%)  src/base/SimpleGrid.cpp:SimpleGrid::GenerateLatitudeLongitude(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool, bool)
+62,790,936 (96.76%) 809,718 (99.44%) 72,507,484 (96.96%) 2,429,143 (99.77%) 9,716,548 (98.25%) 1,619,425 (99.94%)  src/base/SimpleGrid.cpp:SimpleGrid::GenerateLatitudeLongitude(DataArray1D<double> const&, DataArray1D<double> const&, bool, bool, bool)
+37,873,160 (58.36%) 809,714 (99.44%) 47,589,708 (63.64%) 2,429,139 (99.77%) 9,716,548 (98.25%) 1,619,425 (99.94%)  src/base/SimpleGrid.cpp:SimpleGrid::GenerateRectilinearConnectivity(int, int, bool, bool)
+24,935,048 (38.43%)       5 ( 0.00%) 24,935,048 (33.34%)         5 ( 0.00%)         0                  0           src/base/DataArray1D.h:DataArray1D<double>::Allocate(unsigned long)
+24,917,760 (38.40%)       1 ( 0.00%) 24,917,760 (33.32%)         1 ( 0.00%)         0                  0           /usr/include/c++/13/bits/alloc_traits.h:std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_allocate(unsigned long)
+24,917,760 (38.40%)       1 ( 0.00%) 24,917,760 (33.32%)         1 ( 0.00%)         0                  0           /usr/include/c++/13/bits/new_allocator.h:std::__new_allocator<std::vector<int, std::allocator<int> > >::allocate(unsigned long, void const*)
+24,917,760 (38.40%)       1 ( 0.00%) 24,917,760 (33.32%)         1 ( 0.00%)         0                  0           /usr/include/c++/13/bits/stl_vector.h:std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::resize(unsigned long)
+24,917,760 (38.40%)       1 ( 0.00%) 24,917,760 (33.32%)         1 ( 0.00%)         0                  0           /usr/include/c++/13/bits/vector.tcc:std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_default_append(unsigned long)
+12,955,400 (19.96%) 809,713 (99.44%) 22,671,948 (30.32%) 2,429,138 (99.77%) 9,716,548 (98.25%) 1,619,425 (99.94%)  /usr/include/c++/13/bits/stl_vector.h:std::vector<int, std::allocator<int> >::push_back(int&&)
+12,955,400 (19.96%) 809,713 (99.44%) 22,671,948 (30.32%) 2,429,138 (99.77%) 9,716,548 (98.25%) 1,619,425 (99.94%)  /usr/include/c++/13/bits/vector.tcc:void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&)
+12,955,400 (19.96%) 809,713 (99.44%) 22,671,948 (30.32%) 2,429,138 (99.77%) 9,716,548 (98.25%) 1,619,425 (99.94%)  /usr/include/c++/13/bits/vector.tcc:void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&)
+12,955,400 (19.96%) 809,713 (99.44%) 22,671,948 (30.32%) 2,429,138 (99.77%)         0                  0           /usr/include/c++/13/bits/alloc_traits.h:std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long)
+12,955,400 (19.96%) 809,713 (99.44%) 22,671,948 (30.32%) 2,429,138 (99.77%)         0                  0           /usr/include/c++/13/bits/new_allocator.h:std::__new_allocator<int>::allocate(unsigned long, void const*)
+ 1,049,345 ( 1.62%)   2,733 ( 0.34%)  1,049,345 ( 1.40%)     2,733 ( 0.11%)         0                  0           UnknownFile???:H5FL__malloc
+   977,476 ( 1.51%)     902 ( 0.11%)    977,476 ( 1.31%)       902 ( 0.04%)         0                  0           UnknownFile???:UnknownFn???
+   871,576 ( 1.34%)   2,360 ( 0.29%)    871,576 ( 1.17%)     2,360 ( 0.10%)         0                  0           UnknownFile???:H5FL_reg_malloc
+   714,903 ( 1.10%)     117 ( 0.01%)    729,531 ( 0.98%)       375 ( 0.02%)    30,404 ( 0.31%)       298 ( 0.02%)  src/base/NcFileVector.cpp:NcFileVector::InsertFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long)
+   713,657 ( 1.10%)     101 ( 0.01%)    727,069 ( 0.97%)       338 ( 0.01%)    16,231 ( 0.16%)       250 ( 0.02%)  src/base/NcFileVector.cpp:NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool)
+   712,602 ( 1.10%)     125 ( 0.02%)    731,874 ( 0.98%)       244 ( 0.01%)    21,216 ( 0.21%)       126 ( 0.01%)  src/netcdf-cxx-4.2/netcdf.cpp:NcFile::NcFile(char const*, NcFile::FileMode, unsigned long*, unsigned long, NcFile::FileFormat)
+   659,792 ( 1.02%)     941 ( 0.12%)    659,792 ( 0.88%)       941 ( 0.04%)         0                  0           UnknownFile???:H5FL_reg_calloc
+   580,495 ( 0.89%)     663 ( 0.08%)    600,417 ( 0.80%)       755 ( 0.03%)    17,027 ( 0.17%)        74 ( 0.00%)  UnknownFile???:NC_open
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: src/base/NcFileVector.cpp
+--------------------------------------------------------------------------------
+curB             curBk        totB             totBk        totFdB          totFdBk      
+
+-- line 41 ----------------------------------------
+      .            .                .            .               .            .           }
+      .            .                .            .               .            .           
+      .            .                .            .               .            .           ///////////////////////////////////////////////////////////////////////////////
+      .            .                .            .               .            .           
+      .            .                .            .               .            .           void NcFileVector::InsertFile(
+      .            .                .            .               .            .           	const std::string & strFile,
+      .            .                .            .               .            .           	long lTimeIndex
+      .            .                .            .               .            .           ) {
+710,914 ( 1.10%) 102 ( 0.01%) 718,250 ( 0.96%) 172 ( 0.01%) 17,892 ( 0.18%)  88 ( 0.01%)  	NcFile * pNewFile = new NcFile(strFile.c_str());
+      .            .                .            .               .            .           	if (pNewFile == NULL) {
+      .            .                .            .               .            .           		_EXCEPTIONT("Unable to allocate new NcFile");
+      .            .                .            .               .            .           	}
+      .            .                .            .               .            .           	if (!pNewFile->is_valid()) {
+      .            .                .            .               .            .           		_EXCEPTION1("Cannot open input file \"%s\"", strFile.c_str());
+      .            .                .            .               .            .           	}
+      .            .                .            .               .            .           
+      8 ( 0.00%)   1 ( 0.00%)       8 ( 0.00%)   1 ( 0.00%)      0            0           	m_vecNcFile.push_back(pNewFile);
+    144 ( 0.00%)   2 ( 0.00%)     144 ( 0.00%)   2 ( 0.00%)      0            0           	m_vecFilenames.push_back(strFile);
+      8 ( 0.00%)   1 ( 0.00%)       8 ( 0.00%)   1 ( 0.00%)      0            0           	m_vecTimeIxs.push_back(lTimeIndex);
+     72 ( 0.00%)   1 ( 0.00%)      72 ( 0.00%)   1 ( 0.00%)      0            0           	m_vecFileTime.push_back(NcTimeDimension());
+      .            .                .            .               .            .           
+      .            .                .            .               .            .           	// If a time index is already specified no need to read in the "time" variable
+      .            .                .            .               .            .           	if (lTimeIndex != InvalidTimeIndex) {
+      .            .                .            .               .            .           		m_vecFileType.push_back(FileType_Unknown);
+      .            .                .            .               .            .           
+      .            .                .            .               .            .           	// Identify the FileType by the properties of the "time" variable
+      .            .                .            .               .            .           	} else {
+      0            0               22 ( 0.00%)   2 ( 0.00%)     22 ( 0.00%)   2 ( 0.00%)  		NcDim * dimTime = NcGetTimeDimension(*pNewFile);
+      .            .                .            .               .            .           		if (dimTime == NULL) {
+      .            .                .            .               .            .           			NcVar * varTime = NcGetTimeVariable(*pNewFile);
+      .            .                .            .               .            .           			if (varTime != NULL) {
+      .            .                .            .               .            .           				ReadCFTimeDataFromNcFile(
+      .            .                .            .               .            .           					pNewFile,
+      .            .                .            .               .            .           					strFile,
+      .            .                .            .               .            .           					m_vecFileTime[m_vecFileTime.size()-1],
+      .            .                .            .               .            .           					false);
+      .            .                .            .               .            .           				m_vecFileType.push_back(FileType_Standard);
+      .            .                .            .               .            .           			} else {
+      .            .                .            .               .            .           				m_vecFileType.push_back(FileType_NoTimeDim);
+      .            .                .            .               .            .           			}
+      .            .                .            .               .            .           		} else {
+      0            0               22 ( 0.00%)   2 ( 0.00%)     22 ( 0.00%)   2 ( 0.00%)  			NcVar * varTime = NcGetTimeVariable(*pNewFile);
+      .            .                .            .               .            .           			if (varTime == NULL) {
+      .            .                .            .               .            .           				m_vecFileType.push_back(FileType_NoTimeVar);
+      .            .                .            .               .            .           			} else {
+      .            .                .            .               .            .           				// If the time variable exists read it in
+  3,753 ( 0.01%)   9 ( 0.00%)  10,942 ( 0.01%) 189 ( 0.01%) 12,409 ( 0.13%) 202 ( 0.01%)  				ReadCFTimeDataFromNcFile(
+      .            .                .            .               .            .           					pNewFile,
+      .            .                .            .               .            .           					strFile,
+      .            .                .            .               .            .           					m_vecFileTime[m_vecFileTime.size()-1],
+      .            .                .            .               .            .           					false);
+      .            .                .            .               .            .           
+      .            .                .            .               .            .           				// Check time type
+      0            0               59 ( 0.00%)   4 ( 0.00%)     59 ( 0.00%)   4 ( 0.00%)  				NcAtt * attType = varTime->get_att("type");
+      .            .                .            .               .            .           				if (attType == NULL) {
+      4 ( 0.00%)   1 ( 0.00%)       4 ( 0.00%)   1 ( 0.00%)      0            0           					m_vecFileType.push_back(FileType_Standard);
+      .            .                .            .               .            .           				} else {
+      .            .                .            .               .            .           					std::string strType = attType->as_string(0);
+      .            .                .            .               .            .           					if (strType == "daily mean climatology") {
+      .            .                .            .               .            .           						m_vecFileType.push_back(FileType_DailyMeanClimo);
+      .            .                .            .               .            .           					} else if (strType == "annual mean climatology") {
+      .            .                .            .               .            .           						m_vecFileType.push_back(FileType_AnnualMeanClimo);
+      .            .                .            .               .            .           					} else {
+      .            .                .            .               .            .           						m_vecFileType.push_back(FileType_Standard);
+-- line 104 ----------------------------------------
+-- line 124 ----------------------------------------
+      .            .                .            .               .            .           	}
+      .            .                .            .               .            .           
+      .            .                .            .               .            .           	int iLast = 0;
+      .            .                .            .               .            .           	for (int i = 0; i <= strFiles.length(); i++) {
+      .            .                .            .               .            .           		if ((i == strFiles.length()) ||
+      .            .                .            .               .            .           		    (strFiles[i] == ';')
+      .            .                .            .               .            .           		) {
+      .            .                .            .               .            .           			std::string strFile =
+      0            0              112 ( 0.00%)   1 ( 0.00%)      0            0           				strFiles.substr(iLast, i - iLast);
+      .            .                .            .               .            .           
+713,657 ( 1.10%) 101 ( 0.01%) 726,957 ( 0.97%) 337 ( 0.01%) 16,119 ( 0.16%) 249 ( 0.02%)  			InsertFile(strFile);
+      .            .                .            .               .            .           
+      .            .                .            .               .            .           			iLast = i+1;
+      0            0                0            0             112 ( 0.00%)   1 ( 0.00%)  		}
+      .            .                .            .               .            .           	}
+      .            .                .            .               .            .           
+      .            .                .            .               .            .           	if (size() == 0) {
+      .            .                .            .               .            .           		_EXCEPTION1("No input files found in \"%s\"",
+      .            .                .            .               .            .           			strFiles.c_str());
+      .            .                .            .               .            .           	}
+      .            .                .            .               .            .           	_ASSERT(size() == m_vecFilenames.size());
+      .            .                .            .               .            .           }
+-- line 145 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: src/base/DataArray1D.h
+--------------------------------------------------------------------------------
+curB                curBk      totB                totBk      totFdB       totFdBk    
+
+-- line 51 ----------------------------------------
+         .          .                   .          .            .          .           	) :
+         .          .                   .          .            .          .           		m_fOwnsData(true),
+         .          .                   .          .            .          .           		m_sSize(sSize),
+         .          .                   .          .            .          .           		m_fHasFillValue(false),
+         .          .                   .          .            .          .           		m_dFillValue(T()),
+         .          .                   .          .            .          .           		m_data(NULL)
+         .          .                   .          .            .          .           	{
+         .          .                   .          .            .          .           		if (fAllocate) {
+    17,288 ( 0.03%) 2 ( 0.00%)     17,288 ( 0.02%) 2 ( 0.00%)   0          0           			Allocate(sSize);
+         .          .                   .          .            .          .           		}
+         .          .                   .          .            .          .           	}
+         .          .                   .          .            .          .           
+         .          .                   .          .            .          .           	///	<summary>
+         .          .                   .          .            .          .           	///		Copy constructor.
+         .          .                   .          .            .          .           	///	</summary>
+         .          .                   .          .            .          .           	DataArray1D(const DataArray1D<T> & da) :
+         .          .                   .          .            .          .           		m_fOwnsData(true),
+-- line 67 ----------------------------------------
+-- line 70 ----------------------------------------
+         .          .                   .          .            .          .           	{
+         .          .                   .          .            .          .           		Assign(da);
+         .          .                   .          .            .          .           	}
+         .          .                   .          .            .          .           
+         .          .                   .          .            .          .           	///	<summary>
+         .          .                   .          .            .          .           	///		Destructor.
+         .          .                   .          .            .          .           	///	</summary>
+         .          .                   .          .            .          .           	virtual ~DataArray1D() {
+         0          0                   0          0          496 ( 0.01%) 1 ( 0.00%)  		Detach();
+         .          .                   .          .            .          .           	}
+         .          .                   .          .            .          .           
+         .          .                   .          .            .          .           	///	<summary>
+         .          .                   .          .            .          .           	///		Get the size of the data, in bytes.
+         .          .                   .          .            .          .           	///	</summary>
+         .          .                   .          .            .          .           	virtual size_t GetByteSize() const {
+         .          .                   .          .            .          .           
+         .          .                   .          .            .          .           		// Verify data aligns on word boundaries
+-- line 86 ----------------------------------------
+-- line 107 ----------------------------------------
+         .          .                   .          .            .          .           		if (sSize == 0) {
+         .          .                   .          .            .          .           			m_sSize = 0;
+         .          .                   .          .            .          .           
+         .          .                   .          .            .          .           			return;
+         .          .                   .          .            .          .           		}
+         .          .                   .          .            .          .           		if ((m_data == NULL) || (m_sSize != sSize)) {
+         .          .                   .          .            .          .           			m_sSize = sSize;
+         .          .                   .          .            .          .           
+24,935,048 (38.43%) 5 ( 0.00%) 24,935,544 (33.34%) 6 ( 0.00%)   0          0           			m_data = reinterpret_cast<T *>(malloc(GetByteSize()));
+         .          .                   .          .            .          .           
+         .          .                   .          .            .          .           			if (m_data == NULL) {
+         .          .                   .          .            .          .           				_EXCEPTION1("Failed malloc call (%lu bytes)", GetByteSize());
+         .          .                   .          .            .          .           			}
+         .          .                   .          .            .          .           		}
+         .          .                   .          .            .          .           
+         .          .                   .          .            .          .           		Zero();
+         .          .                   .          .            .          .           	}
+-- line 123 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: src/blobs/StitchBlobs.cpp
+--------------------------------------------------------------------------------
+curB                curBk            totB                totBk              totFdB             totFdBk            
+
+-- line 2588 ----------------------------------------
+         .                .                   .                  .                  .                  .           	// Time variable units
+         .                .                   .                  .                  .                  .           	std::string strOutTimeUnits;
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	// Verbose output
+         .                .                   .                  .                  .                  .           	bool fVerbose;
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	// Parse the command line
+         .                .                   .                  .                  .                  .           	BeginCommandLine()
+         0                0                  96 ( 0.00%)         2 ( 0.00%)         0                  0           		CommandLineString(strInputFile, "in", "");
+         0                0                 104 ( 0.00%)         2 ( 0.00%)         8 ( 0.00%)         1 ( 0.00%)  		CommandLineString(strInputFileList, "in_list", "");
+         0                0                 120 ( 0.00%)         2 ( 0.00%)        16 ( 0.00%)         1 ( 0.00%)  		CommandLineString(strConnectivity, "in_connect", "");
+         0                0                  88 ( 0.00%)         1 ( 0.00%)         0                  0           		CommandLineBool(fDiagonalConnectivity, "diag_connect");
+         0                0                 152 ( 0.00%)         2 ( 0.00%)        32 ( 0.00%)         1 ( 0.00%)  		CommandLineString(strOutputFile, "out", "");
+         0                0                  88 ( 0.00%)         1 ( 0.00%)         0                  0           		CommandLineString(strOutputFileList, "out_list", "");
+         0                0                  88 ( 0.00%)         1 ( 0.00%)         0                  0           		CommandLineString(strVariable, "var", "binary_tag");
+         0                0                  88 ( 0.00%)         1 ( 0.00%)         0                  0           		CommandLineString(strOutputVariable, "outvar", "object_id");
+         0                0                 216 ( 0.00%)         2 ( 0.00%)        64 ( 0.00%)         1 ( 0.00%)  		CommandLineInt(nMinBlobSize, "minsize", 1);
+         0                0                  88 ( 0.00%)         1 ( 0.00%)         0                  0           		CommandLineString(strMinTime, "mintime", "1");
+         0                0                  88 ( 0.00%)         1 ( 0.00%)         0                  0           		CommandLineBool(fTagOnly, "tagonly");
+         0                0                 153 ( 0.00%)         4 ( 0.00%)        34 ( 0.00%)         2 ( 0.00%)  		CommandLineDoubleD(dMinPercentOverlapPrev, "min_overlap_prev", 0.0, "(%)")
+         0                0                 153 ( 0.00%)         4 ( 0.00%)        34 ( 0.00%)         2 ( 0.00%)  		CommandLineDoubleD(dMaxPercentOverlapPrev, "max_overlap_prev", 100.0, "(%)")
+         0                0                 153 ( 0.00%)         4 ( 0.00%)        34 ( 0.00%)         2 ( 0.00%)  		CommandLineDoubleD(dMinPercentOverlapNext, "min_overlap_next", 0.0, "(%)")
+         0                0                 153 ( 0.00%)         4 ( 0.00%)        34 ( 0.00%)         2 ( 0.00%)  		CommandLineDoubleD(dMaxPercentOverlapNext, "max_overlap_next", 100.0, "(%)")
+         0                0                  88 ( 0.00%)         1 ( 0.00%)         0                  0           		CommandLineDouble(dMergeDistDeg, "merge_dist", 0.0); 
+         0                0                 459 ( 0.00%)         6 ( 0.00%)       184 ( 0.00%)         3 ( 0.00%)  		CommandLineStringD(strRestrictRegion, "restrict_region", "", "(lat0,lat1,lon0,lon1,count)");
+         0                0                  88 ( 0.00%)         1 ( 0.00%)         0                  0           		CommandLineBool(fRegional, "regional");
+         0                0                  88 ( 0.00%)         1 ( 0.00%)         0                  0           		CommandLineDouble(dMinLatDeg, "minlat", -90.0);
+         0                0                  88 ( 0.00%)         1 ( 0.00%)         0                  0           		CommandLineDouble(dMaxLatDeg, "maxlat", 90.0);
+         0                0                  88 ( 0.00%)         1 ( 0.00%)         0                  0           		CommandLineDouble(dMinLonDeg, "minlon", 0.0);
+         0                0                  88 ( 0.00%)         1 ( 0.00%)         0                  0           		CommandLineDouble(dMaxLonDeg, "maxlon", 360.0);
+         0                0                  88 ( 0.00%)         1 ( 0.00%)         0                  0           		CommandLineBool(fFlatten, "flatten");
+         0                0                  88 ( 0.00%)         1 ( 0.00%)         0                  0           		CommandLineString(strLatitudeName, "latname","lat");
+         0                0                  88 ( 0.00%)         1 ( 0.00%)         0                  0           		CommandLineString(strLongitudeName, "lonname","lon");
+         0                0                  88 ( 0.00%)         1 ( 0.00%)         0                  0           		CommandLineString(strOutTimeUnits,"outtimeunits","");
+         0                0                  88 ( 0.00%)         1 ( 0.00%)         0                  0           		CommandLineString(strThresholdCmd, "thresholdcmd", "");
+         0                0                  88 ( 0.00%)         1 ( 0.00%)         0                  0           		CommandLineBool(fVerbose, "verbose");
+         .                .                   .                  .                  .                  .           
+        79 ( 0.00%)       2 ( 0.00%)        158 ( 0.00%)         4 ( 0.00%)        79 ( 0.00%)         2 ( 0.00%)  		ParseCommandLine(argc, argv);
+     8,192 ( 0.01%)       1 ( 0.00%)      8,192 ( 0.01%)         1 ( 0.00%)     2,903 ( 0.03%)        35 ( 0.00%)  	EndCommandLine(argv)
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	AnnounceBanner();
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	// Create Variable registry
+     1,792 ( 0.00%)      32 ( 0.00%)      1,792 ( 0.00%)        32 ( 0.00%)         0                  0           	VariableRegistry varreg;
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	// Check input
+         .                .                   .                  .                  .                  .           	if ((strInputFile == "") && (strInputFileList == "")) {
+         .                .                   .                  .                  .                  .           		_EXCEPTIONT("No input file (--in) or (--in_list) specified");
+         .                .                   .                  .                  .                  .           	}
+         .                .                   .                  .                  .                  .           	if ((strInputFile != "") && (strInputFileList != "")) {
+         .                .                   .                  .                  .                  .           		_EXCEPTIONT("Only one of input file (--in) or (--in_list) allowed");
+         .                .                   .                  .                  .                  .           	}
+-- line 2639 ----------------------------------------
+-- line 2647 ----------------------------------------
+         .                .                   .                  .                  .                  .           	}
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	// Check variable
+         .                .                   .                  .                  .                  .           	if (strVariable == "") {
+         .                .                   .                  .                  .                  .           		_EXCEPTIONT("No variable name (--var) specified");
+         .                .                   .                  .                  .                  .           	}
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	// Register variable
+       248 ( 0.00%)       2 ( 0.00%)        248 ( 0.00%)         2 ( 0.00%)         0                  0           	int varix = varreg.FindOrRegister(strVariable);
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	// Check output variable
+         .                .                   .                  .                  .                  .           	if (strOutputVariable.length() == 0) {
+         .                .                   .                  .                  .                  .           		strOutputVariable = strVariable + "tag";
+         .                .                   .                  .                  .                  .           	}
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	// Input file list
+         .                .                   .                  .                  .                  .           	FilenameList vecInputFiles;
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	if (strInputFile != "") {
+         .                .                   .                  .                  .                  .           		vecInputFiles.push_back(strInputFile);
+         .                .                   .                  .                  .                  .           	}
+         .                .                   .                  .                  .                  .           	if (strInputFileList != "") {
+    58,048 ( 0.09%)     373 ( 0.05%)     83,176 ( 0.11%)       385 ( 0.02%)    25,128 ( 0.25%)        12 ( 0.00%)  		vecInputFiles.FromFile(strInputFileList, false);
+         .                .                   .                  .                  .                  .           	}
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	int nFiles = vecInputFiles.size();
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	// Output file list
+         .                .                   .                  .                  .                  .           	FilenameList vecOutputFiles;
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	if (strOutputFile != "") {
+         .                .                   .                  .                  .                  .           		vecOutputFiles.push_back(strOutputFile);
+         .                .                   .                  .                  .                  .           	}
+         .                .                   .                  .                  .                  .           	if (strOutputFileList != "") {
+    61,768 ( 0.10%)     373 ( 0.05%)     86,906 ( 0.12%)       385 ( 0.02%)    25,138 ( 0.25%)        12 ( 0.00%)  		vecOutputFiles.FromFile(strOutputFileList, false);
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           		if (vecOutputFiles.size() != vecInputFiles.size()) {
+         .                .                   .                  .                  .                  .           			_EXCEPTION2("Mismatch in number of rows of --in_list (%lu) and --out_list (%lu)",
+         .                .                   .                  .                  .                  .           				vecInputFiles.size(), vecOutputFiles.size());
+         .                .                   .                  .                  .                  .           		}
+         .                .                   .                  .                  .                  .           	}
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	// Parse --mintime
+-- line 2689 ----------------------------------------
+-- line 2798 ----------------------------------------
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	// No connectivity file; check for latitude/longitude dimension
+         .                .                   .                  .                  .                  .           	} else {
+         .                .                   .                  .                  .                  .           		AnnounceStartBlock("No connectivity file specified");
+         .                .                   .                  .                  .                  .           		Announce("Attempting to generate latitude-longitude grid from data file");
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           		// Load in the benchmark file
+         .                .                   .                  .                  .                  .           		NcFileVector vecNcFiles;
+   685,512 ( 1.06%)      77 ( 0.01%)    694,056 ( 0.93%)       265 ( 0.01%)     9,669 ( 0.10%)       195 ( 0.01%)  		vecNcFiles.ParseFromString(vecInputFiles[0]);
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           		_ASSERT(vecNcFiles.size() > 0);
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           		if (vecNcFiles.size() < 1) {
+         .                .                   .                  .                  .                  .           			_EXCEPTIONT("No data files specified; unable to generate grid");
+         .                .                   .                  .                  .                  .           		}
+         .                .                   .                  .                  .                  .           
+62,808,224 (96.79%) 809,720 (99.44%) 72,525,062 (96.98%) 2,429,163 (99.77%) 9,717,942 (98.26%) 1,619,439 (99.94%)  		grid.GenerateLatitudeLongitude(
+         .                .                   .                  .                  .                  .           			vecNcFiles[0],
+         .                .                   .                  .                  .                  .           			strLatitudeName,
+         .                .                   .                  .                  .                  .           			strLongitudeName,
+         .                .                   .                  .                  .                  .           			fRegional,
+         .                .                   .                  .                  .                  .           			fDiagonalConnectivity);
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           		_ASSERT(grid.m_nGridDim.size() == 2);
+         .                .                   .                  .                  .                  .           
+-- line 2822 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: src/netcdf-cxx-4.2/netcdf.cpp
+--------------------------------------------------------------------------------
+curB             curBk       totB             totBk        totFdB          totFdBk      
+
+-- line 60 ----------------------------------------
+      .           .                .            .               .            .           		       nc_inq_natts(the_id, &num)
+      .           .                .            .               .            .           		       );
+      .           .                .            .               .            .               return num;
+      .           .                .            .               .            .           }
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           NcDim* NcFile::get_dim( NcToken name ) const
+      .           .                .            .               .            .           {
+      .           .                .            .               .            .               int dimid;
+      0           0              133 ( 0.00%)   8 ( 0.00%)    133 ( 0.00%)   8 ( 0.00%)      if(NcError::set_err(
+      .           .                .            .               .            .           			nc_inq_dimid(the_id, name, &dimid)
+      .           .                .            .               .            .           			) != NC_NOERR)
+      .           .                .            .               .            .           	return 0;
+      .           .                .            .               .            .               return get_dim(dimid);
+      .           .                .            .               .            .           }
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           NcVar* NcFile::get_var( NcToken name ) const
+      .           .                .            .               .            .           {
+      .           .                .            .               .            .               int varid;
+      0           0              133 ( 0.00%)   8 ( 0.00%)    133 ( 0.00%)   8 ( 0.00%)      if(NcError::set_err(
+      .           .                .            .               .            .           			nc_inq_varid(the_id, name, &varid)
+      .           .                .            .               .            .           			) != NC_NOERR)
+      .           .                .            .               .            .           	return 0;
+      .           .                .            .               .            .               return get_var(varid);
+      .           .                .            .               .            .           }
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           NcAtt* NcFile::get_att( NcToken aname ) const
+      .           .                .            .               .            .           {
+-- line 86 ----------------------------------------
+-- line 376 ----------------------------------------
+      .           .                .            .               .            .                  mode |= NC_NETCDF4|NC_CLASSIC_MODEL;
+      .           .                .            .               .            .           
+      .           .                .            .               .            .               switch (fmode) {
+      .           .                .            .               .            .               case Write:
+      .           .                .            .               .            .           	mode |= NC_WRITE;
+      .           .                .            .               .            .           	/*FALLTHRU*/
+      .           .                .            .               .            .               case ReadOnly:
+      .           .                .            .               .            .           	// use netcdf-3 interface to permit specifying tuning parameter
+556,419 ( 0.86%) 90 ( 0.01%) 571,611 ( 0.76%) 154 ( 0.01%) 16,260 ( 0.16%)  59 ( 0.00%)  	status = NcError::set_err(
+      .           .                .            .               .            .           				  nc__open(path, mode, bufrsizeptr, &the_id)
+      .           .                .            .               .            .           				  );
+      .           .                .            .               .            .           	if(status != NC_NOERR)
+      .           .                .            .               .            .           	{
+      .           .                .            .               .            .           	    NcError::set_err(status);
+      .           .                .            .               .            .           	    the_id =  -1;
+      .           .                .            .               .            .           	}
+      .           .                .            .               .            .           	in_define_mode = 0;
+-- line 392 ----------------------------------------
+-- line 408 ----------------------------------------
+      .           .                .            .               .            .           	in_define_mode = 1;
+      .           .                .            .               .            .           	break;
+      .           .                .            .               .            .               default:
+      .           .                .            .               .            .           	the_id = ncBad;
+      .           .                .            .               .            .           	in_define_mode = 0;
+      .           .                .            .               .            .           	break;
+      .           .                .            .               .            .               }
+      .           .                .            .               .            .               if (is_valid()) {
+  8,192 ( 0.01%)  1 ( 0.00%)   8,192 ( 0.01%)   1 ( 0.00%)      0            0           	dimensions = new NcDim*[NC_MAX_DIMS];
+ 65,536 ( 0.10%)  1 ( 0.00%)  65,536 ( 0.09%)   1 ( 0.00%)      0            0           	variables = new NcVar*[NC_MAX_VARS];
+      .           .                .            .               .            .           	int i;
+      .           .                .            .               .            .           	for (i = 0; i < num_dims(); i++)
+    120 ( 0.00%)  6 ( 0.00%)     120 ( 0.00%)   6 ( 0.00%)      0            0           	    dimensions[i] = new NcDim(this, i);
+      .           .                .            .               .            .           	for (i = 0; i < num_vars(); i++)
+ 65,903 ( 0.10%) 24 ( 0.00%)  69,983 ( 0.09%)  79 ( 0.00%)  4,956 ( 0.05%)  67 ( 0.00%)  	    variables[i] = new NcVar(this, i);
+ 16,432 ( 0.03%)  3 ( 0.00%)  16,432 ( 0.02%)   3 ( 0.00%)      0            0           	globalv = new NcVar(this, ncGlobal);
+      .           .                .            .               .            .               } else {
+      .           .                .            .               .            .           	dimensions = 0;
+      .           .                .            .               .            .           	variables = 0;
+      .           .                .            .               .            .           	globalv = 0;
+      .           .                .            .               .            .               }
+      .           .                .            .               .            .           }
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           NcToken NcDim::name( void ) const
+-- line 431 ----------------------------------------
+-- line 432 ----------------------------------------
+      .           .                .            .               .            .           {
+      .           .                .            .               .            .               return the_name;
+      .           .                .            .               .            .           }
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           long NcDim::size( void ) const
+      .           .                .            .               .            .           {
+      .           .                .            .               .            .               size_t sz = 0;
+      .           .                .            .               .            .               if (the_file)
+      0           0            4,800 ( 0.01%)  32 ( 0.00%)  4,800 ( 0.05%)  32 ( 0.00%)        NcError::set_err(
+      .           .                .            .               .            .           		       nc_inq_dimlen(the_file->id(), the_id, &sz)
+      .           .                .            .               .            .           		       );
+      .           .                .            .               .            .               return sz;
+      .           .                .            .               .            .           }
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           NcBool NcDim::is_valid( void ) const
+      .           .                .            .               .            .           {
+      .           .                .            .               .            .               return the_file->is_valid() && the_id != ncBad;
+-- line 448 ----------------------------------------
+-- line 500 ----------------------------------------
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           NcDim::NcDim(NcFile* nc, int id)
+      .           .                .            .               .            .           	: the_file(nc), the_id(id)
+      .           .                .            .               .            .           {
+      .           .                .            .               .            .               char nam[NC_MAX_NAME];
+      .           .                .            .               .            .               if (the_file && NcError::set_err(
+      .           .                .            .               .            .           				     nc_inq_dimname(the_file->id(), the_id, nam)
+      .           .                .            .               .            .           				     ) == NC_NOERR) {
+     24 ( 0.00%)  3 ( 0.00%)      24 ( 0.00%)   3 ( 0.00%)      0            0           	the_name = new char[strlen(nam) + 1]; 
+      .           .                .            .               .            .           	strcpy(the_name, nam);
+      .           .                .            .               .            .               } else {
+      .           .                .            .               .            .           	the_name = 0;
+      .           .                .            .               .            .               }
+      .           .                .            .               .            .           }
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           NcDim::NcDim(NcFile* nc, NcToken name, long sz)
+      .           .                .            .               .            .           	: the_file(nc)
+-- line 516 ----------------------------------------
+-- line 548 ----------------------------------------
+      .           .                .            .               .            .           NcTypedComponent_as(long)
+      .           .                .            .               .            .           NcTypedComponent_as(float)
+      .           .                .            .               .            .           NcTypedComponent_as(double)
+      .           .                .            .               .            .           NcTypedComponent_as(ncint64)
+      .           .                .            .               .            .           NcTypedComponent_as(ncuint64)
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           char* NcTypedComponent::as_string( long n ) const
+      .           .                .            .               .            .           {
+      0           0              449 ( 0.00%)  24 ( 0.00%)    345 ( 0.00%)  20 ( 0.00%)      NcValues* tmp = values();
+     42 ( 0.00%)  2 ( 0.00%)      42 ( 0.00%)   2 ( 0.00%)      0            0               char* rval = tmp->as_string(n);
+      0           0                0            0             104 ( 0.00%)   4 ( 0.00%)      delete tmp;
+      .           .                .            .               .            .               return rval;
+      .           .                .            .               .            .           }
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           NcTypedComponent::NcTypedComponent ( NcFile* nc )
+      .           .                .            .               .            .           	: the_file(nc)
+      .           .                .            .               .            .           {}
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           NcValues* NcTypedComponent::get_space( long numVals ) const
+      .           .                .            .               .            .           {
+      .           .                .            .               .            .               NcValues* valp;
+      .           .                .            .               .            .               if (numVals < 1)
+      0           0               69 ( 0.00%)   4 ( 0.00%)     69 ( 0.00%)   4 ( 0.00%)  	numVals = num_vals();
+      0           0               69 ( 0.00%)   4 ( 0.00%)     69 ( 0.00%)   4 ( 0.00%)      switch (type()) {
+      .           .                .            .               .            .                 case ncFloat:
+      .           .                .            .               .            .           	valp = new NcValues_float(numVals);
+      .           .                .            .               .            .           	break;
+      .           .                .            .               .            .                 case ncDouble:
+      .           .                .            .               .            .           	valp = new NcValues_double(numVals);
+      .           .                .            .               .            .           	break;
+      .           .                .            .               .            .           	  case ncInt64:
+      .           .                .            .               .            .           	valp = new NcValues_ncint64(numVals);
+-- line 579 ----------------------------------------
+-- line 584 ----------------------------------------
+      .           .                .            .               .            .                 case ncInt:
+      .           .                .            .               .            .           	valp = new NcValues_int(numVals);
+      .           .                .            .               .            .           	break;
+      .           .                .            .               .            .                 case ncShort:
+      .           .                .            .               .            .           	valp = new NcValues_short(numVals);
+      .           .                .            .               .            .           	break;
+      .           .                .            .               .            .                 case ncByte:
+      .           .                .            .               .            .                 case ncChar:
+      0           0              104 ( 0.00%)   4 ( 0.00%)      0            0           	valp = new NcValues_char(numVals);
+      .           .                .            .               .            .           	break;
+      .           .                .            .               .            .           	  case ncString:
+      .           .                .            .               .            .           	valp = new NcValues_ncstring(numVals);
+      .           .                .            .               .            .           	break;
+      .           .                .            .               .            .                 case ncNoType:
+      .           .                .            .               .            .                 default:
+      .           .                .            .               .            .           	valp = 0;
+      .           .                .            .               .            .               }
+-- line 600 ----------------------------------------
+-- line 669 ----------------------------------------
+      .           .                .            .               .            .           			 );
+      .           .                .            .               .            .                 }
+      .           .                .            .               .            .               }
+      .           .                .            .               .            .               return natt;
+      .           .                .            .               .            .           }
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           NcAtt* NcVar::get_att( NcToken aname ) const
+      .           .                .            .               .            .           {
+     79 ( 0.00%)  4 ( 0.00%)     153 ( 0.00%)   8 ( 0.00%)      0            0               NcAtt* att = new NcAtt(the_file, this, aname);
+      0           0              113 ( 0.00%)   8 ( 0.00%)    113 ( 0.00%)   8 ( 0.00%)      if (! att->is_valid()) {
+      0           0                0            0              74 ( 0.00%)   4 ( 0.00%)  	delete att;
+      .           .                .            .               .            .           	return 0;
+      .           .                .            .               .            .               }
+      .           .                .            .               .            .               return att;
+      .           .                .            .               .            .           }
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           NcAtt* NcVar::get_att( int n ) const
+      .           .                .            .               .            .           {
+      .           .                .            .               .            .               if (n < 0 || n >= num_atts())
+-- line 687 ----------------------------------------
+-- line 1258 ----------------------------------------
+      .           .                .            .               .            .                start[j] = the_cur[j];
+      .           .                .            .               .            .               }
+      .           .                .            .               .            .               return NcError::set_err(
+      .           .                .            .               .            .           			    nc_get_vara_text (the_file->id(), the_id, start, count, vals)
+      .           .                .            .               .            .           			    ) == NC_NOERR;
+      .           .                .            .               .            .           }
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           NcVar_get_array(short)
+  2,608 ( 0.00%)  2 ( 0.00%)   3,304 ( 0.00%)  16 ( 0.00%)    688 ( 0.01%)  12 ( 0.00%)  NcVar_get_array(int)
+      .           .                .            .               .            .           NcVar_get_array(long)
+      .           .                .            .               .            .           NcVar_get_array(float)
+      0           0            1,200 ( 0.00%)  12 ( 0.00%)  1,184 ( 0.01%)   8 ( 0.00%)  NcVar_get_array(double)
+      .           .                .            .               .            .           NcVar_get_array2(ncint64, longlong)
+      .           .                .            .               .            .           NcVar_get_array2(ncuint64, ulonglong)
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           #define NcVar_get_nd_array2(TYPE,NCTYPE)					      \
+      .           .                .            .               .            .           NcBool NcVar::get( TYPE* vals, const long* count ) const		      \
+      .           .                .            .               .            .           {									      \
+      .           .                .            .               .            .               if (! the_file->data_mode())					      \
+      .           .                .            .               .            .                 return FALSE;							      \
+-- line 1277 ----------------------------------------
+-- line 1325 ----------------------------------------
+      .           .                .            .               .            .               t[4] = c4;
+      .           .                .            .               .            .               t[5] = -1;
+      .           .                .            .               .            .               for(int j = 0; j < 6; j++) { // find how many parameters were used
+      .           .                .            .               .            .           	int i;
+      .           .                .            .               .            .           	if (t[j] == -1) {
+      .           .                .            .               .            .           	    if (num_dims() < j)
+      .           .                .            .               .            .           	      return FALSE;	// too many for variable's dimensionality
+      .           .                .            .               .            .           	    for (i = 0; i < j; i++) {
+      0           0               96 ( 0.00%)   8 ( 0.00%)  2,400 ( 0.02%)  16 ( 0.00%)  		if (t[i] >= get_dim(i)->size() && ! get_dim(i)->is_unlimited())
+      .           .                .            .               .            .           		  return FALSE;	// too big for dimension
+      .           .                .            .               .            .           		the_cur[i] = t[i];
+      .           .                .            .               .            .           	    }
+      .           .                .            .               .            .           	    for(i = j; i < num_dims(); i++)
+      .           .                .            .               .            .           	      the_cur[i] = 0;
+      .           .                .            .               .            .           	    return TRUE;
+      .           .                .            .               .            .           	}
+      .           .                .            .               .            .               }
+-- line 1341 ----------------------------------------
+-- line 1511 ----------------------------------------
+      .           .                .            .               .            .           }
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           NcVar::NcVar(NcFile* nc, int id)
+      .           .                .            .               .            .              : NcTypedComponent(nc), the_id(id)
+      .           .                .            .               .            .           {
+      .           .                .            .               .            .               char nam[NC_MAX_NAME];
+      .           .                .            .               .            .               if (the_file 
+    137 ( 0.00%)  8 ( 0.00%)   6,357 ( 0.01%)  95 ( 0.00%) 14,661 ( 0.15%) 152 ( 0.01%)  	&& NcError::set_err(
+      .           .                .            .               .            .           			    nc_inq_varname(the_file->id(), the_id, nam)
+      .           .                .            .               .            .           			    ) == NC_NOERR) {
+     38 ( 0.00%)  4 ( 0.00%)      38 ( 0.00%)   4 ( 0.00%)      0            0           	the_name = new char[1 + strlen(nam)];
+      .           .                .            .               .            .           	strcpy(the_name, nam);
+      .           .                .            .               .            .               } else {
+      .           .                .            .               .            .           	the_name = 0;
+      .           .                .            .               .            .               }
+ 81,920 ( 0.13%) 10 ( 0.00%)  81,920 ( 0.11%)  10 ( 0.00%)      0            0               init_cur();
+      .           .                .            .               .            .           }
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           int NcVar::attnum( NcToken attrname ) const
+      .           .                .            .               .            .           {
+      .           .                .            .               .            .               int num;
+      .           .                .            .               .            .               for(num=0; num < num_atts(); num++) {
+      .           .                .            .               .            .           	char aname[NC_MAX_NAME];
+      .           .                .            .               .            .           	NcError::set_err(
+-- line 1535 ----------------------------------------
+-- line 1552 ----------------------------------------
+      .           .                .            .               .            .                 return 0;
+      .           .                .            .               .            .               char* rname = new char[1 + strlen(aname)];
+      .           .                .            .               .            .               strcpy(rname, aname);
+      .           .                .            .               .            .               return rname;
+      .           .                .            .               .            .           }
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           void NcVar::init_cur( void )
+      .           .                .            .               .            .           {
+ 40,960 ( 0.06%)  5 ( 0.00%)  40,960 ( 0.05%)   5 ( 0.00%)      0            0               the_cur = new long[NC_MAX_DIMS]; // *** don't know num_dims() yet?
+ 40,960 ( 0.06%)  5 ( 0.00%)  40,960 ( 0.05%)   5 ( 0.00%)      0            0               cur_rec = new long[NC_MAX_DIMS]; // *** don't know num_dims() yet?
+      .           .                .            .               .            .               for(int i = 0; i < NC_MAX_DIMS; i++) { 
+      .           .                .            .               .            .           	the_cur[i] = 0; cur_rec[i] = 0; }
+      .           .                .            .               .            .           }
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           NcAtt::NcAtt(NcFile* nc, const NcVar* var, NcToken name)
+      .           .                .            .               .            .              : NcTypedComponent(nc), the_variable(var)
+      .           .                .            .               .            .           {
+     15 ( 0.00%)  2 ( 0.00%)      25 ( 0.00%)   4 ( 0.00%)      0            0               the_name = new char[1 + strlen(name)];
+      .           .                .            .               .            .               strcpy(the_name, name);
+      .           .                .            .               .            .           }
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           NcAtt::NcAtt(NcFile* nc, NcToken name)
+      .           .                .            .               .            .              : NcTypedComponent(nc), the_variable(NULL)
+      .           .                .            .               .            .           {
+      .           .                .            .               .            .               the_name = new char[1 + strlen(name)];
+      .           .                .            .               .            .               strcpy(the_name, name);
+      .           .                .            .               .            .           }
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           NcAtt::~NcAtt( void )
+      .           .                .            .               .            .           {
+      0           0                0            0              10 ( 0.00%)   2 ( 0.00%)      delete [] the_name;
+      0           0                0            0              74 ( 0.00%)   4 ( 0.00%)  }
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           NcToken NcAtt::name( void ) const
+      .           .                .            .               .            .           {
+      .           .                .            .               .            .               return the_name;
+      .           .                .            .               .            .           }
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           NcType NcAtt::type( void ) const
+      .           .                .            .               .            .           {
+      .           .                .            .               .            .               nc_type typ;
+      0           0              207 ( 0.00%)  12 ( 0.00%)    207 ( 0.00%)  12 ( 0.00%)      NcError::set_err(
+      .           .                .            .               .            .           		     nc_inq_atttype(the_file->id(), the_variable->id(), the_name, &typ)
+      .           .                .            .               .            .           		     );
+      .           .                .            .               .            .               return (NcType) typ;
+      .           .                .            .               .            .           }
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           long NcAtt::num_vals( void ) const
+      .           .                .            .               .            .           {
+      .           .                .            .               .            .               size_t len;
+      0           0               69 ( 0.00%)   4 ( 0.00%)     69 ( 0.00%)   4 ( 0.00%)      NcError::set_err(
+      .           .                .            .               .            .           		     nc_inq_attlen(the_file->id(), the_variable->id(), the_name, &len)
+      .           .                .            .               .            .           	     	);
+      .           .                .            .               .            .               return len;
+      .           .                .            .               .            .           }
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           NcBool NcAtt::is_valid( void ) const
+      .           .                .            .               .            .           {
+      .           .                .            .               .            .               int num;
+      .           .                .            .               .            .               return the_file->is_valid() &&
+      .           .                .            .               .            .                 (the_variable->id() == NC_GLOBAL || the_variable->is_valid()) &&
+      0           0              113 ( 0.00%)   8 ( 0.00%)    113 ( 0.00%)   8 ( 0.00%)  	NcError::set_err(
+      .           .                .            .               .            .           			 nc_inq_attid(the_file->id(), the_variable->id(), the_name, &num)
+      .           .                .            .               .            .           			 ) == NC_NOERR;
+      .           .                .            .               .            .           }
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           NcValues* NcAtt::values( void ) const
+      .           .                .            .               .            .           {
+      .           .                .            .               .            .               int status;
+      .           .                .            .               .            .               NcValues* valp;
+      0           0               69 ( 0.00%)   4 ( 0.00%)     69 ( 0.00%)   4 ( 0.00%)      if (type() == ncString) {
+      .           .                .            .               .            .           		size_t sStrings;
+      .           .                .            .               .            .           		status = NcError::set_err(
+      .           .                .            .               .            .           				nc_inq_attlen(the_file->id(), the_variable->id(), the_name, &sStrings));
+      .           .                .            .               .            .           		if (status != NC_NOERR) {
+      .           .                .            .               .            .           			return NULL;
+      .           .                .            .               .            .           		}
+      .           .                .            .               .            .           		if (sStrings != 1) {
+      .           .                .            .               .            .           			NcError::set_err(NC_ECANTCREATE);
+-- line 1630 ----------------------------------------
+-- line 1640 ----------------------------------------
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           		valp = get_space(strlen(szString)+1);
+      .           .                .            .               .            .           		strcpy((char *)valp->base(), szString);
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           		nc_free_string(1, &szString);
+      .           .                .            .               .            .           		return valp;
+      .           .                .            .               .            .           
+      .           .                .            .               .            .           	} else {
+      0           0              242 ( 0.00%)  12 ( 0.00%)    138 ( 0.00%)   8 ( 0.00%)  		valp = get_space();
+      .           .                .            .               .            .           	}
+      0           0               69 ( 0.00%)   4 ( 0.00%)     69 ( 0.00%)   4 ( 0.00%)      switch (type()) {
+      .           .                .            .               .            .               case ncFloat:
+      .           .                .            .               .            .           	status = NcError::set_err(
+      .           .                .            .               .            .           				  nc_get_att_float(the_file->id(), the_variable->id(), the_name,
+      .           .                .            .               .            .           				   (float *)valp->base())
+      .           .                .            .               .            .           				  );
+      .           .                .            .               .            .           	break;
+      .           .                .            .               .            .               case ncDouble:
+      .           .                .            .               .            .           	status = NcError::set_err(
+-- line 1658 ----------------------------------------
+-- line 1686 ----------------------------------------
+      .           .                .            .               .            .           	break;
+      .           .                .            .               .            .               case ncByte:
+      .           .                .            .               .            .           	status = NcError::set_err(
+      .           .                .            .               .            .           				  nc_get_att_schar(the_file->id(), the_variable->id(), the_name,
+      .           .                .            .               .            .           				  (signed char *)valp->base())
+      .           .                .            .               .            .           				  );
+      .           .                .            .               .            .           	break;
+      .           .                .            .               .            .               case ncChar:
+      0           0               69 ( 0.00%)   4 ( 0.00%)     69 ( 0.00%)   4 ( 0.00%)  	status = NcError::set_err(
+      .           .                .            .               .            .           				  nc_get_att_text(the_file->id(), the_variable->id(), the_name,
+      .           .                .            .               .            .           				  (char *)valp->base())
+      .           .                .            .               .            .           				  );
+      .           .                .            .               .            .           	break;
+      .           .                .            .               .            .               case ncNoType:
+      .           .                .            .               .            .               default:
+      .           .                .            .               .            .           	return 0;
+      .           .                .            .               .            .               }
+-- line 1702 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: src/base/SimpleGrid.cpp
+--------------------------------------------------------------------------------
+curB                curBk            totB                totBk              totFdB             totFdBk            
+
+-- line 65 ----------------------------------------
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           void SimpleGrid::GenerateRectilinearConnectivity(
+         .                .                   .                  .                  .                  .           	int nLat,
+         .                .                   .                  .                  .                  .           	int nLon,
+         .                .                   .                  .                  .                  .           	bool fRegional,
+         .                .                   .                  .                  .                  .           	bool fDiagonalConnectivity
+         .                .                   .                  .                  .                  .           ) {
+         .                .                   .                  .                  .                  .           	m_vecConnectivity.clear();
+24,917,760 (38.40%)       1 ( 0.00%) 24,917,760 (33.32%)         1 ( 0.00%)         0                  0           	m_vecConnectivity.resize(nLon * nLat);
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	size_t ixs = 0;
+         .                .                   .                  .                  .                  .           	for (int j = 0; j < nLat; j++) {
+         .                .                   .                  .                  .                  .           	for (int i = 0; i < nLon; i++) {
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           		// Connectivity in eight directions
+         .                .                   .                  .                  .                  .           		if (fDiagonalConnectivity) {
+         .                .                   .                  .                  .                  .           			if (fRegional) {
+-- line 81 ----------------------------------------
+-- line 122 ----------------------------------------
+         .                .                   .                  .                  .                  .           					m_vecConnectivity[ixs].push_back(jnew * nLon + inew);
+         .                .                   .                  .                  .                  .           				}
+         .                .                   .                  .                  .                  .           				}
+         .                .                   .                  .                  .                  .           			}
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           		// Connectivity in the four primary directions
+         .                .                   .                  .                  .                  .           		} else {
+         .                .                   .                  .                  .                  .           			if (j != 0) {
+         0                0           3,233,092 ( 4.32%)   808,273 (33.20%)         0                  0           				m_vecConnectivity[ixs].push_back((j-1) * nLon + i);
+         .                .                   .                  .                  .                  .           			}
+         .                .                   .                  .                  .                  .           			if (j != nLat-1) {
+         8 ( 0.00%)       1 ( 0.00%)  6,471,944 ( 8.65%)   809,713 (33.26%) 3,233,092 (32.69%)   808,273 (49.88%)  				m_vecConnectivity[ixs].push_back((j+1) * nLon + i);
+         .                .                   .                  .                  .                  .           			}
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           			if ((!fRegional) ||
+         .                .                   .                  .                  .                  .           			    ((i != 0) && (i != nLon-1))
+         .                .                   .                  .                  .                  .           			) {
+12,932,352 (19.93%) 808,272 (99.26%) 12,943,872 (17.31%)   809,712 (33.26%) 6,471,936 (65.44%)   809,712 (49.97%)  				m_vecConnectivity[ixs].push_back(
+         .                .                   .                  .                  .                  .           					j * nLon + ((i + 1) % nLon));
+    23,040 ( 0.04%)   1,440 ( 0.18%)     23,040 ( 0.03%)     1,440 ( 0.06%)    11,520 ( 0.12%)     1,440 ( 0.09%)  				m_vecConnectivity[ixs].push_back(
+         .                .                   .                  .                  .                  .           					j * nLon + ((i + nLon - 1) % nLon));
+         .                .                   .                  .                  .                  .           			}
+         .                .                   .                  .                  .                  .           		}
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           		ixs++;
+         .                .                   .                  .                  .                  .           	}
+         .                .                   .                  .                  .                  .           	}
+         .                .                   .                  .                  .                  .           }
+-- line 149 ----------------------------------------
+-- line 164 ----------------------------------------
+         .                .                   .                  .                  .                  .           	if (strLatitudeName == "[auto]") {
+         .                .                   .                  .                  .                  .           		vecLatitudeNames.push_back("lat");
+         .                .                   .                  .                  .                  .           		vecLatitudeNames.push_back("latitude");
+         .                .                   .                  .                  .                  .           		vecLatitudeNames.push_back("LAT");
+         .                .                   .                  .                  .                  .           		vecLatitudeNames.push_back("latitude0");
+         .                .                   .                  .                  .                  .           		vecLatitudeNames.push_back("Latitude");
+         .                .                   .                  .                  .                  .           		vecLatitudeNames.push_back("XLAT");
+         .                .                   .                  .                  .                  .           	} else {
+         0                0                  32 ( 0.00%)         1 ( 0.00%)         0                  0           		vecLatitudeNames.push_back(strLatitudeName);
+         .                .                   .                  .                  .                  .           	}
+         .                .                   .                  .                  .                  .           
+         0                0                  84 ( 0.00%)         4 ( 0.00%)        84 ( 0.00%)         4 ( 0.00%)  	size_t sLatIx = NcGetVarFromList(*ncFile, vecLatitudeNames, pvarLat, pdimLat);
+         .                .                   .                  .                  .                  .           	if (sLatIx == vecLatitudeNames.size()) {
+         .                .                   .                  .                  .                  .           		_EXCEPTION1("No variable %s found in input file",
+         .                .                   .                  .                  .                  .           			STLStringHelper::ConcatenateStringVector(vecLatitudeNames, ", ").c_str());
+         .                .                   .                  .                  .                  .           	}
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	if (((*pvarLat)->num_dims() < 1) || ((*pvarLat)->num_dims() > 2)) {
+         .                .                   .                  .                  .                  .           		_EXCEPTION1("In NetCDF file latitude variable \"%s\" must have either one or two dimensions",
+         .                .                   .                  .                  .                  .           			(*pvarLat)->name());
+-- line 183 ----------------------------------------
+-- line 185 ----------------------------------------
+         .                .                   .                  .                  .                  .           	} else if ((*pvarLat)->num_dims() == 1) {
+         .                .                   .                  .                  .                  .           		if ((*pdimLat) == NULL) {
+         .                .                   .                  .                  .                  .           			_EXCEPTION1("In NetCDF file 1D latitude variable \"%s\" must have dimension with same name",
+         .                .                   .                  .                  .                  .           				(*pvarLat)->name());
+         .                .                   .                  .                  .                  .           		}
+         .                .                   .                  .                  .                  .           	}
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	strLatitudeName = vecLatitudeNames[sLatIx];
+         0                0                   0                  0                 32 ( 0.00%)         1 ( 0.00%)  }
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           ///////////////////////////////////////////////////////////////////////////////
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           void SimpleGrid::GetLongitudeFromNcFile(
+         .                .                   .                  .                  .                  .           	NcFile * ncFile,
+         .                .                   .                  .                  .                  .           	std::string & strLongitudeName,
+         .                .                   .                  .                  .                  .           	NcVar ** pvarLon,
+         .                .                   .                  .                  .                  .           	NcDim ** pdimLon
+-- line 201 ----------------------------------------
+-- line 208 ----------------------------------------
+         .                .                   .                  .                  .                  .           	if (strLongitudeName == "[auto]") {
+         .                .                   .                  .                  .                  .           		vecLongitudeNames.push_back("lon");
+         .                .                   .                  .                  .                  .           		vecLongitudeNames.push_back("longitude");
+         .                .                   .                  .                  .                  .           		vecLongitudeNames.push_back("LON");
+         .                .                   .                  .                  .                  .           		vecLongitudeNames.push_back("longitude0");
+         .                .                   .                  .                  .                  .           		vecLongitudeNames.push_back("Longitude");
+         .                .                   .                  .                  .                  .           		vecLongitudeNames.push_back("XLONG");
+         .                .                   .                  .                  .                  .           	} else {
+         0                0                  32 ( 0.00%)         1 ( 0.00%)         0                  0           		vecLongitudeNames.push_back(strLongitudeName);
+         .                .                   .                  .                  .                  .           	}
+         .                .                   .                  .                  .                  .           
+         0                0                  94 ( 0.00%)         4 ( 0.00%)        94 ( 0.00%)         4 ( 0.00%)  	size_t sLonIx = NcGetVarFromList(*ncFile, vecLongitudeNames, pvarLon, pdimLon);
+         .                .                   .                  .                  .                  .           	if (sLonIx == vecLongitudeNames.size()) {
+         .                .                   .                  .                  .                  .           		_EXCEPTION1("No variable %s found in input file",
+         .                .                   .                  .                  .                  .           			STLStringHelper::ConcatenateStringVector(vecLongitudeNames, ", ").c_str());
+         .                .                   .                  .                  .                  .           	}
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	if (((*pvarLon)->num_dims() < 1) || ((*pvarLon)->num_dims() > 2)) {
+         .                .                   .                  .                  .                  .           		_EXCEPTION1("In NetCDF file longitude variable \"%s\" must have either one or two dimensions",
+         .                .                   .                  .                  .                  .           			(*pvarLon)->name());
+-- line 227 ----------------------------------------
+-- line 229 ----------------------------------------
+         .                .                   .                  .                  .                  .           	} else if ((*pvarLon)->num_dims() == 1) {
+         .                .                   .                  .                  .                  .           		if ((*pdimLon) == NULL) {
+         .                .                   .                  .                  .                  .           			_EXCEPTION1("In NetCDF file 1D longitude variable \"%s\" must have dimension with same name",
+         .                .                   .                  .                  .                  .           				(*pvarLon)->name());
+         .                .                   .                  .                  .                  .           		}
+         .                .                   .                  .                  .                  .           	}
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	strLongitudeName = vecLongitudeNames[sLonIx];
+         0                0                   0                  0                 32 ( 0.00%)         1 ( 0.00%)  }
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           ///////////////////////////////////////////////////////////////////////////////
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           void SimpleGrid::GenerateLatitudeLongitude(
+         .                .                   .                  .                  .                  .           	const DataArray1D<double> & vecLat,
+         .                .                   .                  .                  .                  .           	const DataArray1D<double> & vecLon,
+         .                .                   .                  .                  .                  .           	bool fRegional,
+         .                .                   .                  .                  .                  .           	bool fDiagonalConnectivity,
+-- line 245 ----------------------------------------
+-- line 254 ----------------------------------------
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	if (nLat < 2) {
+         .                .                   .                  .                  .                  .           		_EXCEPTIONT("At least two latitudes needed to generate grid.");
+         .                .                   .                  .                  .                  .           	}
+         .                .                   .                  .                  .                  .           	if (nLon < 2) {
+         .                .                   .                  .                  .                  .           		_EXCEPTIONT("At least two longitudes needed to generate grid.");
+         .                .                   .                  .                  .                  .           	}
+         .                .                   .                  .                  .                  .           
+ 8,305,920 (12.80%)       1 ( 0.00%)  8,305,920 (11.11%)         1 ( 0.00%)         0                  0           	m_dLat.Allocate(nLon * nLat);
+ 8,305,920 (12.80%)       1 ( 0.00%)  8,305,920 (11.11%)         1 ( 0.00%)         0                  0           	m_dLon.Allocate(nLon * nLat);
+ 8,305,920 (12.80%)       1 ( 0.00%)  8,305,920 (11.11%)         1 ( 0.00%)         0                  0           	m_dArea.Allocate(nLon * nLat);
+         .                .                   .                  .                  .                  .           
+        16 ( 0.00%)       1 ( 0.00%)         16 ( 0.00%)         1 ( 0.00%)         0                  0           	m_nGridDim.resize(2);
+         .                .                   .                  .                  .                  .           	m_nGridDim[0] = nLat;
+         .                .                   .                  .                  .                  .           	m_nGridDim[1] = nLon;
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	// Verify units of latitude and longitude
+         .                .                   .                  .                  .                  .           	bool fCalculateArea = true;
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	for (int j = 0; j < nLat; j++) {
+         .                .                   .                  .                  .                  .           		if (fabs(vecLat[j]) > 0.5 * M_PI + 1.0e-12) {
+-- line 274 ----------------------------------------
+-- line 382 ----------------------------------------
+         .                .                   .                  .                  .                  .           			m_dArea[ixs] = 1.0;
+         .                .                   .                  .                  .                  .           		}
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           		ixs++;
+         .                .                   .                  .                  .                  .           	}
+         .                .                   .                  .                  .                  .           	}
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	// Generate connectivity
+37,873,160 (58.36%) 809,714 (99.44%) 47,589,708 (63.64%) 2,429,139 (99.77%) 9,716,548 (98.25%) 1,619,425 (99.94%)  	GenerateRectilinearConnectivity(nLat, nLon, fRegional, fDiagonalConnectivity);
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	// Output total area
+         .                .                   .                  .                  .                  .           	{
+         .                .                   .                  .                  .                  .           		double dTotalArea = 0.0;
+         .                .                   .                  .                  .                  .           		for (size_t i = 0; i < m_dArea.GetRows(); i++) {
+         .                .                   .                  .                  .                  .           			dTotalArea += m_dArea[i];
+         .                .                   .                  .                  .                  .           		}
+         .                .                   .                  .                  .                  .           		if (fVerbose) {
+-- line 398 ----------------------------------------
+-- line 415 ----------------------------------------
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	if (IsInitialized()) {
+         .                .                   .                  .                  .                  .           		_EXCEPTIONT("Attempting to call GenerateLatitudeLongitude() on previously initialized grid");
+         .                .                   .                  .                  .                  .           	}
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	// Load latitude and longitude variables
+         .                .                   .                  .                  .                  .           	NcVar * varLat;
+         .                .                   .                  .                  .                  .           	NcDim * dimLat;
+         0                0                 116 ( 0.00%)         5 ( 0.00%)       116 ( 0.00%)         5 ( 0.00%)  	GetLatitudeFromNcFile(ncFile, strLatitudeName, &varLat, &dimLat);
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	NcVar * varLon;
+         .                .                   .                  .                  .                  .           	NcDim * dimLon;
+         0                0                 126 ( 0.00%)         5 ( 0.00%)       126 ( 0.00%)         5 ( 0.00%)  	GetLongitudeFromNcFile(ncFile, strLongitudeName, &varLon, &dimLon);
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	if (varLat->num_dims() != varLon->num_dims()) {
+         .                .                   .                  .                  .                  .           		_EXCEPTION2("Latitude variable \"%s\" and longitude variable \"%s\" must have same number of dimensions",
+         .                .                   .                  .                  .                  .           			varLat->name(), varLon->name());
+         .                .                   .                  .                  .                  .           	}
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	// RLL mesh (lat and lon are vectors)
+         .                .                   .                  .                  .                  .           	if (varLat->num_dims() == 1) {
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           		// Load lat/lon data
+         .                .                   .                  .                  .                  .           		int nLat = dimLat->size();
+         .                .                   .                  .                  .                  .           		int nLon = dimLon->size();
+         .                .                   .                  .                  .                  .           
+     5,768 ( 0.01%)       1 ( 0.00%)      5,768 ( 0.01%)         1 ( 0.00%)         0                  0           		DataArray1D<double> vecLat(nLat);
+         0                0                  24 ( 0.00%)         4 ( 0.00%)       592 ( 0.01%)         4 ( 0.00%)  		varLat->get(vecLat, nLat);
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           		for (int j = 0; j < nLat; j++) {
+         .                .                   .                  .                  .                  .           			vecLat[j] *= M_PI / 180.0;
+         .                .                   .                  .                  .                  .           		}
+         .                .                   .                  .                  .                  .           
+    11,520 ( 0.02%)       1 ( 0.00%)     11,520 ( 0.02%)         1 ( 0.00%)         0                  0           		DataArray1D<double> vecLon(nLon);
+         0                0                  24 ( 0.00%)         4 ( 0.00%)       592 ( 0.01%)         4 ( 0.00%)  		varLon->get(vecLon, nLon);
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           		for (int i = 0; i < nLon; i++) {
+         .                .                   .                  .                  .                  .           			vecLon[i] *= M_PI / 180.0;
+         .                .                   .                  .                  .                  .           		}
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           		// Generate the SimpleGrid
+62,790,936 (96.76%) 809,718 (99.44%) 72,507,484 (96.96%) 2,429,143 (99.77%) 9,716,548 (98.25%) 1,619,425 (99.94%)  		GenerateLatitudeLongitude(
+         .                .                   .                  .                  .                  .           			vecLat,
+         .                .                   .                  .                  .                  .           			vecLon,
+         .                .                   .                  .                  .                  .           			fRegional,
+         .                .                   .                  .                  .                  .           			fDiagonalConnectivity,
+         .                .                   .                  .                  .                  .           			true);                  // Verbosity enabled
+         .                .                   .                  .                  .                  .           	}
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	// Other rectilinear projection (lat and lon are arrays)
+-- line 464 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/include/c++/13/bits/new_allocator.h
+--------------------------------------------------------------------------------
+curB                curBk            totB                totBk              totFdB             totFdBk            
+
+-- line 143 ----------------------------------------
+         .                .                   .                  .                  .                  .           #if __cpp_aligned_new
+         .                .                   .                  .                  .                  .           	if (alignof(_Tp) > __STDCPP_DEFAULT_NEW_ALIGNMENT__)
+         .                .                   .                  .                  .                  .           	  {
+         .                .                   .                  .                  .                  .           	    std::align_val_t __al = std::align_val_t(alignof(_Tp));
+         .                .                   .                  .                  .                  .           	    return static_cast<_Tp*>(_GLIBCXX_OPERATOR_NEW(__n * sizeof(_Tp),
+         .                .                   .                  .                  .                  .           							   __al));
+         .                .                   .                  .                  .                  .           	  }
+         .                .                   .                  .                  .                  .           #endif
+37,910,812 (58.42%) 809,740 (99.44%) 47,664,188 (63.74%) 2,429,198 (99.77%)         0                  0           	return static_cast<_Tp*>(_GLIBCXX_OPERATOR_NEW(__n * sizeof(_Tp)));
+         .                .                   .                  .                  .                  .                 }
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .                 // __p is not permitted to be a null pointer.
+         .                .                   .                  .                  .                  .                 void
+         .                .                   .                  .                  .                  .                 deallocate(_Tp* __p, size_type __n __attribute__ ((__unused__)))
+         .                .                   .                  .                  .                  .                 {
+         .                .                   .                  .                  .                  .           #if __cpp_sized_deallocation
+         .                .                   .                  .                  .                  .           # define _GLIBCXX_SIZED_DEALLOC(p, n) (p), (n) * sizeof(_Tp)
+-- line 159 ----------------------------------------
+-- line 164 ----------------------------------------
+         .                .                   .                  .                  .                  .           #if __cpp_aligned_new
+         .                .                   .                  .                  .                  .           	if (alignof(_Tp) > __STDCPP_DEFAULT_NEW_ALIGNMENT__)
+         .                .                   .                  .                  .                  .           	  {
+         .                .                   .                  .                  .                  .           	    _GLIBCXX_OPERATOR_DELETE(_GLIBCXX_SIZED_DEALLOC(__p, __n),
+         .                .                   .                  .                  .                  .           				     std::align_val_t(alignof(_Tp)));
+         .                .                   .                  .                  .                  .           	    return;
+         .                .                   .                  .                  .                  .           	  }
+         .                .                   .                  .                  .                  .           #endif
+         0                0                   0                  0          9,753,376 (98.62%) 1,619,458 (99.94%)  	_GLIBCXX_OPERATOR_DELETE(_GLIBCXX_SIZED_DEALLOC(__p, __n));
+         .                .                   .                  .                  .                  .                 }
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           #undef _GLIBCXX_SIZED_DEALLOC
+         .                .                   .                  .                  .                  .           #undef _GLIBCXX_OPERATOR_DELETE
+         .                .                   .                  .                  .                  .           #undef _GLIBCXX_OPERATOR_NEW
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           #if __cplusplus <= 201703L
+         .                .                   .                  .                  .                  .                 __attribute__((__always_inline__))
+-- line 180 ----------------------------------------
+-- line 183 ----------------------------------------
+         .                .                   .                  .                  .                  .                 { return _M_max_size(); }
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           #if __cplusplus >= 201103L
+         .                .                   .                  .                  .                  .                 template<typename _Up, typename... _Args>
+         .                .                   .                  .                  .                  .           	__attribute__((__always_inline__))
+         .                .                   .                  .                  .                  .           	void
+         .                .                   .                  .                  .                  .           	construct(_Up* __p, _Args&&... __args)
+         .                .                   .                  .                  .                  .           	noexcept(std::is_nothrow_constructible<_Up, _Args...>::value)
+    87,160 ( 0.13%)     745 ( 0.09%)     87,160 ( 0.12%)       745 ( 0.03%)         0                  0           	{ ::new((void *)__p) _Up(std::forward<_Args>(__args)...); }
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .                 template<typename _Up>
+         .                .                   .                  .                  .                  .           	__attribute__((__always_inline__))
+         .                .                   .                  .                  .                  .           	void
+         .                .                   .                  .                  .                  .           	destroy(_Up* __p)
+         .                .                   .                  .                  .                  .           	noexcept(std::is_nothrow_destructible<_Up>::value)
+         .                .                   .                  .                  .                  .           	{ __p->~_Up(); }
+         .                .                   .                  .                  .                  .           #else
+-- line 199 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/include/c++/13/bits/alloc_traits.h
+--------------------------------------------------------------------------------
+curB                curBk            totB                totBk              totFdB             totFdBk            
+
+-- line 474 ----------------------------------------
+         .                .                   .                  .                  .                  .                  *  @param  __a  An allocator.
+         .                .                   .                  .                  .                  .                  *  @param  __n  The number of objects to allocate space for.
+         .                .                   .                  .                  .                  .                  *
+         .                .                   .                  .                  .                  .                  *  Calls @c a.allocate(n)
+         .                .                   .                  .                  .                  .                 */
+         .                .                   .                  .                  .                  .                 [[__nodiscard__,__gnu__::__always_inline__]]
+         .                .                   .                  .                  .                  .                 static _GLIBCXX20_CONSTEXPR pointer
+         .                .                   .                  .                  .                  .                 allocate(allocator_type& __a, size_type __n)
+37,910,812 (58.42%) 809,740 (99.44%) 47,664,188 (63.74%) 2,429,198 (99.77%)         0                  0                 { return __a.allocate(__n); }
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .                 /**
+         .                .                   .                  .                  .                  .                  *  @brief  Allocate memory.
+         .                .                   .                  .                  .                  .                  *  @param  __a  An allocator.
+         .                .                   .                  .                  .                  .                  *  @param  __n  The number of objects to allocate space for.
+         .                .                   .                  .                  .                  .                  *  @param  __hint Aid to locality.
+         .                .                   .                  .                  .                  .                  *  @return Memory of suitable size and alignment for @a n objects
+         .                .                   .                  .                  .                  .                  *          of type @c value_type
+-- line 490 ----------------------------------------
+-- line 509 ----------------------------------------
+         .                .                   .                  .                  .                  .                  *  @param  __p  Pointer to the memory to deallocate.
+         .                .                   .                  .                  .                  .                  *  @param  __n  The number of objects space was allocated for.
+         .                .                   .                  .                  .                  .                  *
+         .                .                   .                  .                  .                  .                  *  Calls <tt> a.deallocate(p, n) </tt>
+         .                .                   .                  .                  .                  .                 */
+         .                .                   .                  .                  .                  .                 [[__gnu__::__always_inline__]]
+         .                .                   .                  .                  .                  .                 static _GLIBCXX20_CONSTEXPR void
+         .                .                   .                  .                  .                  .                 deallocate(allocator_type& __a, pointer __p, size_type __n)
+         0                0                   0                  0          9,753,376 (98.62%) 1,619,458 (99.94%)        { __a.deallocate(__p, __n); }
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .                 /**
+         .                .                   .                  .                  .                  .                  *  @brief  Construct an object of type `_Up`
+         .                .                   .                  .                  .                  .                  *  @param  __a  An allocator.
+         .                .                   .                  .                  .                  .                  *  @param  __p  Pointer to memory of suitable size and alignment for
+         .                .                   .                  .                  .                  .                  *	       an object of type `_Up`.
+         .                .                   .                  .                  .                  .                  *  @param  __args Constructor arguments.
+         .                .                   .                  .                  .                  .                  *
+-- line 525 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/include/c++/13/bits/vector.tcc
+--------------------------------------------------------------------------------
+curB                curBk            totB                totBk              totFdB             totFdBk            
+
+-- line 115 ----------------------------------------
+         .                .                   .                  .                  .                  .           	  {
+         .                .                   .                  .                  .                  .           	    _GLIBCXX_ASAN_ANNOTATE_GROW(1);
+         .                .                   .                  .                  .                  .           	    _Alloc_traits::construct(this->_M_impl, this->_M_impl._M_finish,
+         .                .                   .                  .                  .                  .           				     std::forward<_Args>(__args)...);
+         .                .                   .                  .                  .                  .           	    ++this->_M_impl._M_finish;
+         .                .                   .                  .                  .                  .           	    _GLIBCXX_ASAN_ANNOTATE_GREW(1);
+         .                .                   .                  .                  .                  .           	  }
+         .                .                   .                  .                  .                  .           	else
+12,955,476 (19.96%) 809,715 (99.44%) 22,672,528 (30.32%) 2,429,146 (99.77%) 9,716,796 (98.25%) 1,619,430 (99.94%)  	  _M_realloc_insert(end(), std::forward<_Args>(__args)...);
+         .                .                   .                  .                  .                  .           #if __cplusplus > 201402L
+         .                .                   .                  .                  .                  .           	return back();
+         .                .                   .                  .                  .                  .           #endif
+         .                .                   .                  .                  .                  .                 }
+         .                .                   .                  .                  .                  .           #endif
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .             template<typename _Tp, typename _Alloc>
+         .                .                   .                  .                  .                  .               _GLIBCXX20_CONSTEXPR
+-- line 131 ----------------------------------------
+-- line 451 ----------------------------------------
+         .                .                   .                  .                  .                  .               _M_realloc_insert(iterator __position, const _Tp& __x)
+         .                .                   .                  .                  .                  .           #endif
+         .                .                   .                  .                  .                  .               {
+         .                .                   .                  .                  .                  .                 const size_type __len =
+         .                .                   .                  .                  .                  .           	_M_check_len(size_type(1), "vector::_M_realloc_insert");
+         .                .                   .                  .                  .                  .                 pointer __old_start = this->_M_impl._M_start;
+         .                .                   .                  .                  .                  .                 pointer __old_finish = this->_M_impl._M_finish;
+         .                .                   .                  .                  .                  .                 const size_type __elems_before = __position - begin();
+12,991,884 (20.02%) 809,722 (99.44%) 22,745,260 (30.42%) 2,429,180 (99.77%)         0                  0                 pointer __new_start(this->_M_allocate(__len));
+         .                .                   .                  .                  .                  .                 pointer __new_finish(__new_start);
+         .                .                   .                  .                  .                  .                 __try
+         .                .                   .                  .                  .                  .           	{
+         .                .                   .                  .                  .                  .           	  // The order of the three operations is dictated by the C++11
+         .                .                   .                  .                  .                  .           	  // case, where the moves could alter a new element belonging
+         .                .                   .                  .                  .                  .           	  // to the existing vector.  This is an issue only for callers
+         .                .                   .                  .                  .                  .           	  // taking the element by lvalue ref (see last bullet of C++11
+         .                .                   .                  .                  .                  .           	  // [res.on.arguments]).
+-- line 467 ----------------------------------------
+-- line 511 ----------------------------------------
+         .                .                   .                  .                  .                  .           	  _M_deallocate(__new_start, __len);
+         .                .                   .                  .                  .                  .           	  __throw_exception_again;
+         .                .                   .                  .                  .                  .           	}
+         .                .                   .                  .                  .                  .           #if __cplusplus >= 201103L
+         .                .                   .                  .                  .                  .                 if _GLIBCXX17_CONSTEXPR (!_S_use_relocate())
+         .                .                   .                  .                  .                  .           #endif
+         .                .                   .                  .                  .                  .           	std::_Destroy(__old_start, __old_finish, _M_get_Tp_allocator());
+         .                .                   .                  .                  .                  .                 _GLIBCXX_ASAN_ANNOTATE_REINIT;
+         0                0                   0                  0          9,753,056 (98.62%) 1,619,455 (99.94%)        _M_deallocate(__old_start,
+         .                .                   .                  .                  .                  .           		    this->_M_impl._M_end_of_storage - __old_start);
+         .                .                   .                  .                  .                  .                 this->_M_impl._M_start = __new_start;
+         .                .                   .                  .                  .                  .                 this->_M_impl._M_finish = __new_finish;
+         .                .                   .                  .                  .                  .                 this->_M_impl._M_end_of_storage = __new_start + __len;
+         .                .                   .                  .                  .                  .               }
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .             template<typename _Tp, typename _Alloc>
+         .                .                   .                  .                  .                  .               _GLIBCXX20_CONSTEXPR
+-- line 527 ----------------------------------------
+-- line 655 ----------------------------------------
+         .                .                   .                  .                  .                  .           	    {
+         .                .                   .                  .                  .                  .           	      // Make local copies of these members because the compiler thinks
+         .                .                   .                  .                  .                  .           	      // the allocator can alter them if 'this' is globally reachable.
+         .                .                   .                  .                  .                  .           	      pointer __old_start = this->_M_impl._M_start;
+         .                .                   .                  .                  .                  .           	      pointer __old_finish = this->_M_impl._M_finish;
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           	      const size_type __len =
+         .                .                   .                  .                  .                  .           		_M_check_len(__n, "vector::_M_default_append");
+24,917,776 (38.40%)       2 ( 0.00%) 24,917,776 (33.32%)         2 ( 0.00%)         0                  0           	      pointer __new_start(this->_M_allocate(__len));
+         .                .                   .                  .                  .                  .           	      if _GLIBCXX17_CONSTEXPR (_S_use_relocate())
+         .                .                   .                  .                  .                  .           		{
+         .                .                   .                  .                  .                  .           		  __try
+         .                .                   .                  .                  .                  .           		    {
+         .                .                   .                  .                  .                  .           		      std::__uninitialized_default_n_a(__new_start + __size,
+         .                .                   .                  .                  .                  .           			      __n, _M_get_Tp_allocator());
+         .                .                   .                  .                  .                  .           		    }
+         .                .                   .                  .                  .                  .           		  __catch(...)
+-- line 671 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/include/c++/13/bits/stl_vector.h
+--------------------------------------------------------------------------------
+curB                curBk            totB                totBk              totFdB             totFdBk            
+
+-- line 358 ----------------------------------------
+         .                .                   .                  .                  .                  .                 _Vector_base(const allocator_type& __a, _Vector_base&& __x)
+         .                .                   .                  .                  .                  .                 : _M_impl(_Tp_alloc_type(__a), std::move(__x._M_impl))
+         .                .                   .                  .                  .                  .                 { }
+         .                .                   .                  .                  .                  .           #endif
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .                 _GLIBCXX20_CONSTEXPR
+         .                .                   .                  .                  .                  .                 ~_Vector_base() _GLIBCXX_NOEXCEPT
+         .                .                   .                  .                  .                  .                 {
+         0                0                   0                  0                320 ( 0.00%)         3 ( 0.00%)  	_M_deallocate(_M_impl._M_start,
+         .                .                   .                  .                  .                  .           		      _M_impl._M_end_of_storage - _M_impl._M_start);
+         .                .                   .                  .                  .                  .                 }
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .               public:
+         .                .                   .                  .                  .                  .                 _Vector_impl _M_impl;
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .                 _GLIBCXX20_CONSTEXPR
+         .                .                   .                  .                  .                  .                 pointer
+-- line 374 ----------------------------------------
+-- line 727 ----------------------------------------
+         .                .                   .                  .                  .                  .                  *  responsibility.
+         .                .                   .                  .                  .                  .                  */
+         .                .                   .                  .                  .                  .                 _GLIBCXX20_CONSTEXPR
+         .                .                   .                  .                  .                  .                 ~vector() _GLIBCXX_NOEXCEPT
+         .                .                   .                  .                  .                  .                 {
+         .                .                   .                  .                  .                  .           	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+         .                .                   .                  .                  .                  .           		      _M_get_Tp_allocator());
+         .                .                   .                  .                  .                  .           	_GLIBCXX_ASAN_ANNOTATE_BEFORE_DEALLOC;
+         0                0                   0                  0                320 ( 0.00%)         3 ( 0.00%)        }
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .                 /**
+         .                .                   .                  .                  .                  .                  *  @brief  %Vector assignment operator.
+         .                .                   .                  .                  .                  .                  *  @param  __x  A %vector of identical element and allocator types.
+         .                .                   .                  .                  .                  .                  *
+         .                .                   .                  .                  .                  .                  *  All the elements of @a __x are copied, but any unused capacity in
+         .                .                   .                  .                  .                  .                  *  @a __x will not be copied.
+         .                .                   .                  .                  .                  .                  *
+-- line 743 ----------------------------------------
+-- line 1005 ----------------------------------------
+         .                .                   .                  .                  .                  .                  *  %vector's current size the %vector is truncated, otherwise
+         .                .                   .                  .                  .                  .                  *  default constructed elements are appended.
+         .                .                   .                  .                  .                  .                  */
+         .                .                   .                  .                  .                  .                 _GLIBCXX20_CONSTEXPR
+         .                .                   .                  .                  .                  .                 void
+         .                .                   .                  .                  .                  .                 resize(size_type __new_size)
+         .                .                   .                  .                  .                  .                 {
+         .                .                   .                  .                  .                  .           	if (__new_size > size())
+24,917,776 (38.40%)       2 ( 0.00%) 24,917,776 (33.32%)         2 ( 0.00%)         0                  0           	  _M_default_append(__new_size - size());
+         .                .                   .                  .                  .                  .           	else if (__new_size < size())
+         .                .                   .                  .                  .                  .           	  _M_erase_at_end(this->_M_impl._M_start + __new_size);
+         .                .                   .                  .                  .                  .                 }
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .                 /**
+         .                .                   .                  .                  .                  .                  *  @brief  Resizes the %vector to the specified number of elements.
+         .                .                   .                  .                  .                  .                  *  @param  __new_size  Number of elements the %vector should contain.
+         .                .                   .                  .                  .                  .                  *  @param  __x  Data with which new elements should be populated.
+-- line 1021 ----------------------------------------
+-- line 1281 ----------------------------------------
+         .                .                   .                  .                  .                  .           	  {
+         .                .                   .                  .                  .                  .           	    _GLIBCXX_ASAN_ANNOTATE_GROW(1);
+         .                .                   .                  .                  .                  .           	    _Alloc_traits::construct(this->_M_impl, this->_M_impl._M_finish,
+         .                .                   .                  .                  .                  .           				     __x);
+         .                .                   .                  .                  .                  .           	    ++this->_M_impl._M_finish;
+         .                .                   .                  .                  .                  .           	    _GLIBCXX_ASAN_ANNOTATE_GREW(1);
+         .                .                   .                  .                  .                  .           	  }
+         .                .                   .                  .                  .                  .           	else
+    38,860 ( 0.06%)      28 ( 0.00%)     75,184 ( 0.10%)        55 ( 0.00%)    36,260 ( 0.37%)        25 ( 0.00%)  	  _M_realloc_insert(end(), __x);
+         .                .                   .                  .                  .                  .                 }
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .           #if __cplusplus >= 201103L
+         .                .                   .                  .                  .                  .                 _GLIBCXX20_CONSTEXPR
+         .                .                   .                  .                  .                  .                 void
+         .                .                   .                  .                  .                  .                 push_back(value_type&& __x)
+12,955,476 (19.96%) 809,715 (99.44%) 22,672,528 (30.32%) 2,429,146 (99.77%) 9,716,796 (98.25%) 1,619,430 (99.94%)        { emplace_back(std::move(__x)); }
+         .                .                   .                  .                  .                  .           
+         .                .                   .                  .                  .                  .                 template<typename... _Args>
+         .                .                   .                  .                  .                  .           #if __cplusplus > 201402L
+         .                .                   .                  .                  .                  .           	_GLIBCXX20_CONSTEXPR
+         .                .                   .                  .                  .                  .           	reference
+         .                .                   .                  .                  .                  .           #else
+         .                .                   .                  .                  .                  .           	void
+         .                .                   .                  .                  .                  .           #endif
+-- line 1304 ----------------------------------------
+
+--------------------------------------------------------------------------------
+The following files chosen for auto-annotation could not be found:
+--------------------------------------------------------------------------------
+  UnknownFile???
+
+--------------------------------------------------------------------------------
+curB                 curBk              totB                 totBk               totFdB              totFdBk             
+--------------------------------------------------------------------------------
+419,042,496 (100.0%) 7,289,536 (100.0%) 506,765,110 (100.0%) 21,865,691 (100.0%) 87,756,849 (100.0%) 14,576,280 (100.0%)  events annotated
+
