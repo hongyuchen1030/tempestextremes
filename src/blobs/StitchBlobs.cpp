@@ -22,7 +22,6 @@
 #include "CoordTransforms.h"
 #include "BlobUtilities.h"
 #include <cmath>
-#include <numeric> 
 
 #include "CommandLine.h"
 #include "Exception.h"
@@ -158,14 +157,13 @@ class TagCollectiveOP {
 		void Serialize() {
 			serialVecAllBlobTags.clear();
 			serialVecAllBlobTags_index.clear();
-			serialVecAllBlobTags.reserve(_vecAllBlobTags.size() * 10);  // Estimate based on average elements
-			serialVecAllBlobTags_index.reserve(_vecAllBlobTags.size() + 1);
-	
-			int curIndx = 0;
+			int curIndx = 0;//Point to the next empty slot for inserting a new vector<Tag>
 			serialVecAllBlobTags_index.push_back(curIndx);
-			for (const auto& vec : _vecAllBlobTags) {
-				serialVecAllBlobTags.insert(serialVecAllBlobTags.end(), vec.begin(), vec.end());
-				curIndx += vec.size();
+			for (int i = 0; i < _vecAllBlobTags.size(); i++) {
+				for (int j = 0; j < _vecAllBlobTags[i].size(); j++) {
+					serialVecAllBlobTags.push_back(_vecAllBlobTags[i][j]);
+					curIndx++;
+				}
 				serialVecAllBlobTags_index.push_back(curIndx);
 			}
 			serializedFlag = 1;
@@ -178,24 +176,20 @@ class TagCollectiveOP {
 		///		after the deserialization
 		///	</summary>
 		void Deserialize() {
-			deserialSetAllTags.clear();
-			desirialVecAllBlobTags.clear();
-			desirialVecAllBlobTags.reserve(serialVecAllBlobTags_index.size() - 1);
-	
-			for (size_t i = 0; i < serialVecAllBlobTags_index.size() - 1; i++) {
-				int start = serialVecAllBlobTags_index[i];
-				int end = serialVecAllBlobTags_index[i + 1];
-				desirialVecAllBlobTags.emplace_back(serialVecAllBlobTags.begin() + start, serialVecAllBlobTags.begin() + end);
-				deserialSetAllTags.insert(serialVecAllBlobTags.begin() + start, serialVecAllBlobTags.begin() + end);
+			for (int i = 0; i < serialVecAllBlobTags_index.size() - 1; i++) {
+				int startIndx = serialVecAllBlobTags_index[i];
+				int endIndx = std::min(serialVecAllBlobTags_index[i+1],int(serialVecAllBlobTags.size()));
+				std::vector<Tag> curVecBlobTags;
+				for (int i = startIndx; i < endIndx; i++) {
+					curVecBlobTags.push_back(serialVecAllBlobTags[i]);
+					deserialSetAllTags.insert(serialVecAllBlobTags[i]);
+				}
+				desirialVecAllBlobTags.push_back(curVecBlobTags);
 			}
-	
 			serialVecAllBlobTags.clear();
-			serialVecAllBlobTags.shrink_to_fit();
 			serialVecAllBlobTags_index.clear();
-			serialVecAllBlobTags_index.shrink_to_fit();
 			serializedFlag = 0;
 		}
-	
 		
 
 
@@ -241,8 +235,12 @@ class TagCollectiveOP {
 		///		Constructor that will read in std::vector< std::vector<Tag>> vecAllBlobTags and MPI communicator
 		///		It will also create the derived MPI_Datatype for Tag and commit it.
 		///	</summary>	
-		TagCollectiveOP(MPI_Comm communicator, const std::vector<std::vector<Tag>>& vecAllBlobTags)
-        : m_comm(communicator), _vecAllBlobTags(std::move(vecAllBlobTags)) {
+		TagCollectiveOP(
+			MPI_Comm communicator, 
+			const std::vector< std::vector<Tag>> & vecAllBlobTags
+		) {
+			this->_vecAllBlobTags = vecAllBlobTags;
+			this->m_comm = communicator;
 			this->serializedFlag = 0;
 			int rank, size;
 			MPI_Comm_size(m_comm, &size);
@@ -277,20 +275,7 @@ class TagCollectiveOP {
 		///		Destructor.
 		///	</summary>
 		~TagCollectiveOP(){
-			MPI_Type_free(&MPI_Tag_type);
-			_vecAllBlobTags.clear();
-			_vecAllBlobTags.shrink_to_fit();
-			serialVecAllBlobTags.clear();
-			serialVecAllBlobTags.shrink_to_fit();
-			serialVecAllBlobTags_index.clear();
-			serialVecAllBlobTags_index.shrink_to_fit();
-			desirialVecAllBlobTags.clear();
-			desirialVecAllBlobTags.shrink_to_fit();
-			deserialSetAllTags.clear();
-			vecScatterCounts.clear();
-			vecScatterCounts.shrink_to_fit();
-			vecScatterCounts_index.clear();
-			vecScatterCounts_index.shrink_to_fit();		
+			MPI_Type_free(&MPI_Tag_type);			
 		}
 
 		///	<summary>
@@ -339,7 +324,9 @@ class TagCollectiveOP {
 					MPI_Recv(recvTags.data(), recvCount, MPI_Tag_type, sourceRank, gather_tag, m_comm, &status);
 
 					// Pack the receive Tag into the local serialVecAllBlobTags.
-					serialVecAllBlobTags.insert(serialVecAllBlobTags.end(), std::make_move_iterator(recvTags.begin()), std::make_move_iterator(recvTags.end()));
+					for (auto recvTag : recvTags) {
+						serialVecAllBlobTags.push_back(recvTag);
+					}
 
 					MPI_Status status_index;
 					int recvCount_index;
@@ -358,13 +345,14 @@ class TagCollectiveOP {
 					// P0 serialVecAllBlobTags: 0, 3, 5, 7;   P1 serialVecAllBlobTags: 0, 3, 5, 7
 					// After Gather:
 					// P0 serialVecAllBlobTags: 0, 3, 5, 7, 9, 11, 13
-					
-					int offset = serialVecAllBlobTags_index.back();  // Get the last index (total count so far)
-
-					for (size_t i = 1; i < recvTagsIndx.size(); i++) {
-						serialVecAllBlobTags_index.push_back(recvTagsIndx[i] + offset);
+					int serialVecAllBlobTags_index_size = serialVecAllBlobTags_index.size();
+					int curLocalTagSize = serialVecAllBlobTags_index[serialVecAllBlobTags_index_size - 1];
+					for (int i = 1; i < recvTagsIndx.size(); i++) {
+						// Update the index
+						int index = recvTagsIndx[i];
+						index += curLocalTagSize;
+						serialVecAllBlobTags_index.push_back(index);
 					}
-
 				}
 			}
 		}
@@ -452,35 +440,41 @@ class TagCollectiveOP {
 			this->Serialize();
 
 			if (rank == 0) {
-				std::vector<int> arrayScatterCounts(size);
-				std::vector<int> arrayScatterDisplacements(size);
-				std::vector<int> arrayScatterCounts_index(size);
-				std::vector<int> arrayScatterDisplacements_index(size);
-				
-				_ASSERT(vecScatterCounts.size() == size);
-				_ASSERT(vecScatterCounts_index.size() == size);
-				
-				// Directly copy vector values
-				arrayScatterCounts = vecScatterCounts;
-				arrayScatterCounts_index = vecScatterCounts_index;
-				
-				// Compute displacements using efficient prefix sum
-				std::partial_sum(vecScatterCounts.begin(), vecScatterCounts.end() - 1, arrayScatterDisplacements.begin() + 1);
-				std::partial_sum(vecScatterCounts_index.begin(), vecScatterCounts_index.end() - 1, arrayScatterDisplacements_index.begin() + 1);
+				// For Tags
+				int arrayScatterCounts[size];
+				int arrayScatterDisplacements[size];
+				_ASSERT(vecScatterCounts.size() > 1);
+				arrayScatterCounts[0] = vecScatterCounts[0];
+				arrayScatterDisplacements[0] = 0;		
+				for (int i = 1; i < vecScatterCounts.size(); i++) {
+					arrayScatterCounts[i] = vecScatterCounts[i];				
+					arrayScatterDisplacements[i] = vecScatterCounts[i - 1] + arrayScatterDisplacements[i - 1];
+				}
+
+				// For Tags Index
+				int arrayScatterCounts_index[size];
+				int arrayScatterDisplacements_index[size];
+				_ASSERT(vecScatterCounts_index.size() > 1);
+				arrayScatterCounts_index[0] = vecScatterCounts_index[0];
+				arrayScatterDisplacements_index[0] = 0;		
+				for (int i = 1; i < vecScatterCounts.size(); i++) {
+					arrayScatterCounts_index[i] = vecScatterCounts_index[i];				
+					arrayScatterDisplacements_index[i] = vecScatterCounts_index[i - 1] + arrayScatterDisplacements_index[i - 1];
+				}
 				
 				//-------------------Scatter---------------------------
 				// For Tags
-				auto scatterBuffer = std::move(serialVecAllBlobTags);
+				auto scatterBuffer = this->serialVecAllBlobTags;
 				this->serialVecAllBlobTags.clear();
 				this->serialVecAllBlobTags.resize(arrayScatterCounts[rank]);
-				MPI_Scatterv(scatterBuffer.data(), arrayScatterCounts.data(), arrayScatterDisplacements.data(), MPI_Tag_type, 
+				MPI_Scatterv(scatterBuffer.data(), arrayScatterCounts, arrayScatterDisplacements, MPI_Tag_type, 
 							serialVecAllBlobTags.data(), arrayScatterCounts[rank], MPI_Tag_type, 0, m_comm);
 
 				// For index
-				auto scatterBuffer_index = std::move(serialVecAllBlobTags_index);
+				auto scatterBuffer_index = this->serialVecAllBlobTags_index;
 				this->serialVecAllBlobTags_index.clear();
 				this->serialVecAllBlobTags_index.resize(arrayScatterCounts_index[rank]);
-				MPI_Scatterv(scatterBuffer_index.data(), arrayScatterCounts_index.data(), arrayScatterDisplacements_index.data(), 
+				MPI_Scatterv(scatterBuffer_index.data(), arrayScatterCounts_index, arrayScatterDisplacements_index, 
 							MPI_INT, serialVecAllBlobTags_index.data(), arrayScatterCounts_index[rank], MPI_INT, 0, m_comm);
 	
 			} else {
@@ -620,12 +614,12 @@ class TagExchangeOP {
 		///	</summary>
 		TagExchangeOP(MPI_Comm communicator, 
 					  const std::vector< std::vector<Tag> > & vecAllBlobTags){
-			this->_vecAllBlobTags = std::move(vecAllBlobTags);
+			this->_vecAllBlobTags = vecAllBlobTags;
 			this->m_comm = communicator;
 			//Initialize the size for the sendTags:
 			sendTags.resize(2);
-			sendTags[0].reserve(_vecAllBlobTags[0].size());
-			sendTags[1].reserve(_vecAllBlobTags[_vecAllBlobTags.size() - 1].size());
+			sendTags[0].resize(_vecAllBlobTags[0].size());
+			sendTags[1].resize(_vecAllBlobTags[_vecAllBlobTags.size()-1].size());
 
 			//Initialize the size for the recvTags:
 			recvTags.resize(2);
@@ -660,22 +654,7 @@ class TagExchangeOP {
 		~TagExchangeOP(){
 			MPI_Type_free(&MPI_Tag_type);
 			MPIrequests.clear();
-			MPIrequests.shrink_to_fit();
-		
 			MPIstatuses.clear();
-			MPIstatuses.shrink_to_fit();
-		
-			_vecAllBlobTags.clear();
-			_vecAllBlobTags.shrink_to_fit();
-		
-			exchangedvecAllBlobTags.clear();
-			exchangedvecAllBlobTags.shrink_to_fit();
-		
-			sendTags.clear();
-			sendTags.shrink_to_fit();
-		
-			recvTags.clear();
-			recvTags.shrink_to_fit();
 		}
 
 		///	<summary>
@@ -933,7 +912,7 @@ class BlobBoxesDegExchangeOP {
 		///	</summary>
 		BlobBoxesDegExchangeOP(MPI_Comm communicator, 
 							   const std::vector< std::vector< LatLonBox<double> > > & vecAllBlobBoxesDeg){
-			this->_vecAllBlobBoxesDeg = std::move(vecAllBlobBoxesDeg);
+			this->_vecAllBlobBoxesDeg = vecAllBlobBoxesDeg;
 			this->m_comm = communicator;
 
 		//########################### Notes for  derived MPI datatype of the LatLonBox<double>(Hongyu Chen) ############################################################################ 
@@ -979,26 +958,8 @@ class BlobBoxesDegExchangeOP {
 		~BlobBoxesDegExchangeOP(){
 			// MPI_Type_free(&MPI_LatonBox_double_type);
 			// MPI_Type_free(&MPI_doubleArray);
-
-			// Clear and shrink MPI-related buffers
 			MPIrequests.clear();
-			MPIrequests.shrink_to_fit();
-			
 			MPIstatuses.clear();
-			MPIstatuses.shrink_to_fit();
-
-			// Clear and shrink all data structures
-			_vecAllBlobBoxesDeg.clear();
-			_vecAllBlobBoxesDeg.shrink_to_fit();
-
-			exchangedvecAllBlobBoxesDeg.clear();
-			exchangedvecAllBlobBoxesDeg.shrink_to_fit();
-
-			sendBlobBoxesDeg.clear();
-			sendBlobBoxesDeg.shrink_to_fit();
-
-			recvBlobBoxesDeg.clear();
-			recvBlobBoxesDeg.shrink_to_fit();
 		}
 
 		///	<summary>
@@ -1013,11 +974,8 @@ class BlobBoxesDegExchangeOP {
 
 			//----------------------Send data first----------------------
 			// Pack data into the send buffer
-			sendBlobBoxesDeg.resize(2);
-			recvBlobBoxesDeg.resize(2);
-			sendBlobBoxesDeg[0] = std::move(_vecAllBlobBoxesDeg[0]);
-			sendBlobBoxesDeg[1] = std::move(_vecAllBlobBoxesDeg[_vecAllBlobBoxesDeg.size()-1]);
-		
+			sendBlobBoxesDeg[0] = _vecAllBlobBoxesDeg[0];
+			sendBlobBoxesDeg[1] = _vecAllBlobBoxesDeg[_vecAllBlobBoxesDeg.size()-1];
 
 			// Send data
 			for (auto dir: {DIR_LEFT, DIR_RIGHT}) {
@@ -1219,18 +1177,16 @@ class BlobsExchangeOp {
 
 			for (auto dir : {DIR_LEFT, DIR_RIGHT}) {
 				int curIndx = 0;//Point to the next empty slot for inserting a new set
-				const std::vector<IndicatorSet>& sendVecBlobs = (dir == DIR_LEFT) ? _vecAllBlobs.front() : _vecAllBlobs.back();
-				sendBlobsIndx[dir].reserve(sendVecBlobs.size() + 1);
-				sendBlobsIndx[dir].emplace_back(curIndx);
-				
+				std::vector<IndicatorSet> sendVecBlobs = (dir == DIR_LEFT)? _vecAllBlobs[0]:_vecAllBlobs[_vecAllBlobs.size()-1];//the vector of set that needs to be serialized
+				sendBlobsIndx[dir].push_back(curIndx);
 
-				for (const auto& curSet : sendVecBlobs) {
-					sendBlobs[dir].reserve(sendBlobs[dir].size() + curSet.size());
-					for (const auto& val : curSet) {
-						sendBlobs[dir].emplace_back(val);
+				for (int i = 0; i < sendVecBlobs.size(); i++) {
+					IndicatorSet curSet = sendVecBlobs[i];
+					for (auto it = curSet.begin(); it != curSet.end(); it++) {
+						sendBlobs[dir].push_back(*it);
 						curIndx++;
 					}
-					sendBlobsIndx[dir].emplace_back(curIndx);//Now it records the starting position of the next IndicatorSet
+					sendBlobsIndx[dir].push_back(curIndx);//Now it records the starting position of the next IndicatorSet
 				}
 			}
 		}
@@ -1256,18 +1212,18 @@ class BlobsExchangeOp {
 				if ((rank == size - 1) && dir == DIR_RIGHT) {
 					continue;
 				}
-
-				recvBlobsUnserial[dir].reserve(recvBlobsIndx[dir].size() - 1);
-
-				for (size_t i = 0; i < recvBlobsIndx[dir].size() - 1; i++) {
+				for (int i = 0; i < recvBlobsIndx[dir].size()-1; i++){
 					IndicatorSet curSet;
 					int startIndx = recvBlobsIndx[dir][i];
-					int endIndx = std::min(recvBlobsIndx[dir][i + 1], static_cast<int>(recvBlobs[dir].size()));
+					int endIndx = std::min(recvBlobsIndx[dir][i+1],int(recvBlobs[dir].size()));
 
-					for (int j = startIndx; j < endIndx; j++) {
-						curSet.insert(recvBlobs[dir][j]);
+					//Deserialize each set
+					for (int i = startIndx; i < endIndx; i++){
+						curSet.insert(recvBlobs[dir][i]);
 					}
-					recvBlobsUnserial[dir].emplace_back(std::move(curSet));
+
+					//push each set into the vector
+					recvBlobsUnserial[dir].push_back(curSet);
 				}
 			}
 			recvBlobsIndx.clear();
@@ -1321,53 +1277,21 @@ class BlobsExchangeOp {
 	public:
 		///	<summary>
 		///		Construct the Operator with BlobsExchangeOp
-		///		It will construct this->m_comm and move vecAllBlobs to this->_vecAllBlobs to avoid unnecessary copies.	
+		///		It will contruct the this->m_comm and this->_vecAllBlobs based on the input communicator and vecAllBlobs	
 		///	</summary>
 		BlobsExchangeOp(MPI_Comm communicator, 
-						std::vector<std::vector<IndicatorSet>> vecAllBlobs) 
-			: _vecAllBlobs(std::move(vecAllBlobs)), m_comm(communicator) {
-			// Preallocate memory for buffers to avoid reallocations
-			sendBlobs.resize(2);
-			sendBlobsIndx.resize(2);
-			recvBlobs.resize(2);
-			recvBlobsIndx.resize(2);
-			recvBlobsUnserial.resize(2);
+						const std::vector< std::vector<IndicatorSet> > & vecAllBlobs){
+			this->_vecAllBlobs = vecAllBlobs;
+			this->m_comm = communicator;
 		}
-	
 
 
 		///	<summary>
 		///		Destructor for BlobsExchangeOp
 		///	</summary>
 		~BlobsExchangeOp(){
-			// Clear and shrink MPI-related buffers
 			MPIrequests.clear();
-			MPIrequests.shrink_to_fit();
-
 			MPIstatuses.clear();
-			MPIstatuses.shrink_to_fit();
-
-			// Clear and shrink all data structures
-			_vecAllBlobs.clear();
-			_vecAllBlobs.shrink_to_fit();
-
-			exchangedVecAllBlobs.clear();
-			exchangedVecAllBlobs.shrink_to_fit();
-
-			sendBlobs.clear();
-			sendBlobs.shrink_to_fit();
-
-			sendBlobsIndx.clear();
-			sendBlobsIndx.shrink_to_fit();
-
-			recvBlobs.clear();
-			recvBlobs.shrink_to_fit();
-
-			recvBlobsIndx.clear();
-			recvBlobsIndx.shrink_to_fit();
-
-			recvBlobsUnserial.clear();
-			recvBlobsUnserial.shrink_to_fit();
 			
 		}
 
@@ -1648,16 +1572,14 @@ class GlobalTimesExchangeOp {
 		///	</summary>
 		GlobalTimesExchangeOp(
 			MPI_Comm communicator, 
-			std::vector<std::vector<Time>> vecGlobalTimes,  // Use pass-by-value to enable move
-			int processorResponsibalForFile_LB, 
-			int processorResponsibalForFile_UB
-		) 
-			: _vecGlobalTimes(std::move(vecGlobalTimes)), // Move instead of copying
-			  m_comm(communicator),
-			  fileLowerBound(processorResponsibalForFile_LB),
-			  fileUpperBound(processorResponsibalForFile_UB) 
-		{
-			// Preallocate memory for buffers
+			const std::vector< std::vector<Time> > & vecGlobalTimes, 
+			const int & processorResponsibalForFile_LB, 
+			const int & processorResponsibalForFile_UB
+		) {
+			this->_vecGlobalTimes = vecGlobalTimes;
+			this->m_comm = communicator;
+			this->fileLowerBound = processorResponsibalForFile_LB;
+			this->fileUpperBound = processorResponsibalForFile_UB;
 			sendTimes.resize(2);
 			recvTimes.resize(2);
 		}
@@ -1665,29 +1587,10 @@ class GlobalTimesExchangeOp {
 		///	<summary>
 		///		Destructor
 		///	</summary>
-		~GlobalTimesExchangeOp() {
-			// Clear and shrink MPI request/status vectors
+		~GlobalTimesExchangeOp(){
 			MPIrequests.clear();
-			MPIrequests.shrink_to_fit();
-		
 			MPIstatuses.clear();
-			MPIstatuses.shrink_to_fit();
-		
-			// Release memory for exchanged and original global times
-			_vecGlobalTimes.clear();
-			_vecGlobalTimes.shrink_to_fit();
-		
-			exchangedVecGlobalTimes.clear();
-			exchangedVecGlobalTimes.shrink_to_fit();
-		
-			// Release memory for send/receive buffers
-			sendTimes.clear();
-			sendTimes.shrink_to_fit();
-		
-			recvTimes.clear();
-			recvTimes.shrink_to_fit();
 		}
-		
 
 		///	<summary>
 		///		Start the exchange process.
@@ -1896,21 +1799,23 @@ class MapGraphGatherOp {
 		///	<summary>
 		///		Serialize the MapGraph and generate the local std::pair<Tag, Tag> array
 		///	</summary>
-		void Serialize() {
+		void Serialize(){
 			localPairs.clear();
-			localPairs.reserve(_multimapTagGraph.size()); // Reserve space to avoid reallocations
-			for (const auto& entry : _multimapTagGraph) {
-				localPairs.emplace_back(entry.first, entry.second);
+			for (auto it = _multimapTagGraph.begin(); it != _multimapTagGraph.end(); ++it) {
+				localPairs.push_back(std::pair<Tag, Tag>(it->first, it->second));
 			}
+
 		}
-		
 
 		///	<summary>
 		///		Deserialize the local std::pair<Tag, Tag> array and generate back
 		///		the MapGraph (Only Processor 0 will call it)
 		///	</summary>
 		void Deserialize() {
-			outputTagGraph.insert(localPairs.begin(), localPairs.end());
+			for (std::pair<Tag, Tag> tagPair : localPairs) {
+				outputTagGraph.insert(tagPair);
+			}
+
 		}
 
 	protected:
@@ -1937,26 +1842,20 @@ class MapGraphGatherOp {
 		///		the input communicator and multimapTagGraph
 		///		And also construct the derived MPI_Datatype for Tag and commit it.
 		///	</summary>
-		MapGraphGatherOp(MPI_Comm communicator, const MapGraph& multimapTagGraph)
-		: m_comm(communicator), _multimapTagGraph(std::move(multimapTagGraph)) {}
-	
+		MapGraphGatherOp(MPI_Comm communicator, 
+						 const MapGraph & multimapTagGraph) {
+
+			this->_multimapTagGraph = multimapTagGraph;
+			this->m_comm = communicator;
+		}
 
 		///	<summary>
 		///		Destructor
 		///	</summary>
-		~MapGraphGatherOp() {
+		~MapGraphGatherOp(){
 			MPIrequests.clear();
-			MPIrequests.shrink_to_fit();
-		
 			MPIstatuses.clear();
-			MPIstatuses.shrink_to_fit();
-		
-			localPairs.clear();
-			localPairs.shrink_to_fit();
-		
-			outputTagGraph.clear();
 		}
-		
 
 
 
@@ -2000,7 +1899,9 @@ class MapGraphGatherOp {
 					MPI_Recv(recvTagPairs.data(), byteCount, MPI_BYTE, sourceRank, reduce_tag, m_comm, &status);
 
 					//Pack the receive Pairs into the localPairs.
-					localPairs.insert(localPairs.end(), std::make_move_iterator(recvTagPairs.begin()), std::make_move_iterator(recvTagPairs.end()));
+					for (auto recvPair : recvTagPairs) {
+						localPairs.push_back(recvPair);
+					}
 
 
 
@@ -4248,4 +4149,3 @@ try {
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-
