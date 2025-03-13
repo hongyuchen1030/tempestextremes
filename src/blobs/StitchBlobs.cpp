@@ -22,6 +22,7 @@
 #include "CoordTransforms.h"
 #include "BlobUtilities.h"
 #include <cmath>
+#include <memory>
 
 #include "CommandLine.h"
 #include "Exception.h"
@@ -2372,11 +2373,11 @@ struct Node3 {
 	//    their reponsible input files and do the exchange with the neighbor
 	//    processors.
 	// 6. The each processor will build the multigraph locally and then gather
-	//    it to the root processor.
+	//    it to the root processor. (I should only gather the multigraph to P0, all others remains at local)
 	// 7. The root processor will build the connectivity graph based on the
 	//    gathered multigraph and then reassign tag numbers
 	// 8. Then root processor will scatter out the updated vecAllBlobTags to
-	//    each processor.
+	//    each processor. (The time.localTagId only update the id, not tag)
 	// 9. Each processor will write their local vecAllBlobTags to the output
 	//    file individually. The time of the output file will be identical to
 	//    the input file.
@@ -2905,7 +2906,7 @@ try {
 		varreg.UnloadAllGridData();
 
 		// Load in the benchmark file
-		NcFileVector vecNcFiles;
+		NcFileVector vecNcFiles; //[HC] Why it is called "vecNcFiles" what information does it have? Coz u can have multiple files at one line
 		vecNcFiles.ParseFromString(vecInputFiles[f]);
 		_ASSERT(vecNcFiles.size() > 0);
 		
@@ -2950,7 +2951,9 @@ try {
 			// Load the search variable data
 			Variable & var = varreg.Get(varix);
 			vecNcFiles.SetConstantTimeIx(t);
-			var.LoadGridData(varreg, vecNcFiles, grid);
+			// [HC] Check in every loop how does thedata change
+			// Memeory scale by the number of the threads used
+			var.LoadGridData(varreg, vecNcFiles, grid); //[HC] What does this do? Does it load the full grid? Allocating new mem for this object
 			const DataArray1D<float> & dataIndicator = var.GetData();
 /*
 			float dChecksum = 0.0;
@@ -3359,25 +3362,32 @@ try {
 #if defined(TEMPEST_MPIOMP)
 
 	//We still need the original unexchanged data for these two variables later
-	GlobalTimesExchangeOp MPI_exchangedGlobalTimes(MPI_REAL_COMM,vecGlobalTimes, processorResponsibalForFile_LB, processorResponsibalForFile_UB);//Declare here since it needs to be reverted later
-	TagExchangeOP MPI_exchangedTags(MPI_REAL_COMM, vecAllBlobTags);
-	BlobsExchangeOp MPI_exchangedBlobs(MPI_REAL_COMM, vecAllBlobs);
+	std::unique_ptr<GlobalTimesExchangeOp> MPI_exchangedGlobalTimes;
+	std::unique_ptr<TagExchangeOP>       MPI_exchangedTags;
+	std::unique_ptr<BlobsExchangeOp>       MPI_exchangedBlobs;
 	if (nMPISize > 1 && valid_flag) {
 
-		//Exchange vecGlobalTimes (will be reverted after the connectivity graph is built)		
-		MPI_exchangedGlobalTimes.StartExchange();
-		MPI_exchangedGlobalTimes.EndExchange();
-		vecGlobalTimes = MPI_exchangedGlobalTimes.GetExchangedVecGlobalTimes();
+    // Now allocate the objects.
+		MPI_exchangedGlobalTimes.reset(new GlobalTimesExchangeOp(MPI_REAL_COMM, vecGlobalTimes,
+				processorResponsibalForFile_LB,
+				processorResponsibalForFile_UB));
+		MPI_exchangedTags.reset(new TagExchangeOP(MPI_REAL_COMM, vecAllBlobTags));
+		MPI_exchangedBlobs.reset(new BlobsExchangeOp(MPI_REAL_COMM, vecAllBlobs));
 
-		//Exchange vecAllBlobTags			
-		MPI_exchangedTags.StartExchange();
-		MPI_exchangedTags.EndExchange();
-		vecAllBlobTags = MPI_exchangedTags.GetExchangedVecAllBlobTags();
+		// Exchange vecGlobalTimes.
+		MPI_exchangedGlobalTimes->StartExchange();
+		MPI_exchangedGlobalTimes->EndExchange();
+		vecGlobalTimes = MPI_exchangedGlobalTimes->GetExchangedVecGlobalTimes();
 
-		//Exchange vecAllBlobs
-		MPI_exchangedBlobs.StartExchange();
-		MPI_exchangedBlobs.EndExchange();
-		vecAllBlobs = MPI_exchangedBlobs.GetExchangedVecAllBlobs();
+		// Exchange vecAllBlobTags.
+		MPI_exchangedTags->StartExchange();
+		MPI_exchangedTags->EndExchange();
+		vecAllBlobTags = MPI_exchangedTags->GetExchangedVecAllBlobTags();
+
+		// Exchange vecAllBlobs.
+		MPI_exchangedBlobs->StartExchange();
+		MPI_exchangedBlobs->EndExchange();
+		vecAllBlobs = MPI_exchangedBlobs->GetExchangedVecAllBlobs();
 
 		//Exchange vecPrevBlobBoxesDeg
 		BlobBoxesDegExchangeOP MPI_exchangedBlobBoxesDeg(MPI_REAL_COMM, vecAllBlobBoxesDeg);
@@ -3599,8 +3609,8 @@ try {
 				multimapTagGraph = MPI_MapGraph.GetGatheredTagGraph();
 			}
 
-			//Gather the setAllTags to P0
-			TagCollectiveOP MPI_TagsGather(MPI_REAL_COMM, MPI_exchangedTags.GetOriginalVecAllBlobTags());
+			//Gather the setAllTags to P0 (Set All Tags can remain at local)
+			TagCollectiveOP MPI_TagsGather(MPI_REAL_COMM, MPI_exchangedTags->GetOriginalVecAllBlobTags());
 			MPI_TagsGather.Gather();
 
 
@@ -3900,7 +3910,7 @@ try {
 			// Processor 0 scatter the updated vecAllBlobsTag to other processors
 			if (nMPISize > 1 && valid_flag) {
 				// Revert the exchanged vecGlobalTimes and nGlobalTimes for output:
-				vecGlobalTimes = MPI_exchangedGlobalTimes.GetUnExchangedVecGlobalTimes();
+				vecGlobalTimes = MPI_exchangedGlobalTimes->GetUnExchangedVecGlobalTimes();
 				nGlobalTimes = original_nGlobalTimes;
 
 
@@ -3913,13 +3923,13 @@ try {
 				// Calling the GatherTagCounts() will update the _vecAlllBlobTags
 				//  inside the TagCollectiveOP to the input one for all processors
 				//  except P0
-				MPI_TagScatter.GatherTagCounts(MPI_exchangedTags.GetOriginalVecAllBlobTags());
+				MPI_TagScatter.GatherTagCounts(MPI_exchangedTags->GetOriginalVecAllBlobTags());
 				// Make sure all the gather process is finished
 				MPI_Barrier(MPI_REAL_COMM);
 				MPI_TagScatter.Scatter();
 				MPI_Barrier(MPI_REAL_COMM);
 				vecAllBlobTags = MPI_TagScatter.GetUnserialVecAllTags(0);
-				vecAllBlobs = MPI_exchangedBlobs.GetOriginalVecAllBlobs();
+				vecAllBlobs = MPI_exchangedBlobs->GetOriginalVecAllBlobs();
 
 			}
 		#endif

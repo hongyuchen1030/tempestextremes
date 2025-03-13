@@ -1,21 +1,1488 @@
 
 RANKS: <0>
 
+Conditional jump or move depends on uninitialised value(s)
+  at calloc (in vg_replace_malloc.c:1595)
+  by cxil_get_svc_list (in libcxi.c:243)
+  by cxip_nic_get_best_rgroup_vni (in cxip_nic.c:163)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_alloc (in cxip_nic.c:338)
+  by cxip_info_alloc (in cxip_info.c:443)
+  by cxip_info_init (in cxip_info.c:487)
+  by fi_cxi_ini (in cxip_info.c:1323)
+  by fi_ini (in fabric.c:919)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1264)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param write(buf) points to uninitialised byte(s)
+  at write (in ./src/blobs/StitchBlobs)
+  by device_write.isra.1 (in libcxi.c:45)
+  by cxil_get_svc_list (in libcxi.c:249)
+  by cxip_nic_get_best_rgroup_vni (in cxip_nic.c:163)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_alloc (in cxip_nic.c:338)
+  by cxip_info_alloc (in cxip_info.c:443)
+  by cxip_info_init (in cxip_info.c:487)
+  by fi_cxi_ini (in cxip_info.c:1323)
+  by fi_ini (in fabric.c:919)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1264)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+in frame #2, created by cxil_get_svc_list (libcxi.c:219)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxil_get_svc_list (in libcxi.c:254)
+  by cxip_nic_get_best_rgroup_vni (in cxip_nic.c:163)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_alloc (in cxip_nic.c:338)
+  by cxip_info_alloc (in cxip_info.c:443)
+  by cxip_info_init (in cxip_info.c:487)
+  by fi_cxi_ini (in cxip_info.c:1323)
+  by fi_ini (in fabric.c:919)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1264)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxip_nic_get_best_rgroup_vni (in cxip_nic.c:179)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_alloc (in cxip_nic.c:338)
+  by cxip_info_alloc (in cxip_info.c:443)
+  by cxip_info_init (in cxip_info.c:487)
+  by fi_cxi_ini (in cxip_info.c:1323)
+  by fi_ini (in fabric.c:919)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1264)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Use of uninitialised value of size 8
+  at cxip_nic_get_best_rgroup_vni (in cxip_nic.c:177)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_alloc (in cxip_nic.c:338)
+  by cxip_info_alloc (in cxip_info.c:443)
+  by cxip_info_init (in cxip_info.c:487)
+  by fi_cxi_ini (in cxip_info.c:1323)
+  by fi_ini (in fabric.c:919)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1264)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxip_nic_get_best_rgroup_vni (in cxip_nic.c:179)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_alloc (in cxip_nic.c:338)
+  by cxip_info_alloc (in cxip_info.c:443)
+  by cxip_info_init (in cxip_info.c:487)
+  by fi_cxi_ini (in cxip_info.c:1323)
+  by fi_ini (in fabric.c:919)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1264)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Use of uninitialised value of size 8
+  at cxip_nic_get_best_rgroup_vni (in cxip_nic.c:182)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_alloc (in cxip_nic.c:338)
+  by cxip_info_alloc (in cxip_info.c:443)
+  by cxip_info_init (in cxip_info.c:487)
+  by fi_cxi_ini (in cxip_info.c:1323)
+  by fi_ini (in fabric.c:919)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1264)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxip_nic_get_best_rgroup_vni (in cxip_nic.c:208)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_alloc (in cxip_nic.c:338)
+  by cxip_info_alloc (in cxip_info.c:443)
+  by cxip_info_init (in cxip_info.c:487)
+  by fi_cxi_ini (in cxip_info.c:1323)
+  by fi_ini (in fabric.c:919)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1264)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Use of uninitialised value of size 8
+  at cxip_nic_get_best_rgroup_vni (in cxip_nic.c:218)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_alloc (in cxip_nic.c:338)
+  by cxip_info_alloc (in cxip_info.c:443)
+  by cxip_info_init (in cxip_info.c:487)
+  by fi_cxi_ini (in cxip_info.c:1323)
+  by fi_ini (in fabric.c:919)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1264)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Use of uninitialised value of size 8
+  at cxip_nic_get_best_rgroup_vni (in cxip_nic.c:219)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_alloc (in cxip_nic.c:338)
+  by cxip_info_alloc (in cxip_info.c:443)
+  by cxip_info_init (in cxip_info.c:487)
+  by fi_cxi_ini (in cxip_info.c:1323)
+  by fi_ini (in fabric.c:919)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1264)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Use of uninitialised value of size 8
+  at cxip_nic_get_best_rgroup_vni (in cxip_nic.c:228)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_alloc (in cxip_nic.c:338)
+  by cxip_info_alloc (in cxip_info.c:443)
+  by cxip_info_init (in cxip_info.c:487)
+  by fi_cxi_ini (in cxip_info.c:1323)
+  by fi_ini (in fabric.c:919)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1264)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxip_nic_get_best_rgroup_vni (in cxip_nic.c:179)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_alloc (in cxip_nic.c:338)
+  by cxip_info_alloc (in cxip_info.c:443)
+  by cxip_info_init (in cxip_info.c:513)
+  by fi_cxi_ini (in cxip_info.c:1323)
+  by fi_ini (in fabric.c:919)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1264)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Use of uninitialised value of size 8
+  at cxip_nic_get_best_rgroup_vni (in cxip_nic.c:177)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_alloc (in cxip_nic.c:338)
+  by cxip_info_alloc (in cxip_info.c:443)
+  by cxip_info_init (in cxip_info.c:513)
+  by fi_cxi_ini (in cxip_info.c:1323)
+  by fi_ini (in fabric.c:919)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1264)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxip_nic_get_best_rgroup_vni (in cxip_nic.c:179)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_alloc (in cxip_nic.c:338)
+  by cxip_info_alloc (in cxip_info.c:443)
+  by cxip_info_init (in cxip_info.c:513)
+  by fi_cxi_ini (in cxip_info.c:1323)
+  by fi_ini (in fabric.c:919)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1264)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Use of uninitialised value of size 8
+  at cxip_nic_get_best_rgroup_vni (in cxip_nic.c:182)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_alloc (in cxip_nic.c:338)
+  by cxip_info_alloc (in cxip_info.c:443)
+  by cxip_info_init (in cxip_info.c:513)
+  by fi_cxi_ini (in cxip_info.c:1323)
+  by fi_ini (in fabric.c:919)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1264)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxip_nic_get_best_rgroup_vni (in cxip_nic.c:208)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_alloc (in cxip_nic.c:338)
+  by cxip_info_alloc (in cxip_info.c:443)
+  by cxip_info_init (in cxip_info.c:513)
+  by fi_cxi_ini (in cxip_info.c:1323)
+  by fi_ini (in fabric.c:919)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1264)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Use of uninitialised value of size 8
+  at cxip_nic_get_best_rgroup_vni (in cxip_nic.c:218)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_alloc (in cxip_nic.c:338)
+  by cxip_info_alloc (in cxip_info.c:443)
+  by cxip_info_init (in cxip_info.c:513)
+  by fi_cxi_ini (in cxip_info.c:1323)
+  by fi_ini (in fabric.c:919)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1264)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Use of uninitialised value of size 8
+  at cxip_nic_get_best_rgroup_vni (in cxip_nic.c:219)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_alloc (in cxip_nic.c:338)
+  by cxip_info_alloc (in cxip_info.c:443)
+  by cxip_info_init (in cxip_info.c:513)
+  by fi_cxi_ini (in cxip_info.c:1323)
+  by fi_ini (in fabric.c:919)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1264)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Use of uninitialised value of size 8
+  at cxip_nic_get_best_rgroup_vni (in cxip_nic.c:228)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_alloc (in cxip_nic.c:338)
+  by cxip_info_alloc (in cxip_info.c:443)
+  by cxip_info_init (in cxip_info.c:513)
+  by fi_cxi_ini (in cxip_info.c:1323)
+  by fi_ini (in fabric.c:919)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1264)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at calloc (in vg_replace_malloc.c:1595)
+  by cxil_get_svc_list (in libcxi.c:243)
+  by cxip_nic_get_best_rgroup_vni (in cxip_nic.c:163)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_control (in cxip_nic.c:283)
+  by fi_control (in fabric.h:689)
+  by cxip_alter_info (in cxip_info.c:1378)
+  by cxip_getinfo (in cxip_info.c:1762)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1311)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxil_get_svc_list (in libcxi.c:254)
+  by cxip_nic_get_best_rgroup_vni (in cxip_nic.c:163)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_control (in cxip_nic.c:283)
+  by fi_control (in fabric.h:689)
+  by cxip_alter_info (in cxip_info.c:1378)
+  by cxip_getinfo (in cxip_info.c:1762)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1311)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxip_nic_get_best_rgroup_vni (in cxip_nic.c:179)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_control (in cxip_nic.c:283)
+  by fi_control (in fabric.h:689)
+  by cxip_alter_info (in cxip_info.c:1378)
+  by cxip_getinfo (in cxip_info.c:1762)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1311)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Use of uninitialised value of size 8
+  at cxip_nic_get_best_rgroup_vni (in cxip_nic.c:177)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_control (in cxip_nic.c:283)
+  by fi_control (in fabric.h:689)
+  by cxip_alter_info (in cxip_info.c:1378)
+  by cxip_getinfo (in cxip_info.c:1762)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1311)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxip_nic_get_best_rgroup_vni (in cxip_nic.c:179)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_control (in cxip_nic.c:283)
+  by fi_control (in fabric.h:689)
+  by cxip_alter_info (in cxip_info.c:1378)
+  by cxip_getinfo (in cxip_info.c:1762)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1311)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Use of uninitialised value of size 8
+  at cxip_nic_get_best_rgroup_vni (in cxip_nic.c:182)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_control (in cxip_nic.c:283)
+  by fi_control (in fabric.h:689)
+  by cxip_alter_info (in cxip_info.c:1378)
+  by cxip_getinfo (in cxip_info.c:1762)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1311)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxip_nic_get_best_rgroup_vni (in cxip_nic.c:208)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_control (in cxip_nic.c:283)
+  by fi_control (in fabric.h:689)
+  by cxip_alter_info (in cxip_info.c:1378)
+  by cxip_getinfo (in cxip_info.c:1762)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1311)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Use of uninitialised value of size 8
+  at cxip_nic_get_best_rgroup_vni (in cxip_nic.c:218)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_control (in cxip_nic.c:283)
+  by fi_control (in fabric.h:689)
+  by cxip_alter_info (in cxip_info.c:1378)
+  by cxip_getinfo (in cxip_info.c:1762)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1311)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Use of uninitialised value of size 8
+  at cxip_nic_get_best_rgroup_vni (in cxip_nic.c:219)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_control (in cxip_nic.c:283)
+  by fi_control (in fabric.h:689)
+  by cxip_alter_info (in cxip_info.c:1378)
+  by cxip_getinfo (in cxip_info.c:1762)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1311)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Use of uninitialised value of size 8
+  at cxip_nic_get_best_rgroup_vni (in cxip_nic.c:228)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_control (in cxip_nic.c:283)
+  by fi_control (in fabric.h:689)
+  by cxip_alter_info (in cxip_info.c:1378)
+  by cxip_getinfo (in cxip_info.c:1762)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1311)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param write(buf) points to uninitialised byte(s)
+  at write (in ./src/blobs/StitchBlobs)
+  by device_write.isra.1 (in libcxi.c:45)
+  by cxil_alloc_evtq (in libcxi.c:1136)
+  by cxip_ep_ctrl_eq_alloc (in cxip_ctrl.c:492)
+  by cxip_ep_ctrl_init (in cxip_ctrl.c:646)
+  by cxip_ep_enable (in cxip_ep.c:500)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+in frame #2, created by cxil_alloc_evtq (libcxi.c:1096)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at mmap (in ./src/blobs/StitchBlobs)
+  by cxil_alloc_evtq (in libcxi.c:1141)
+  by cxip_ep_ctrl_eq_alloc (in cxip_ctrl.c:492)
+  by cxip_ep_ctrl_init (in cxip_ctrl.c:646)
+  by cxip_ep_enable (in cxip_ep.c:500)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param mmap(length) contains uninitialised byte(s)
+  at mmap (in ./src/blobs/StitchBlobs)
+  by cxil_alloc_evtq (in libcxi.c:1141)
+  by cxip_ep_ctrl_eq_alloc (in cxip_ctrl.c:492)
+  by cxip_ep_ctrl_init (in cxip_ctrl.c:646)
+  by cxip_ep_enable (in cxip_ep.c:500)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param mmap(offset) contains uninitialised byte(s)
+  at mmap (in ./src/blobs/StitchBlobs)
+  by cxil_alloc_evtq (in libcxi.c:1141)
+  by cxip_ep_ctrl_eq_alloc (in cxip_ctrl.c:492)
+  by cxip_ep_ctrl_init (in cxip_ctrl.c:646)
+  by cxip_ep_enable (in cxip_ep.c:500)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at mmap (in ./src/blobs/StitchBlobs)
+  by cxil_alloc_evtq (in libcxi.c:1141)
+  by cxip_ep_ctrl_eq_alloc (in cxip_ctrl.c:492)
+  by cxip_ep_ctrl_init (in cxip_ctrl.c:655)
+  by cxip_ep_enable (in cxip_ep.c:500)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param mmap(length) contains uninitialised byte(s)
+  at mmap (in ./src/blobs/StitchBlobs)
+  by cxil_alloc_evtq (in libcxi.c:1141)
+  by cxip_ep_ctrl_eq_alloc (in cxip_ctrl.c:492)
+  by cxip_ep_ctrl_init (in cxip_ctrl.c:655)
+  by cxip_ep_enable (in cxip_ep.c:500)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param mmap(offset) contains uninitialised byte(s)
+  at mmap (in ./src/blobs/StitchBlobs)
+  by cxil_alloc_evtq (in libcxi.c:1141)
+  by cxip_ep_ctrl_eq_alloc (in cxip_ctrl.c:492)
+  by cxip_ep_ctrl_init (in cxip_ctrl.c:655)
+  by cxip_ep_enable (in cxip_ep.c:500)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param write(buf) points to uninitialised byte(s)
+  at write (in ./src/blobs/StitchBlobs)
+  by device_write.isra.1 (in libcxi.c:45)
+  by cxil_alloc_cmdq (in libcxi.c:764)
+  by cxip_cmdq_alloc (in cxip_cmdq.c:201)
+  by cxip_ep_cmdq (in cxip_ep.c:85)
+  by cxip_ep_ctrl_init (in cxip_ctrl.c:665)
+  by cxip_ep_enable (in cxip_ep.c:500)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+in frame #2, created by cxil_alloc_cmdq (libcxi.c:741)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at mmap (in ./src/blobs/StitchBlobs)
+  by cxil_alloc_cmdq (in libcxi.c:776)
+  by cxip_cmdq_alloc (in cxip_cmdq.c:201)
+  by cxip_ep_cmdq (in cxip_ep.c:85)
+  by cxip_ep_ctrl_init (in cxip_ctrl.c:673)
+  by cxip_ep_enable (in cxip_ep.c:500)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param mmap(length) contains uninitialised byte(s)
+  at mmap (in ./src/blobs/StitchBlobs)
+  by cxil_alloc_cmdq (in libcxi.c:776)
+  by cxip_cmdq_alloc (in cxip_cmdq.c:201)
+  by cxip_ep_cmdq (in cxip_ep.c:85)
+  by cxip_ep_ctrl_init (in cxip_ctrl.c:673)
+  by cxip_ep_enable (in cxip_ep.c:500)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param mmap(offset) contains uninitialised byte(s)
+  at mmap (in ./src/blobs/StitchBlobs)
+  by cxil_alloc_cmdq (in libcxi.c:776)
+  by cxip_cmdq_alloc (in cxip_cmdq.c:201)
+  by cxip_ep_cmdq (in cxip_ep.c:85)
+  by cxip_ep_ctrl_init (in cxip_ctrl.c:673)
+  by cxip_ep_enable (in cxip_ep.c:500)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at mmap (in ./src/blobs/StitchBlobs)
+  by cxil_alloc_cmdq (in libcxi.c:785)
+  by cxip_cmdq_alloc (in cxip_cmdq.c:201)
+  by cxip_ep_cmdq (in cxip_ep.c:85)
+  by cxip_ep_ctrl_init (in cxip_ctrl.c:673)
+  by cxip_ep_enable (in cxip_ep.c:500)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param mmap(length) contains uninitialised byte(s)
+  at mmap (in ./src/blobs/StitchBlobs)
+  by cxil_alloc_cmdq (in libcxi.c:785)
+  by cxip_cmdq_alloc (in cxip_cmdq.c:201)
+  by cxip_ep_cmdq (in cxip_ep.c:85)
+  by cxip_ep_ctrl_init (in cxip_ctrl.c:673)
+  by cxip_ep_enable (in cxip_ep.c:500)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param mmap(offset) contains uninitialised byte(s)
+  at mmap (in ./src/blobs/StitchBlobs)
+  by cxil_alloc_cmdq (in libcxi.c:785)
+  by cxip_cmdq_alloc (in cxip_cmdq.c:201)
+  by cxip_ep_cmdq (in cxip_ep.c:85)
+  by cxip_ep_ctrl_init (in cxip_ctrl.c:673)
+  by cxip_ep_enable (in cxip_ep.c:500)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param write(buf) points to uninitialised byte(s)
+  at write (in ./src/blobs/StitchBlobs)
+  by device_write.isra.1 (in libcxi.c:45)
+  by cxil_alloc_pte (in libcxi.c:1336)
+  by cxip_pte_alloc_nomap (in cxip_pte.c:207)
+  by cxip_ep_ctrl_init (in cxip_ctrl.c:681)
+  by cxip_ep_enable (in cxip_ep.c:500)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+in frame #2, created by cxil_alloc_pte (libcxi.c:1315)
+
+
+RANKS: <0>
+
+Syscall param write(buf) points to uninitialised byte(s)
+  at write (in ./src/blobs/StitchBlobs)
+  by device_write.isra.1 (in libcxi.c:45)
+  by cxil_map_pte (in libcxi.c:1398)
+  by cxip_pte_map (in cxip_pte.c:165)
+  by cxip_ep_ctrl_init (in cxip_ctrl.c:695)
+  by cxip_ep_enable (in cxip_ep.c:500)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+in frame #2, created by cxil_map_pte (libcxi.c:1381)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at mmap (in ./src/blobs/StitchBlobs)
+  by cxil_alloc_evtq (in libcxi.c:1141)
+  by cxip_evtq_init (in cxip_evtq.c:554)
+  by cxip_txc_enable (in cxip_txc.c:355)
+  by cxip_ep_enable (in cxip_ep.c:517)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param mmap(length) contains uninitialised byte(s)
+  at mmap (in ./src/blobs/StitchBlobs)
+  by cxil_alloc_evtq (in libcxi.c:1141)
+  by cxip_evtq_init (in cxip_evtq.c:554)
+  by cxip_txc_enable (in cxip_txc.c:355)
+  by cxip_ep_enable (in cxip_ep.c:517)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param mmap(offset) contains uninitialised byte(s)
+  at mmap (in ./src/blobs/StitchBlobs)
+  by cxil_alloc_evtq (in libcxi.c:1141)
+  by cxip_evtq_init (in cxip_evtq.c:554)
+  by cxip_txc_enable (in cxip_txc.c:355)
+  by cxip_ep_enable (in cxip_ep.c:517)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at __cxi_cq_free_slots_check (in cxi_prov_hw.h:565)
+  by __cxi_cq_free_slots (in cxi_prov_hw.h:580)
+  by cxi_cq_emit_target (in cxi_prov_hw.h:1320)
+  by cxip_pte_set_state (in cxip_pte.c:23)
+  by cxip_rdzv_base_pte_alloc.constprop.3 (in cxip_rdzv_pte.c:266)
+  by cxip_rdzv_match_pte_alloc (in cxip_rdzv_pte.c:300)
+  by txc_msg_init (in cxip_txc.c:253)
+  by cxip_txc_enable (in cxip_txc.c:372)
+  by cxip_ep_enable (in cxip_ep.c:517)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at __cxi_cq_free_slots (in cxi_prov_hw.h:582)
+  by cxi_cq_emit_target (in cxi_prov_hw.h:1320)
+  by cxip_pte_set_state (in cxip_pte.c:23)
+  by cxip_rdzv_base_pte_alloc.constprop.3 (in cxip_rdzv_pte.c:266)
+  by cxip_rdzv_match_pte_alloc (in cxip_rdzv_pte.c:300)
+  by txc_msg_init (in cxip_txc.c:253)
+  by cxip_txc_enable (in cxip_txc.c:372)
+  by cxip_ep_enable (in cxip_ep.c:517)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Use of uninitialised value of size 8
+  at memcpy (in string_fortified.h:34)
+  by cxi_cq_emit_target (in cxi_prov_hw.h:1325)
+  by cxip_pte_set_state (in cxip_pte.c:23)
+  by cxip_rdzv_base_pte_alloc.constprop.3 (in cxip_rdzv_pte.c:266)
+  by cxip_rdzv_match_pte_alloc (in cxip_rdzv_pte.c:300)
+  by txc_msg_init (in cxip_txc.c:253)
+  by cxip_txc_enable (in cxip_txc.c:372)
+  by cxip_ep_enable (in cxip_ep.c:517)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxi_cq_ring (in cxi_prov_hw.h:713)
+  by cxip_pte_set_state (in cxip_pte.c:29)
+  by cxip_rdzv_base_pte_alloc.constprop.3 (in cxip_rdzv_pte.c:266)
+  by cxip_rdzv_match_pte_alloc (in cxip_rdzv_pte.c:300)
+  by txc_msg_init (in cxip_txc.c:253)
+  by cxip_txc_enable (in cxip_txc.c:372)
+  by cxip_ep_enable (in cxip_ep.c:517)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxi_cq_update_wp (in cxi_prov_hw.h:604)
+  by cxi_cq_ring (in cxi_prov_hw.h:716)
+  by cxip_pte_set_state (in cxip_pte.c:29)
+  by cxip_rdzv_base_pte_alloc.constprop.3 (in cxip_rdzv_pte.c:266)
+  by cxip_rdzv_match_pte_alloc (in cxip_rdzv_pte.c:300)
+  by txc_msg_init (in cxip_txc.c:253)
+  by cxip_txc_enable (in cxip_txc.c:372)
+  by cxip_ep_enable (in cxip_ep.c:517)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxip_pte_state_change (in cxip_pte.c:298)
+  by cxip_evtq_progress (in cxip_evtq.c:376)
+  by cxip_rdzv_pte_wait_append (in cxip_rdzv_pte.c:40)
+  by cxip_rdzv_pte_zbp_req_alloc (in cxip_rdzv_pte.c:177)
+  by cxip_rdzv_match_pte_alloc (in cxip_rdzv_pte.c:309)
+  by txc_msg_init (in cxip_txc.c:253)
+  by cxip_txc_enable (in cxip_txc.c:372)
+  by cxip_ep_enable (in cxip_ep.c:517)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at mmap (in ./src/blobs/StitchBlobs)
+  by cxil_alloc_evtq (in libcxi.c:1141)
+  by cxip_evtq_init (in cxip_evtq.c:554)
+  by cxip_rxc_enable (in cxip_rxc.c:314)
+  by cxip_ep_enable (in cxip_ep.c:523)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param mmap(length) contains uninitialised byte(s)
+  at mmap (in ./src/blobs/StitchBlobs)
+  by cxil_alloc_evtq (in libcxi.c:1141)
+  by cxip_evtq_init (in cxip_evtq.c:554)
+  by cxip_rxc_enable (in cxip_rxc.c:314)
+  by cxip_ep_enable (in cxip_ep.c:523)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param mmap(offset) contains uninitialised byte(s)
+  at mmap (in ./src/blobs/StitchBlobs)
+  by cxil_alloc_evtq (in libcxi.c:1141)
+  by cxip_evtq_init (in cxip_evtq.c:554)
+  by cxip_rxc_enable (in cxip_rxc.c:314)
+  by cxip_ep_enable (in cxip_ep.c:523)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param write(buf) points to uninitialised byte(s)
+  at write (in ./src/blobs/StitchBlobs)
+  by device_write.isra.1 (in libcxi.c:45)
+  by cxil_evtq_adjust_reserved_fc (in libcxi.c:1215)
+  by cxip_evtq_adjust_reserved_fc_event_slots (in cxip_evtq.c:50)
+  by rxc_msg_init (in cxip_rxc.c:158)
+  by cxip_rxc_enable (in cxip_rxc.c:321)
+  by cxip_ep_enable (in cxip_ep.c:523)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+in frame #2, created by cxil_evtq_adjust_reserved_fc (libcxi.c:1199)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at __cxi_cq_free_slots_check (in cxi_prov_hw.h:565)
+  by __cxi_cq_free_slots (in cxi_prov_hw.h:580)
+  by cxi_cq_emit_target (in cxi_prov_hw.h:1320)
+  by cxip_pte_append (in cxip_pte.c:87)
+  by cxip_ptelist_link_buf (in cxip_ptelist_buf.c:75)
+  by cxip_ptelist_bufpool_init (in cxip_ptelist_buf.c:317)
+  by cxip_req_bufpool_init (in cxip_req_buf.c:315)
+  by cxip_rxc_enable (in cxip_rxc.c:332)
+  by cxip_ep_enable (in cxip_ep.c:523)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at __cxi_cq_free_slots (in cxi_prov_hw.h:582)
+  by cxi_cq_emit_target (in cxi_prov_hw.h:1320)
+  by cxip_pte_append (in cxip_pte.c:87)
+  by cxip_ptelist_link_buf (in cxip_ptelist_buf.c:75)
+  by cxip_ptelist_bufpool_init (in cxip_ptelist_buf.c:317)
+  by cxip_req_bufpool_init (in cxip_req_buf.c:315)
+  by cxip_rxc_enable (in cxip_rxc.c:332)
+  by cxip_ep_enable (in cxip_ep.c:523)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Use of uninitialised value of size 8
+  at memcpy (in string_fortified.h:34)
+  by cxi_cq_emit_target (in cxi_prov_hw.h:1325)
+  by cxip_pte_append (in cxip_pte.c:87)
+  by cxip_ptelist_link_buf (in cxip_ptelist_buf.c:75)
+  by cxip_ptelist_bufpool_init (in cxip_ptelist_buf.c:317)
+  by cxip_req_bufpool_init (in cxip_req_buf.c:315)
+  by cxip_rxc_enable (in cxip_rxc.c:332)
+  by cxip_ep_enable (in cxip_ep.c:523)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxi_cq_ring (in cxi_prov_hw.h:713)
+  by cxip_pte_append (in cxip_pte.c:95)
+  by cxip_ptelist_link_buf (in cxip_ptelist_buf.c:75)
+  by cxip_ptelist_bufpool_init (in cxip_ptelist_buf.c:317)
+  by cxip_req_bufpool_init (in cxip_req_buf.c:315)
+  by cxip_rxc_enable (in cxip_rxc.c:332)
+  by cxip_ep_enable (in cxip_ep.c:523)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxi_cq_update_wp (in cxi_prov_hw.h:604)
+  by cxi_cq_ring (in cxi_prov_hw.h:716)
+  by cxip_pte_append (in cxip_pte.c:95)
+  by cxip_ptelist_link_buf (in cxip_ptelist_buf.c:75)
+  by cxip_ptelist_bufpool_init (in cxip_ptelist_buf.c:317)
+  by cxip_req_bufpool_init (in cxip_req_buf.c:315)
+  by cxip_rxc_enable (in cxip_rxc.c:332)
+  by cxip_ep_enable (in cxip_ep.c:523)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at __cxi_cq_free_slots_check (in cxi_prov_hw.h:565)
+  by __cxi_cq_free_slots (in cxi_prov_hw.h:580)
+  by cxi_cq_emit_target (in cxi_prov_hw.h:1320)
+  by cxip_pte_append (in cxip_pte.c:87)
+  by cxip_ptelist_link_buf (in cxip_ptelist_buf.c:75)
+  by cxip_ptelist_bufpool_init (in cxip_ptelist_buf.c:317)
+  by cxip_oflow_bufpool_init (in cxip_msg.c:1537)
+  by cxip_rxc_enable (in cxip_rxc.c:339)
+  by cxip_ep_enable (in cxip_ep.c:523)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at __cxi_cq_free_slots (in cxi_prov_hw.h:582)
+  by cxi_cq_emit_target (in cxi_prov_hw.h:1320)
+  by cxip_pte_append (in cxip_pte.c:87)
+  by cxip_ptelist_link_buf (in cxip_ptelist_buf.c:75)
+  by cxip_ptelist_bufpool_init (in cxip_ptelist_buf.c:317)
+  by cxip_oflow_bufpool_init (in cxip_msg.c:1537)
+  by cxip_rxc_enable (in cxip_rxc.c:339)
+  by cxip_ep_enable (in cxip_ep.c:523)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Use of uninitialised value of size 8
+  at memcpy (in string_fortified.h:34)
+  by cxi_cq_emit_target (in cxi_prov_hw.h:1325)
+  by cxip_pte_append (in cxip_pte.c:87)
+  by cxip_ptelist_link_buf (in cxip_ptelist_buf.c:75)
+  by cxip_ptelist_bufpool_init (in cxip_ptelist_buf.c:317)
+  by cxip_oflow_bufpool_init (in cxip_msg.c:1537)
+  by cxip_rxc_enable (in cxip_rxc.c:339)
+  by cxip_ep_enable (in cxip_ep.c:523)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxi_cq_ring (in cxi_prov_hw.h:713)
+  by cxip_pte_append (in cxip_pte.c:95)
+  by cxip_ptelist_link_buf (in cxip_ptelist_buf.c:75)
+  by cxip_ptelist_bufpool_init (in cxip_ptelist_buf.c:317)
+  by cxip_oflow_bufpool_init (in cxip_msg.c:1537)
+  by cxip_rxc_enable (in cxip_rxc.c:339)
+  by cxip_ep_enable (in cxip_ep.c:523)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxi_cq_update_wp (in cxi_prov_hw.h:604)
+  by cxi_cq_ring (in cxi_prov_hw.h:716)
+  by cxip_pte_append (in cxip_pte.c:95)
+  by cxip_ptelist_link_buf (in cxip_ptelist_buf.c:75)
+  by cxip_ptelist_bufpool_init (in cxip_ptelist_buf.c:317)
+  by cxip_oflow_bufpool_init (in cxip_msg.c:1537)
+  by cxip_rxc_enable (in cxip_rxc.c:339)
+  by cxip_ep_enable (in cxip_ep.c:523)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param write(buf) points to uninitialised byte(s)
+  at write (in ./src/blobs/StitchBlobs)
+  by device_write.isra.1 (in libcxi.c:45)
+  by cxil_alloc_domain (in libcxi.c:560)
+  by cxip_portals_table_alloc (in cxip_portals_table.c:39)
+  by cxip_ep_enable (in cxip_ep.c:487)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by mca_btl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by mca_btl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_bml_r2_component_init (in ./src/blobs/StitchBlobs)
+  by mca_bml_base_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_ob1_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+in frame #2, created by cxil_alloc_domain (libcxi.c:539)
+
+
+RANKS: <0>
+
+Syscall param write(buf) points to uninitialised byte(s)
+  at write (in ./src/blobs/StitchBlobs)
+  by device_write.isra.1 (in libcxi.c:45)
+  by cxil_map (in libcxi.c:910)
+  by cxip_ep_ctrl_eq_alloc (in cxip_ctrl.c:483)
+  by cxip_ep_ctrl_init (in cxip_ctrl.c:646)
+  by cxip_ep_enable (in cxip_ep.c:500)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by mca_btl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by mca_btl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_bml_r2_component_init (in ./src/blobs/StitchBlobs)
+  by mca_bml_base_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_ob1_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+in frame #2, created by cxil_map (libcxi.c:878)
+
+
+RANKS: <0>
+
+Syscall param write(buf) points to uninitialised byte(s)
+  at write (in ./src/blobs/StitchBlobs)
+  by device_write.isra.1 (in libcxi.c:45)
+  by cxil_alloc_cp (in libcxi.c:464)
+  by cxip_cp_get (in cxip_cmdq.c:63)
+  by cxip_cmdq_alloc (in cxip_cmdq.c:182)
+  by cxip_ep_cmdq (in cxip_ep.c:85)
+  by cxip_ep_ctrl_init (in cxip_ctrl.c:665)
+  by cxip_ep_enable (in cxip_ep.c:500)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by mca_btl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by mca_btl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_bml_r2_component_init (in ./src/blobs/StitchBlobs)
+  by mca_bml_base_init (in ./src/blobs/StitchBlobs)
+in frame #2, created by cxil_alloc_cp (libcxi.c:441)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at __cxi_cq_free_slots (in cxi_prov_hw.h:582)
+  by cxi_cq_emit_target (in cxi_prov_hw.h:1320)
+  by cxip_pte_set_state (in cxip_pte.c:23)
+  by cxip_ep_ctrl_init (in cxip_ctrl.c:701)
+  by cxip_ep_enable (in cxip_ep.c:500)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by mca_btl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by mca_btl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_bml_r2_component_init (in ./src/blobs/StitchBlobs)
+  by mca_bml_base_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_ob1_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxi_cq_ring (in cxi_prov_hw.h:713)
+  by cxip_pte_set_state (in cxip_pte.c:29)
+  by cxip_ep_ctrl_init (in cxip_ctrl.c:701)
+  by cxip_ep_enable (in cxip_ep.c:500)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by mca_btl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by mca_btl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_bml_r2_component_init (in ./src/blobs/StitchBlobs)
+  by mca_bml_base_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_ob1_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxi_cq_update_wp (in cxi_prov_hw.h:604)
+  by cxi_cq_ring (in cxi_prov_hw.h:716)
+  by cxip_pte_set_state (in cxip_pte.c:29)
+  by cxip_ep_ctrl_init (in cxip_ctrl.c:701)
+  by cxip_ep_enable (in cxip_ep.c:500)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by mca_btl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by mca_btl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_bml_r2_component_init (in ./src/blobs/StitchBlobs)
+  by mca_bml_base_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_ob1_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param write(buf) points to uninitialised byte(s)
+  at write (in ./src/blobs/StitchBlobs)
+  by device_write.isra.1 (in libcxi.c:45)
+  by cxil_alloc_evtq (in libcxi.c:1136)
+  by cxip_evtq_init (in cxip_evtq.c:554)
+  by cxip_txc_enable (in cxip_txc.c:355)
+  by cxip_ep_enable (in cxip_ep.c:517)
+  by cxip_ep_control (in cxip_ep.c:1011)
+  by mca_btl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by mca_btl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_bml_r2_component_init (in ./src/blobs/StitchBlobs)
+  by mca_bml_base_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_ob1_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+in frame #2, created by cxil_alloc_evtq (libcxi.c:1096)
+
+
+RANKS: <0>
+
+Syscall param writev(vector[1]) points to uninitialised byte(s)
+  at writev (in ./src/blobs/StitchBlobs)
+  by send_msg (in ptl_base_sendrecv.c:270)
+  by pmix_ptl_base_send_handler (in ptl_base_sendrecv.c:400)
+  by ??? (in ./src/blobs/StitchBlobs)
+  by event_base_loop (in ./src/blobs/StitchBlobs)
+  by progress_engine (in pmix_progress_threads.c:230)
+  by start_thread (in ./src/blobs/StitchBlobs)
+  by clone (in ./src/blobs/StitchBlobs)
+Address is 29 bytes inside a block of size 512 alloc'd
+  at realloc (in vg_replace_malloc.c:1690)
+  by pmix_bfrop_buffer_extend (in bfrop_base_fns.c:1161)
+  by pmix_bfrops_base_pack_byte (in bfrop_base_pack.c:198)
+  by pmix_bfrops_base_pack_buf (in bfrop_base_pack.c:485)
+  by pmix_bfrops_base_pack (in bfrop_base_pack.c:62)
+  by _commitfn (in pmix_client.c:1458)
+  by ??? (in ./src/blobs/StitchBlobs)
+  by event_base_loop (in ./src/blobs/StitchBlobs)
+  by progress_engine (in pmix_progress_threads.c:230)
+  by start_thread (in ./src/blobs/StitchBlobs)
+  by clone (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
 Mismatched free() / delete / delete []
   at operator delete[](void*) (in vg_replace_malloc.c:1330)
   by DataArray1D<int>::Detach() (in DataArray1D.h:163)
   by DataArray1D<int>::~DataArray1D() (in DataArray1D.h:78)
-  by ReadCFTimeDataFromNcFile(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcTimeDimension&, bool) (in NetCDFUtilities.cpp:804)
+  by ReadCFTimeDataFromNcFile(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcTimeDimension&, bool) (in NetCDFUtilities.cpp:745)
   by NcFileVector::InsertFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long) (in NcFileVector.cpp:87)
-  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:134)
-  by main (in StitchBlobs.cpp:2821)
+  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:138)
+  by main (in StitchBlobs.cpp:2708)
 Address is 0 bytes inside a block of size 496 alloc'd
   at malloc (in vg_replace_malloc.c:442)
   by DataArray1D<int>::Allocate(unsigned long) (in DataArray1D.h:115)
-  by ReadCFTimeDataFromNcFile(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcTimeDimension&, bool) (in NetCDFUtilities.cpp:749)
+  by ReadCFTimeDataFromNcFile(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcTimeDimension&, bool) (in NetCDFUtilities.cpp:751)
   by NcFileVector::InsertFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long) (in NcFileVector.cpp:87)
-  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:134)
-  by main (in StitchBlobs.cpp:2821)
+  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:138)
+  by main (in StitchBlobs.cpp:2708)
 
 
 RANKS: <0>
@@ -24,14 +1491,14 @@ Mismatched free() / delete / delete []
   at operator delete[](void*) (in vg_replace_malloc.c:1330)
   by DataArray1D<double>::Detach() (in DataArray1D.h:163)
   by DataArray1D<double>::~DataArray1D() (in DataArray1D.h:78)
-  by SimpleGrid::GenerateLatitudeLongitude(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool, bool) (in SimpleGrid.cpp:462)
-  by main (in StitchBlobs.cpp:2829)
+  by SimpleGrid::GenerateLatitudeLongitude(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool, bool) (in SimpleGrid.cpp:448)
+  by main (in StitchBlobs.cpp:2716)
 Address is 0 bytes inside a block of size 11,520 alloc'd
   at malloc (in vg_replace_malloc.c:442)
   by DataArray1D<double>::Allocate(unsigned long) (in DataArray1D.h:115)
   by DataArray1D<double>::DataArray1D(unsigned long, bool) (in DataArray1D.h:59)
   by SimpleGrid::GenerateLatitudeLongitude(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool, bool) (in SimpleGrid.cpp:448)
-  by main (in StitchBlobs.cpp:2829)
+  by main (in StitchBlobs.cpp:2716)
 
 
 RANKS: <0>
@@ -40,14 +1507,14 @@ Mismatched free() / delete / delete []
   at operator delete[](void*) (in vg_replace_malloc.c:1330)
   by DataArray1D<double>::Detach() (in DataArray1D.h:163)
   by DataArray1D<double>::~DataArray1D() (in DataArray1D.h:78)
-  by SimpleGrid::GenerateLatitudeLongitude(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool, bool) (in SimpleGrid.cpp:462)
-  by main (in StitchBlobs.cpp:2829)
+  by SimpleGrid::GenerateLatitudeLongitude(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool, bool) (in SimpleGrid.cpp:441)
+  by main (in StitchBlobs.cpp:2716)
 Address is 0 bytes inside a block of size 5,768 alloc'd
   at malloc (in vg_replace_malloc.c:442)
   by DataArray1D<double>::Allocate(unsigned long) (in DataArray1D.h:115)
   by DataArray1D<double>::DataArray1D(unsigned long, bool) (in DataArray1D.h:59)
   by SimpleGrid::GenerateLatitudeLongitude(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool, bool) (in SimpleGrid.cpp:441)
-  by main (in StitchBlobs.cpp:2829)
+  by main (in StitchBlobs.cpp:2716)
 
 
 RANKS: <0>
@@ -57,12 +1524,12 @@ Mismatched free() / delete / delete []
   by DataArray1D<float>::Detach() (in DataArray1D.h:163)
   by DataArray1D<float>::Allocate(unsigned long) (in DataArray1D.h:105)
   by Variable::LoadGridData(VariableRegistry&, NcFileVector const&, SimpleGrid const&) (in Variable.cpp:977)
-  by main (in StitchBlobs.cpp:3067)
+  by main (in StitchBlobs.cpp:2954)
 Address is 0 bytes inside a block of size 4,152,960 alloc'd
   at malloc (in vg_replace_malloc.c:442)
   by DataArray1D<float>::Allocate(unsigned long) (in DataArray1D.h:115)
   by Variable::LoadGridData(VariableRegistry&, NcFileVector const&, SimpleGrid const&) (in Variable.cpp:977)
-  by main (in StitchBlobs.cpp:3067)
+  by main (in StitchBlobs.cpp:2954)
 
 
 RANKS: <0>
@@ -71,10 +1538,10 @@ Mismatched free() / delete / delete []
   at operator delete[](void*) (in vg_replace_malloc.c:1330)
   by DataArray1D<double>::Detach() (in DataArray1D.h:163)
   by DataArray1D<double>::~DataArray1D() (in DataArray1D.h:78)
-  by CopyNcVar(NcFile&, NcFile&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool, bool) (in NetCDFUtilities.cpp:508)
+  by CopyNcVar(NcFile&, NcFile&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool, bool) (in NetCDFUtilities.cpp:505)
   by CopyNcVarIfExists(NcFile&, NcFile&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool, bool) (in NetCDFUtilities.cpp:554)
   by PrepareBlobOutputVar(NcFile&, NcFile&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, SimpleGrid const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcType, NcDim*, NcDim**, NcDim**, NcVar**) (in BlobUtilities.h:104)
-  by main (in StitchBlobs.cpp:4117)
+  by main (in StitchBlobs.cpp:3994)
 Address is 0 bytes inside a block of size 5,768 alloc'd
   at malloc (in vg_replace_malloc.c:442)
   by DataArray1D<double>::Allocate(unsigned long) (in DataArray1D.h:115)
@@ -82,7 +1549,7 @@ Address is 0 bytes inside a block of size 5,768 alloc'd
   by CopyNcVar(NcFile&, NcFile&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool, bool) (in NetCDFUtilities.cpp:505)
   by CopyNcVarIfExists(NcFile&, NcFile&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool, bool) (in NetCDFUtilities.cpp:554)
   by PrepareBlobOutputVar(NcFile&, NcFile&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, SimpleGrid const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcType, NcDim*, NcDim**, NcDim**, NcVar**) (in BlobUtilities.h:104)
-  by main (in StitchBlobs.cpp:4117)
+  by main (in StitchBlobs.cpp:3994)
 
 
 RANKS: <0>
@@ -91,12 +1558,12 @@ Mismatched free() / delete / delete []
   at operator delete[](void*) (in vg_replace_malloc.c:1330)
   by DataArray1D<int>::Detach() (in DataArray1D.h:163)
   by DataArray1D<int>::~DataArray1D() (in DataArray1D.h:78)
-  by main (in StitchBlobs.cpp:4195)
+  by main (in StitchBlobs.cpp:4021)
 Address is 0 bytes inside a block of size 4,152,960 alloc'd
   at malloc (in vg_replace_malloc.c:442)
   by DataArray1D<int>::Allocate(unsigned long) (in DataArray1D.h:115)
   by DataArray1D<int>::DataArray1D(unsigned long, bool) (in DataArray1D.h:59)
-  by main (in StitchBlobs.cpp:4144)
+  by main (in StitchBlobs.cpp:4021)
 
 
 RANKS: <0>
@@ -105,20 +1572,746 @@ Mismatched free() / delete / delete []
   at operator delete[](void*) (in vg_replace_malloc.c:1330)
   by DataArray1D<double>::Detach() (in DataArray1D.h:163)
   by DataArray1D<double>::~DataArray1D() (in DataArray1D.h:78)
-  by main (in StitchBlobs.cpp:4195)
+  by main (in StitchBlobs.cpp:3977)
 Address is 0 bytes inside a block of size 992 alloc'd
   at malloc (in vg_replace_malloc.c:442)
   by DataArray1D<double>::Allocate(unsigned long) (in DataArray1D.h:115)
   by DataArray1D<double>::DataArray1D(unsigned long, bool) (in DataArray1D.h:59)
-  by main (in StitchBlobs.cpp:4100)
+  by main (in StitchBlobs.cpp:3977)
+
+
+RANKS: <0>
+
+Mismatched free() / delete / delete []
+  at operator delete[](void*) (in vg_replace_malloc.c:1330)
+  by DataArray1D<double>::Detach() (in DataArray1D.h:163)
+  by DataArray1D<double>::~DataArray1D() (in DataArray1D.h:78)
+  by SimpleGrid::~SimpleGrid() (in SimpleGrid.cpp:43)
+  by main (in StitchBlobs.cpp:2694)
+Address is 0 bytes inside a block of size 8,305,920 alloc'd
+  at malloc (in vg_replace_malloc.c:442)
+  by DataArray1D<double>::Allocate(unsigned long) (in DataArray1D.h:115)
+  by SimpleGrid::GenerateLatitudeLongitude(DataArray1D<double> const&, DataArray1D<double> const&, bool, bool, bool) (in SimpleGrid.cpp:264)
+  by SimpleGrid::GenerateLatitudeLongitude(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool, bool) (in SimpleGrid.cpp:456)
+  by main (in StitchBlobs.cpp:2716)
+
+
+RANKS: <0>
+
+Mismatched free() / delete / delete []
+  at operator delete[](void*) (in vg_replace_malloc.c:1330)
+  by DataArray1D<double>::Detach() (in DataArray1D.h:163)
+  by DataArray1D<double>::~DataArray1D() (in DataArray1D.h:78)
+  by SimpleGrid::~SimpleGrid() (in SimpleGrid.cpp:43)
+  by main (in StitchBlobs.cpp:2694)
+Address is 0 bytes inside a block of size 8,305,920 alloc'd
+  at malloc (in vg_replace_malloc.c:442)
+  by DataArray1D<double>::Allocate(unsigned long) (in DataArray1D.h:115)
+  by SimpleGrid::GenerateLatitudeLongitude(DataArray1D<double> const&, DataArray1D<double> const&, bool, bool, bool) (in SimpleGrid.cpp:262)
+  by SimpleGrid::GenerateLatitudeLongitude(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool, bool) (in SimpleGrid.cpp:456)
+  by main (in StitchBlobs.cpp:2716)
+
+
+RANKS: <0>
+
+Mismatched free() / delete / delete []
+  at operator delete[](void*) (in vg_replace_malloc.c:1330)
+  by DataArray1D<double>::Detach() (in DataArray1D.h:163)
+  by DataArray1D<double>::~DataArray1D() (in DataArray1D.h:78)
+  by SimpleGrid::~SimpleGrid() (in SimpleGrid.cpp:43)
+  by main (in StitchBlobs.cpp:2694)
+Address is 0 bytes inside a block of size 8,305,920 alloc'd
+  at malloc (in vg_replace_malloc.c:442)
+  by DataArray1D<double>::Allocate(unsigned long) (in DataArray1D.h:115)
+  by SimpleGrid::GenerateLatitudeLongitude(DataArray1D<double> const&, DataArray1D<double> const&, bool, bool, bool) (in SimpleGrid.cpp:263)
+  by SimpleGrid::GenerateLatitudeLongitude(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool, bool) (in SimpleGrid.cpp:456)
+  by main (in StitchBlobs.cpp:2716)
+
+
+RANKS: <0>
+
+Mismatched free() / delete / delete []
+  at operator delete[](void*) (in vg_replace_malloc.c:1330)
+  by DataArray1D<float>::Detach() (in DataArray1D.h:163)
+  by DataArray1D<float>::~DataArray1D() (in DataArray1D.h:78)
+  by Variable::~Variable() (in Variable.h:508)
+  by VariableRegistry::~VariableRegistry() (in Variable.cpp:54)
+  by main (in StitchBlobs.cpp:2533)
+Address is 0 bytes inside a block of size 4,152,960 alloc'd
+  at malloc (in vg_replace_malloc.c:442)
+  by DataArray1D<float>::Allocate(unsigned long) (in DataArray1D.h:115)
+  by Variable::LoadGridData(VariableRegistry&, NcFileVector const&, SimpleGrid const&) (in Variable.cpp:977)
+  by main (in StitchBlobs.cpp:2954)
+
+
+RANKS: <0>
+
+Syscall param write(buf) points to uninitialised byte(s)
+  at write (in ./src/blobs/StitchBlobs)
+  by device_write.isra.1 (in libcxi.c:45)
+  by cxil_unmap_pte (in libcxi.c:1425)
+  by cxip_pte_unmap_list (in cxip_pte.c:138)
+  by cxip_pte_free (in cxip_pte.c:275)
+  by cxip_rdzv_pte_free (in cxip_rdzv_pte.c:194)
+  by cxip_rdzv_match_pte_free (in cxip_rdzv_pte.c:204)
+  by txc_msg_fini (in cxip_txc.c:284)
+  by cxip_txc_disable (in cxip_txc.c:476)
+  by cxip_free_endpoint (in cxip_ep.c:638)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+in frame #2, created by cxil_unmap_pte (libcxi.c:1419)
+
+
+RANKS: <0>
+
+Syscall param write(buf) points to uninitialised byte(s)
+  at write (in ./src/blobs/StitchBlobs)
+  by device_write.isra.1 (in libcxi.c:45)
+  by free_pte (in libcxi.c:1296)
+  by cxil_destroy_pte (in libcxi.c:1362)
+  by cxip_pte_free (in cxip_pte.c:279)
+  by cxip_rdzv_pte_free (in cxip_rdzv_pte.c:194)
+  by cxip_rdzv_match_pte_free (in cxip_rdzv_pte.c:204)
+  by txc_msg_fini (in cxip_txc.c:284)
+  by cxip_txc_disable (in cxip_txc.c:476)
+  by cxip_free_endpoint (in cxip_ep.c:638)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_rte_finalize (in ./src/blobs/StitchBlobs)
+in frame #2, created by cxil_destroy_pte (libcxi.c:1357)
+
+
+RANKS: <0>
+
+Syscall param munmap(length) contains uninitialised byte(s)
+  at syscall (in ./src/blobs/StitchBlobs)
+  by _intercept_munmap (in ./src/blobs/StitchBlobs)
+  by cxil_destroy_evtq (in libcxi.c:1182)
+  by cxip_evtq_fini (in cxip_evtq.c:413)
+  by cxip_free_endpoint (in cxip_ep.c:638)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_rte_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param write(buf) points to uninitialised byte(s)
+  at write (in ./src/blobs/StitchBlobs)
+  by device_write.isra.1 (in libcxi.c:45)
+  by free_evtq (in libcxi.c:1083)
+  by cxil_destroy_evtq (in libcxi.c:1187)
+  by cxip_evtq_fini (in cxip_evtq.c:413)
+  by cxip_free_endpoint (in cxip_ep.c:638)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_rte_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize (in ./src/blobs/StitchBlobs)
+in frame #2, created by cxil_destroy_evtq (libcxi.c:1176)
 
 
 RANKS: <0>
 
 Conditional jump or move depends on uninitialised value(s)
-  at PMPI_Type_free (in ./bin/StitchBlobs)
-  by TagExchangeOP::~TagExchangeOP() (in StitchBlobs.cpp:665)
-  by main (in StitchBlobs.cpp:4267)
+  at __cxi_cq_free_slots_check (in cxi_prov_hw.h:565)
+  by __cxi_cq_free_slots (in cxi_prov_hw.h:580)
+  by cxi_cq_emit_target (in cxi_prov_hw.h:1320)
+  by cxip_pte_set_state (in cxip_pte.c:23)
+  by cxip_pte_set_state_wait (in cxip_pte.c:45)
+  by rxc_msg_disable (in cxip_rxc.c:73)
+  by cxip_rxc_disable (in cxip_rxc.c:536)
+  by cxip_free_endpoint (in cxip_ep.c:639)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_rte_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_finalize (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at __cxi_cq_free_slots (in cxi_prov_hw.h:582)
+  by cxi_cq_emit_target (in cxi_prov_hw.h:1320)
+  by cxip_pte_set_state (in cxip_pte.c:23)
+  by cxip_pte_set_state_wait (in cxip_pte.c:45)
+  by rxc_msg_disable (in cxip_rxc.c:73)
+  by cxip_rxc_disable (in cxip_rxc.c:536)
+  by cxip_free_endpoint (in cxip_ep.c:639)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_rte_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_finalize (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Use of uninitialised value of size 8
+  at memcpy (in string_fortified.h:34)
+  by cxi_cq_emit_target (in cxi_prov_hw.h:1325)
+  by cxip_pte_set_state (in cxip_pte.c:23)
+  by cxip_pte_set_state_wait (in cxip_pte.c:45)
+  by rxc_msg_disable (in cxip_rxc.c:73)
+  by cxip_rxc_disable (in cxip_rxc.c:536)
+  by cxip_free_endpoint (in cxip_ep.c:639)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_rte_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_finalize (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxi_cq_ring (in cxi_prov_hw.h:713)
+  by cxip_pte_set_state (in cxip_pte.c:29)
+  by cxip_pte_set_state_wait (in cxip_pte.c:45)
+  by rxc_msg_disable (in cxip_rxc.c:73)
+  by cxip_rxc_disable (in cxip_rxc.c:536)
+  by cxip_free_endpoint (in cxip_ep.c:639)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_rte_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_finalize (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxi_cq_update_wp (in cxi_prov_hw.h:604)
+  by cxi_cq_ring (in cxi_prov_hw.h:716)
+  by cxip_pte_set_state (in cxip_pte.c:29)
+  by cxip_pte_set_state_wait (in cxip_pte.c:45)
+  by rxc_msg_disable (in cxip_rxc.c:73)
+  by cxip_rxc_disable (in cxip_rxc.c:536)
+  by cxip_free_endpoint (in cxip_ep.c:639)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_rte_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_finalize (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxip_pte_state_change (in cxip_pte.c:298)
+  by cxip_evtq_progress (in cxip_evtq.c:376)
+  by cxip_pte_set_state_wait (in cxip_pte.c:49)
+  by rxc_msg_disable (in cxip_rxc.c:73)
+  by cxip_rxc_disable (in cxip_rxc.c:536)
+  by cxip_free_endpoint (in cxip_ep.c:639)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_rte_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at __cxi_cq_free_slots_check (in cxi_prov_hw.h:565)
+  by __cxi_cq_free_slots (in cxi_prov_hw.h:580)
+  by cxi_cq_emit_target (in cxi_prov_hw.h:1320)
+  by cxip_pte_unlink (in cxip_pte.c:116)
+  by cxip_ptelist_unlink_buf (in cxip_ptelist_buf.c:26)
+  by cxip_ptelist_bufpool_fini (in cxip_ptelist_buf.c:349)
+  by cxip_rxc_disable (in cxip_rxc.c:545)
+  by cxip_free_endpoint (in cxip_ep.c:639)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_rte_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_finalize (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at __cxi_cq_free_slots (in cxi_prov_hw.h:582)
+  by cxi_cq_emit_target (in cxi_prov_hw.h:1320)
+  by cxip_pte_unlink (in cxip_pte.c:116)
+  by cxip_ptelist_unlink_buf (in cxip_ptelist_buf.c:26)
+  by cxip_ptelist_bufpool_fini (in cxip_ptelist_buf.c:349)
+  by cxip_rxc_disable (in cxip_rxc.c:545)
+  by cxip_free_endpoint (in cxip_ep.c:639)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_rte_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_finalize (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Use of uninitialised value of size 8
+  at memcpy (in string_fortified.h:34)
+  by cxi_cq_emit_target (in cxi_prov_hw.h:1325)
+  by cxip_pte_unlink (in cxip_pte.c:116)
+  by cxip_ptelist_unlink_buf (in cxip_ptelist_buf.c:26)
+  by cxip_ptelist_bufpool_fini (in cxip_ptelist_buf.c:349)
+  by cxip_rxc_disable (in cxip_rxc.c:545)
+  by cxip_free_endpoint (in cxip_ep.c:639)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_rte_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_finalize (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxi_cq_ring (in cxi_prov_hw.h:713)
+  by cxip_pte_unlink (in cxip_pte.c:123)
+  by cxip_ptelist_unlink_buf (in cxip_ptelist_buf.c:26)
+  by cxip_ptelist_bufpool_fini (in cxip_ptelist_buf.c:349)
+  by cxip_rxc_disable (in cxip_rxc.c:545)
+  by cxip_free_endpoint (in cxip_ep.c:639)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_rte_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_finalize (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxi_cq_update_wp (in cxi_prov_hw.h:604)
+  by cxi_cq_ring (in cxi_prov_hw.h:716)
+  by cxip_pte_unlink (in cxip_pte.c:123)
+  by cxip_ptelist_unlink_buf (in cxip_ptelist_buf.c:26)
+  by cxip_ptelist_bufpool_fini (in cxip_ptelist_buf.c:349)
+  by cxip_rxc_disable (in cxip_rxc.c:545)
+  by cxip_free_endpoint (in cxip_ep.c:639)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_rte_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_finalize (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param write(buf) points to uninitialised byte(s)
+  at write (in ./src/blobs/StitchBlobs)
+  by device_write.isra.1 (in libcxi.c:45)
+  by cxil_unmap (in libcxi.c:947)
+  by cxip_unmap_nocache (in cxip_iomm.c:612)
+  by cxip_unmap (in cxip_iomm.c:636)
+  by cxip_ptelist_buf_free (in cxip_ptelist_buf.c:203)
+  by cxip_ptelist_buf_dlist_free (in cxip_ptelist_buf.c:224)
+  by cxip_ptelist_bufpool_fini (in cxip_ptelist_buf.c:361)
+  by cxip_rxc_disable (in cxip_rxc.c:545)
+  by cxip_free_endpoint (in cxip_ep.c:639)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+in frame #2, created by cxil_unmap (libcxi.c:935)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at __cxi_cq_free_slots_check (in cxi_prov_hw.h:565)
+  by __cxi_cq_free_slots (in cxi_prov_hw.h:580)
+  by cxi_cq_emit_target (in cxi_prov_hw.h:1320)
+  by cxip_pte_unlink (in cxip_pte.c:116)
+  by cxip_ptelist_unlink_buf (in cxip_ptelist_buf.c:26)
+  by cxip_ptelist_bufpool_fini (in cxip_ptelist_buf.c:349)
+  by cxip_rxc_disable (in cxip_rxc.c:548)
+  by cxip_free_endpoint (in cxip_ep.c:639)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_rte_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_finalize (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at __cxi_cq_free_slots (in cxi_prov_hw.h:582)
+  by cxi_cq_emit_target (in cxi_prov_hw.h:1320)
+  by cxip_pte_unlink (in cxip_pte.c:116)
+  by cxip_ptelist_unlink_buf (in cxip_ptelist_buf.c:26)
+  by cxip_ptelist_bufpool_fini (in cxip_ptelist_buf.c:349)
+  by cxip_rxc_disable (in cxip_rxc.c:548)
+  by cxip_free_endpoint (in cxip_ep.c:639)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_rte_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_finalize (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Use of uninitialised value of size 8
+  at memcpy (in string_fortified.h:34)
+  by cxi_cq_emit_target (in cxi_prov_hw.h:1325)
+  by cxip_pte_unlink (in cxip_pte.c:116)
+  by cxip_ptelist_unlink_buf (in cxip_ptelist_buf.c:26)
+  by cxip_ptelist_bufpool_fini (in cxip_ptelist_buf.c:349)
+  by cxip_rxc_disable (in cxip_rxc.c:548)
+  by cxip_free_endpoint (in cxip_ep.c:639)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_rte_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_finalize (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxi_cq_ring (in cxi_prov_hw.h:713)
+  by cxip_pte_unlink (in cxip_pte.c:123)
+  by cxip_ptelist_unlink_buf (in cxip_ptelist_buf.c:26)
+  by cxip_ptelist_bufpool_fini (in cxip_ptelist_buf.c:349)
+  by cxip_rxc_disable (in cxip_rxc.c:548)
+  by cxip_free_endpoint (in cxip_ep.c:639)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_rte_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_finalize (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at cxi_cq_update_wp (in cxi_prov_hw.h:604)
+  by cxi_cq_ring (in cxi_prov_hw.h:716)
+  by cxip_pte_unlink (in cxip_pte.c:123)
+  by cxip_ptelist_unlink_buf (in cxip_ptelist_buf.c:26)
+  by cxip_ptelist_bufpool_fini (in cxip_ptelist_buf.c:349)
+  by cxip_rxc_disable (in cxip_rxc.c:548)
+  by cxip_free_endpoint (in cxip_ep.c:639)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_rte_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_finalize (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param munmap(length) contains uninitialised byte(s)
+  at syscall (in ./src/blobs/StitchBlobs)
+  by _intercept_munmap (in ./src/blobs/StitchBlobs)
+  by cxil_destroy_cmdq (in libcxi.c:833)
+  by cxip_cmdq_free (in cxip_cmdq.c:228)
+  by cxip_ep_cmdq_put (in cxip_ep.c:120)
+  by cxip_ep_ctrl_fini (in cxip_ctrl.c:783)
+  by cxip_ep_disable (in cxip_ep.c:592)
+  by cxip_free_endpoint (in cxip_ep.c:640)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_rte_finalize (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param munmap(length) contains uninitialised byte(s)
+  at syscall (in ./src/blobs/StitchBlobs)
+  by _intercept_munmap (in ./src/blobs/StitchBlobs)
+  by cxil_destroy_cmdq (in libcxi.c:837)
+  by cxip_cmdq_free (in cxip_cmdq.c:228)
+  by cxip_ep_cmdq_put (in cxip_ep.c:120)
+  by cxip_ep_ctrl_fini (in cxip_ctrl.c:783)
+  by cxip_ep_disable (in cxip_ep.c:592)
+  by cxip_free_endpoint (in cxip_ep.c:640)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_rte_finalize (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param write(buf) points to uninitialised byte(s)
+  at write (in ./src/blobs/StitchBlobs)
+  by device_write.isra.1 (in libcxi.c:45)
+  by free_cmdq (in libcxi.c:610)
+  by cxil_destroy_cmdq (in libcxi.c:841)
+  by cxip_cmdq_free (in cxip_cmdq.c:228)
+  by cxip_ep_cmdq_put (in cxip_ep.c:120)
+  by cxip_ep_ctrl_fini (in cxip_ctrl.c:783)
+  by cxip_ep_disable (in cxip_ep.c:592)
+  by cxip_free_endpoint (in cxip_ep.c:640)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_rte_finalize (in ./src/blobs/StitchBlobs)
+in frame #2, created by cxil_destroy_cmdq (libcxi.c:815)
+
+
+RANKS: <0>
+
+Syscall param munmap(length) contains uninitialised byte(s)
+  at syscall (in ./src/blobs/StitchBlobs)
+  by _intercept_munmap (in ./src/blobs/StitchBlobs)
+  by cxil_destroy_evtq (in libcxi.c:1182)
+  by cxip_eq_ctrl_eq_free (in cxip_ctrl.c:450)
+  by cxip_ep_ctrl_fini (in cxip_ctrl.c:786)
+  by cxip_ep_disable (in cxip_ep.c:592)
+  by cxip_free_endpoint (in cxip_ep.c:640)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_rte_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param write(buf) points to uninitialised byte(s)
+  at write (in ./src/blobs/StitchBlobs)
+  by device_write.isra.1 (in libcxi.c:45)
+  by free_evtq (in libcxi.c:1083)
+  by cxil_destroy_evtq (in libcxi.c:1187)
+  by cxip_eq_ctrl_eq_free (in cxip_ctrl.c:450)
+  by cxip_ep_ctrl_fini (in cxip_ctrl.c:786)
+  by cxip_ep_disable (in cxip_ep.c:592)
+  by cxip_free_endpoint (in cxip_ep.c:640)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_rte_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+in frame #2, created by cxil_destroy_evtq (libcxi.c:1176)
+
+
+RANKS: <0>
+
+Syscall param write(buf) points to uninitialised byte(s)
+  at write (in ./src/blobs/StitchBlobs)
+  by device_write.isra.1 (in libcxi.c:45)
+  by cxil_unmap (in libcxi.c:947)
+  by cxip_eq_ctrl_eq_free (in cxip_ctrl.c:454)
+  by cxip_ep_ctrl_fini (in cxip_ctrl.c:786)
+  by cxip_ep_disable (in cxip_ep.c:592)
+  by cxip_free_endpoint (in cxip_ep.c:640)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by ompi_mtl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by opal_finalize_cleanup_domain (in ./src/blobs/StitchBlobs)
+  by opal_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_rte_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+in frame #2, created by cxil_unmap (libcxi.c:935)
+
+
+RANKS: <0>
+
+Conditional jump or move depends on uninitialised value(s)
+  at opal_interval_tree_traverse (in ./src/blobs/StitchBlobs)
+  by mca_rcache_base_vma_tree_iterate (in ./src/blobs/StitchBlobs)
+  by mca_rcache_grdma_finalize (in ./src/blobs/StitchBlobs)
+  by mca_rcache_base_module_destroy (in ./src/blobs/StitchBlobs)
+  by mca_btl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by mca_btl_base_close (in ./src/blobs/StitchBlobs)
+  by mca_base_framework_close (in ./src/blobs/StitchBlobs)
+  by mca_bml_base_close (in ./src/blobs/StitchBlobs)
+  by mca_base_framework_close (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_finalize (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Use of uninitialised value of size 8
+  at opal_interval_tree_traverse (in ./src/blobs/StitchBlobs)
+  by mca_rcache_base_vma_tree_iterate (in ./src/blobs/StitchBlobs)
+  by mca_rcache_grdma_finalize (in ./src/blobs/StitchBlobs)
+  by mca_rcache_base_module_destroy (in ./src/blobs/StitchBlobs)
+  by mca_btl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by mca_btl_base_close (in ./src/blobs/StitchBlobs)
+  by mca_base_framework_close (in ./src/blobs/StitchBlobs)
+  by mca_bml_base_close (in ./src/blobs/StitchBlobs)
+  by mca_base_framework_close (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_finalize (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Use of uninitialised value of size 8
+  at opal_interval_tree_traverse (in ./src/blobs/StitchBlobs)
+  by mca_rcache_base_vma_tree_iterate (in ./src/blobs/StitchBlobs)
+  by mca_rcache_grdma_finalize (in ./src/blobs/StitchBlobs)
+  by mca_rcache_base_module_destroy (in ./src/blobs/StitchBlobs)
+  by mca_btl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by mca_btl_base_close (in ./src/blobs/StitchBlobs)
+  by mca_base_framework_close (in ./src/blobs/StitchBlobs)
+  by mca_bml_base_close (in ./src/blobs/StitchBlobs)
+  by mca_base_framework_close (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_finalize (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Use of uninitialised value of size 8
+  at opal_interval_tree_traverse (in ./src/blobs/StitchBlobs)
+  by mca_rcache_base_vma_tree_iterate (in ./src/blobs/StitchBlobs)
+  by mca_rcache_grdma_finalize (in ./src/blobs/StitchBlobs)
+  by mca_rcache_base_module_destroy (in ./src/blobs/StitchBlobs)
+  by mca_btl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by mca_btl_base_close (in ./src/blobs/StitchBlobs)
+  by mca_base_framework_close (in ./src/blobs/StitchBlobs)
+  by mca_bml_base_close (in ./src/blobs/StitchBlobs)
+  by mca_base_framework_close (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_finalize (in ./src/blobs/StitchBlobs)
+
+
+RANKS: <0>
+
+Syscall param write(buf) points to uninitialised byte(s)
+  at write (in ./src/blobs/StitchBlobs)
+  by device_write.isra.1 (in libcxi.c:45)
+  by cxil_destroy_domain (in libcxi.c:593)
+  by cxip_portals_table_free (in cxip_portals_table.c:91)
+  by cxip_ep_disable (in cxip_ep.c:593)
+  by cxip_free_endpoint (in cxip_ep.c:640)
+  by cxip_ep_close (in cxip_ep.c:674)
+  by mca_btl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by mca_btl_base_close (in ./src/blobs/StitchBlobs)
+  by mca_base_framework_close (in ./src/blobs/StitchBlobs)
+  by mca_bml_base_close (in ./src/blobs/StitchBlobs)
+  by mca_base_framework_close (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+in frame #2, created by cxil_destroy_domain (libcxi.c:579)
+
+
+RANKS: <0>
+
+Syscall param write(buf) points to uninitialised byte(s)
+  at write (in ./src/blobs/StitchBlobs)
+  by device_write.isra.1 (in libcxi.c:45)
+  by cxil_destroy_cp (in libcxi.c:499)
+  by cxip_free_lni (in cxip_if.c:286)
+  by cxip_domain_disable (in cxip_dom.c:541)
+  by cxip_dom_close (in cxip_dom.c:568)
+  by mca_btl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by mca_btl_base_close (in ./src/blobs/StitchBlobs)
+  by mca_base_framework_close (in ./src/blobs/StitchBlobs)
+  by mca_bml_base_close (in ./src/blobs/StitchBlobs)
+  by mca_base_framework_close (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize (in ./src/blobs/StitchBlobs)
+in frame #2, created by cxil_destroy_cp (libcxi.c:491)
+
+
+RANKS: <0>
+
+Syscall param write(buf) points to uninitialised byte(s)
+  at write (in ./src/blobs/StitchBlobs)
+  by device_write.isra.1 (in libcxi.c:45)
+  by cxil_destroy_lni (in libcxi.c:428)
+  by cxip_free_lni (in cxip_if.c:291)
+  by cxip_domain_disable (in cxip_dom.c:541)
+  by cxip_dom_close (in cxip_dom.c:568)
+  by mca_btl_ofi_finalize (in ./src/blobs/StitchBlobs)
+  by mca_btl_base_close (in ./src/blobs/StitchBlobs)
+  by mca_base_framework_close (in ./src/blobs/StitchBlobs)
+  by mca_bml_base_close (in ./src/blobs/StitchBlobs)
+  by mca_base_framework_close (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_finalize (in ./src/blobs/StitchBlobs)
+in frame #2, created by cxil_destroy_lni (libcxi.c:414)
+
+
+RANKS: <0>
+
+8 bytes in 1 blocks are definitely lost
+  at malloc (in vg_replace_malloc.c:442)
+  by pmix_bfrops_base_unpack_bo (in bfrop_base_unpack.c:1101)
+  by pmix_bfrops_base_unpack_val (in bfrop_base_unpack.c:690)
+  by pmix_bfrops_base_unpack_value (in bfrop_base_unpack.c:718)
+  by pmix_bfrops_base_unpack_buffer (in bfrop_base_unpack.c:64)
+  by pmix_bfrops_base_unpack (in bfrop_base_unpack.c:141)
+  by _dstore_fetch (in ./src/blobs/StitchBlobs)
+  by pmix_common_dstor_fetch (in ./src/blobs/StitchBlobs)
+  by ds21_fetch (in ./src/blobs/StitchBlobs)
+  by _getfn_fastpath (in pmix_client_get.c:884)
+  by PMIx_Get_nb (in pmix_client_get.c:567)
+  by PMIx_Get (in pmix_client_get.c:107)
+  by ompi_mtl_ofi_add_procs (in ./src/blobs/StitchBlobs)
 
 
 RANKS: <0>
@@ -129,8 +2322,8 @@ RANKS: <0>
   by NcTypedComponent::as_string(long) const (in netcdf.cpp:557)
   by ReadCFTimeDataFromNcFile(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcTimeDimension&, bool) (in NetCDFUtilities.cpp:711)
   by NcFileVector::InsertFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long) (in NcFileVector.cpp:87)
-  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:134)
-  by main (in StitchBlobs.cpp:2821)
+  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:138)
+  by main (in StitchBlobs.cpp:2708)
 
 
 RANKS: <0>
@@ -141,42 +2334,26 @@ RANKS: <0>
   by NcTypedComponent::as_string(long) const (in netcdf.cpp:557)
   by ReadCFTimeDataFromNcFile(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcTimeDimension&, bool) (in NetCDFUtilities.cpp:711)
   by NcFileVector::InsertFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long) (in NcFileVector.cpp:87)
-  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:134)
-  by main (in StitchBlobs.cpp:4060)
+  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:138)
+  by main (in StitchBlobs.cpp:3937)
 
 
 RANKS: <0>
 
-24 bytes in 1 blocks are possibly lost in loss record 192 of 941
+16 bytes in 1 blocks are definitely lost
   at malloc (in vg_replace_malloc.c:442)
-  by tsearch (in ./bin/StitchBlobs)
-  by darshan_track_common_val_counters (in darshan-common.c:238)
-  by pread (in darshan-posix.c:952)
-  by H5FD__sec2_read (in ./bin/StitchBlobs)
-  by H5FD_read (in ./bin/StitchBlobs)
-  by H5F__accum_read (in ./bin/StitchBlobs)
-  by H5PB_read (in ./bin/StitchBlobs)
-  by H5F_block_read (in ./bin/StitchBlobs)
-  by H5C_protect (in ./bin/StitchBlobs)
-  by H5AC_protect (in ./bin/StitchBlobs)
-  by H5B2__hdr_protect (in ./bin/StitchBlobs)
-
-
-RANKS: <0>
-
-24 bytes in 1 blocks are possibly lost in loss record 193 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by tsearch (in ./bin/StitchBlobs)
-  by darshan_track_common_val_counters (in darshan-common.c:238)
-  by pread (in darshan-posix.c:952)
-  by H5FD__sec2_read (in ./bin/StitchBlobs)
-  by H5FD_read (in ./bin/StitchBlobs)
-  by H5F__accum_read (in ./bin/StitchBlobs)
-  by H5PB_read (in ./bin/StitchBlobs)
-  by H5F_block_read (in ./bin/StitchBlobs)
-  by H5C_protect (in ./bin/StitchBlobs)
-  by H5AC_protect (in ./bin/StitchBlobs)
-  by H5B_find (in ./bin/StitchBlobs)
+  by pmix_malloc (in pmix_common.h:1628)
+  by PMIx_Topology_create (in bfrop_base_macro_backers.c:831)
+  by pmix_bfrops_base_copy_topology (in bfrop_base_copy.c:1273)
+  by pmix_bfrops_base_value_xfer (in bfrop_base_fns.c:1077)
+  by pmix_hash_store (in pmix_hash.c:233)
+  by pmix_gds_hash_store (in gds_hash.c:1269)
+  by pmix_hwloc_setup_topology (in pmix_hwloc.c:459)
+  by PMIx_Init (in pmix_client.c:865)
+  by ompi_rte_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
 
 
 RANKS: <0>
@@ -185,10 +2362,10 @@ RANKS: <0>
   at operator new[](unsigned long) (in vg_replace_malloc.c:725)
   by NcValues_char::as_string(long) const (in ncvalues.cpp:354)
   by NcTypedComponent::as_string(long) const (in netcdf.cpp:557)
-  by ReadCFTimeDataFromNcFile(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcTimeDimension&, bool) (in NetCDFUtilities.cpp:740)
+  by ReadCFTimeDataFromNcFile(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcTimeDimension&, bool) (in NetCDFUtilities.cpp:742)
   by NcFileVector::InsertFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long) (in NcFileVector.cpp:87)
-  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:134)
-  by main (in StitchBlobs.cpp:2821)
+  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:138)
+  by main (in StitchBlobs.cpp:2708)
 
 
 RANKS: <0>
@@ -197,7 +2374,7 @@ RANKS: <0>
   at operator new[](unsigned long) (in vg_replace_malloc.c:725)
   by NcValues_char::as_string(long) const (in ncvalues.cpp:354)
   by NcTypedComponent::as_string(long) const (in netcdf.cpp:557)
-  by main (in StitchBlobs.cpp:2951)
+  by main (in StitchBlobs.cpp:2838)
 
 
 RANKS: <0>
@@ -206,10 +2383,10 @@ RANKS: <0>
   at operator new[](unsigned long) (in vg_replace_malloc.c:725)
   by NcValues_char::as_string(long) const (in ncvalues.cpp:354)
   by NcTypedComponent::as_string(long) const (in netcdf.cpp:557)
-  by ReadCFTimeDataFromNcFile(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcTimeDimension&, bool) (in NetCDFUtilities.cpp:740)
+  by ReadCFTimeDataFromNcFile(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcTimeDimension&, bool) (in NetCDFUtilities.cpp:742)
   by NcFileVector::InsertFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long) (in NcFileVector.cpp:87)
-  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:134)
-  by main (in StitchBlobs.cpp:4060)
+  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:138)
+  by main (in StitchBlobs.cpp:3937)
 
 
 RANKS: <0>
@@ -219,8 +2396,16 @@ RANKS: <0>
   by NcVar::get_att(char const*) const (in netcdf.cpp:677)
   by ReadCFTimeDataFromNcFile(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcTimeDimension&, bool) (in NetCDFUtilities.cpp:717)
   by NcFileVector::InsertFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long) (in NcFileVector.cpp:87)
-  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:134)
-  by main (in StitchBlobs.cpp:2821)
+  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:138)
+  by main (in StitchBlobs.cpp:2708)
+
+
+RANKS: <0>
+
+38 (32 direct, 6 indirect) bytes in 1 blocks are definitely lost
+  at operator new(unsigned long) (in vg_replace_malloc.c:483)
+  by NcVar::get_att(char const*) const (in netcdf.cpp:677)
+  by main (in StitchBlobs.cpp:2832)
 
 
 RANKS: <0>
@@ -230,8 +2415,8 @@ RANKS: <0>
   by NcVar::get_att(char const*) const (in netcdf.cpp:677)
   by ReadCFTimeDataFromNcFile(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcTimeDimension&, bool) (in NetCDFUtilities.cpp:717)
   by NcFileVector::InsertFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long) (in NcFileVector.cpp:87)
-  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:134)
-  by main (in StitchBlobs.cpp:4060)
+  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:138)
+  by main (in StitchBlobs.cpp:3937)
 
 
 RANKS: <0>
@@ -241,8 +2426,8 @@ RANKS: <0>
   by NcVar::get_att(char const*) const (in netcdf.cpp:677)
   by ReadCFTimeDataFromNcFile(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcTimeDimension&, bool) (in NetCDFUtilities.cpp:703)
   by NcFileVector::InsertFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long) (in NcFileVector.cpp:87)
-  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:134)
-  by main (in StitchBlobs.cpp:2821)
+  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:138)
+  by main (in StitchBlobs.cpp:2708)
 
 
 RANKS: <0>
@@ -252,90 +2437,8 @@ RANKS: <0>
   by NcVar::get_att(char const*) const (in netcdf.cpp:677)
   by ReadCFTimeDataFromNcFile(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcTimeDimension&, bool) (in NetCDFUtilities.cpp:703)
   by NcFileVector::InsertFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long) (in NcFileVector.cpp:87)
-  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:134)
-  by main (in StitchBlobs.cpp:4060)
-
-
-RANKS: <0>
-
-48 bytes in 2 blocks are possibly lost in loss record 370 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by tsearch (in ./bin/StitchBlobs)
-  by darshan_track_common_val_counters (in darshan-common.c:238)
-  by read (in darshan-posix.c:910)
-  by std::__basic_file<char>::xsgetn(char*, long) (in ./bin/StitchBlobs)
-  by std::basic_filebuf<char, std::char_traits<char> >::underflow() (in ./bin/StitchBlobs)
-  by std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in ./bin/StitchBlobs)
-  by FilenameList::FromFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in FilenameList.h:44)
-  by main (in StitchBlobs.cpp:2684)
-
-
-RANKS: <0>
-
-48 bytes in 2 blocks are possibly lost in loss record 371 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by tsearch (in ./bin/StitchBlobs)
-  by darshan_track_common_val_counters (in darshan-common.c:238)
-  by pread (in darshan-posix.c:952)
-  by H5FD__sec2_read (in ./bin/StitchBlobs)
-  by H5FD_read (in ./bin/StitchBlobs)
-  by H5F__accum_read (in ./bin/StitchBlobs)
-  by H5PB_read (in ./bin/StitchBlobs)
-  by H5F_block_read (in ./bin/StitchBlobs)
-  by H5C_protect (in ./bin/StitchBlobs)
-  by H5AC_protect (in ./bin/StitchBlobs)
-  by H5O_protect (in ./bin/StitchBlobs)
-
-
-RANKS: <0>
-
-48 bytes in 2 blocks are possibly lost in loss record 372 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by tsearch (in ./bin/StitchBlobs)
-  by darshan_track_common_val_counters (in darshan-common.c:238)
-  by pread (in darshan-posix.c:952)
-  by H5FD__sec2_read (in ./bin/StitchBlobs)
-  by H5FD_read (in ./bin/StitchBlobs)
-  by H5F__accum_read (in ./bin/StitchBlobs)
-  by H5PB_read (in ./bin/StitchBlobs)
-  by H5F_shared_block_read (in ./bin/StitchBlobs)
-  by H5D__contig_readvv_sieve_cb (in ./bin/StitchBlobs)
-  by H5VM_opvv (in ./bin/StitchBlobs)
-  by H5D__contig_readvv (in ./bin/StitchBlobs)
-
-
-RANKS: <0>
-
-104 bytes in 1 blocks are possibly lost in loss record 625 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by darshan_track_common_val_counters (in darshan-common.c:228)
-  by pread (in darshan-posix.c:952)
-  by H5FD__sec2_read (in ./bin/StitchBlobs)
-  by H5FD_read (in ./bin/StitchBlobs)
-  by H5F__accum_read (in ./bin/StitchBlobs)
-  by H5PB_read (in ./bin/StitchBlobs)
-  by H5F_block_read (in ./bin/StitchBlobs)
-  by H5C_protect (in ./bin/StitchBlobs)
-  by H5AC_protect (in ./bin/StitchBlobs)
-  by H5B2__hdr_protect (in ./bin/StitchBlobs)
-  by H5B2_open (in ./bin/StitchBlobs)
-
-
-RANKS: <0>
-
-104 bytes in 1 blocks are possibly lost in loss record 626 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by darshan_track_common_val_counters (in darshan-common.c:228)
-  by pread (in darshan-posix.c:952)
-  by H5FD__sec2_read (in ./bin/StitchBlobs)
-  by H5FD_read (in ./bin/StitchBlobs)
-  by H5F__accum_read (in ./bin/StitchBlobs)
-  by H5PB_read (in ./bin/StitchBlobs)
-  by H5F_block_read (in ./bin/StitchBlobs)
-  by H5C_protect (in ./bin/StitchBlobs)
-  by H5AC_protect (in ./bin/StitchBlobs)
-  by H5B_find (in ./bin/StitchBlobs)
-  by H5D__btree_idx_get_addr (in ./bin/StitchBlobs)
+  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:138)
+  by main (in StitchBlobs.cpp:3937)
 
 
 RANKS: <0>
@@ -346,8 +2449,8 @@ RANKS: <0>
   by NcTypedComponent::as_string(long) const (in netcdf.cpp:557)
   by ReadCFTimeDataFromNcFile(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcTimeDimension&, bool) (in NetCDFUtilities.cpp:711)
   by NcFileVector::InsertFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long) (in NcFileVector.cpp:87)
-  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:134)
-  by main (in StitchBlobs.cpp:2931)
+  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:138)
+  by main (in StitchBlobs.cpp:2818)
 
 
 RANKS: <0>
@@ -358,208 +2461,25 @@ RANKS: <0>
   by NcTypedComponent::as_string(long) const (in netcdf.cpp:557)
   by ReadCFTimeDataFromNcFile(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcTimeDimension&, bool) (in NetCDFUtilities.cpp:711)
   by NcFileVector::InsertFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long) (in NcFileVector.cpp:87)
-  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:134)
-  by main (in StitchBlobs.cpp:3023)
+  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:138)
+  by main (in StitchBlobs.cpp:2910)
 
 
 RANKS: <0>
 
-208 bytes in 2 blocks are possibly lost in loss record 686 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by darshan_track_common_val_counters (in darshan-common.c:228)
-  by read (in darshan-posix.c:910)
-  by std::__basic_file<char>::xsgetn(char*, long) (in ./bin/StitchBlobs)
-  by std::basic_filebuf<char, std::char_traits<char> >::underflow() (in ./bin/StitchBlobs)
-  by std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in ./bin/StitchBlobs)
-  by FilenameList::FromFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in FilenameList.h:44)
-  by main (in StitchBlobs.cpp:2684)
-
-
-RANKS: <0>
-
-208 bytes in 2 blocks are possibly lost in loss record 687 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by darshan_track_common_val_counters (in darshan-common.c:228)
-  by pread (in darshan-posix.c:952)
-  by H5FD__sec2_read (in ./bin/StitchBlobs)
-  by H5FD_read (in ./bin/StitchBlobs)
-  by H5F__accum_read (in ./bin/StitchBlobs)
-  by H5PB_read (in ./bin/StitchBlobs)
-  by H5F_block_read (in ./bin/StitchBlobs)
-  by H5C_protect (in ./bin/StitchBlobs)
-  by H5AC_protect (in ./bin/StitchBlobs)
-  by H5O_protect (in ./bin/StitchBlobs)
-  by H5O_obj_type (in ./bin/StitchBlobs)
-
-
-RANKS: <0>
-
-208 bytes in 2 blocks are possibly lost in loss record 688 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by darshan_track_common_val_counters (in darshan-common.c:228)
-  by pread (in darshan-posix.c:952)
-  by H5FD__sec2_read (in ./bin/StitchBlobs)
-  by H5FD_read (in ./bin/StitchBlobs)
-  by H5F__accum_read (in ./bin/StitchBlobs)
-  by H5PB_read (in ./bin/StitchBlobs)
-  by H5F_shared_block_read (in ./bin/StitchBlobs)
-  by H5D__contig_readvv_sieve_cb (in ./bin/StitchBlobs)
-  by H5VM_opvv (in ./bin/StitchBlobs)
-  by H5D__contig_readvv (in ./bin/StitchBlobs)
-  by H5D__select_io (in ./bin/StitchBlobs)
-
-
-RANKS: <0>
-
-288 bytes in 12 blocks are possibly lost in loss record 727 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by tsearch (in ./bin/StitchBlobs)
-  by darshan_track_common_val_counters (in darshan-common.c:238)
-  by pread (in darshan-posix.c:952)
-  by H5FD__sec2_read (in ./bin/StitchBlobs)
-  by H5FD_read (in ./bin/StitchBlobs)
-  by H5FD_locate_signature (in ./bin/StitchBlobs)
-  by H5F__super_read (in ./bin/StitchBlobs)
-  by H5F_open (in ./bin/StitchBlobs)
-  by H5VL__native_file_open (in ./bin/StitchBlobs)
-  by H5VL_file_open (in ./bin/StitchBlobs)
-  by H5F__open_api_common (in ./bin/StitchBlobs)
-
-
-RANKS: <0>
-
-288 bytes in 12 blocks are possibly lost in loss record 728 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by tsearch (in ./bin/StitchBlobs)
-  by darshan_track_common_val_counters (in darshan-common.c:238)
-  by pread (in darshan-posix.c:952)
-  by H5FD__sec2_read (in ./bin/StitchBlobs)
-  by H5FD_read (in ./bin/StitchBlobs)
-  by H5FD_locate_signature (in ./bin/StitchBlobs)
-  by H5F__super_read (in ./bin/StitchBlobs)
-  by H5F_open (in ./bin/StitchBlobs)
-  by H5VL__native_file_open (in ./bin/StitchBlobs)
-  by H5VL_file_open (in ./bin/StitchBlobs)
-  by H5F__open_api_common (in ./bin/StitchBlobs)
-
-
-RANKS: <0>
-
-288 bytes in 12 blocks are possibly lost in loss record 729 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by tsearch (in ./bin/StitchBlobs)
-  by darshan_track_common_val_counters (in darshan-common.c:238)
-  by pread (in darshan-posix.c:952)
-  by H5FD__sec2_read (in ./bin/StitchBlobs)
-  by H5FD_read (in ./bin/StitchBlobs)
-  by H5F__accum_read (in ./bin/StitchBlobs)
-  by H5PB_read (in ./bin/StitchBlobs)
-  by H5F_block_read (in ./bin/StitchBlobs)
-  by H5C_protect (in ./bin/StitchBlobs)
-  by H5AC_protect (in ./bin/StitchBlobs)
-  by H5O_protect (in ./bin/StitchBlobs)
-
-
-RANKS: <0>
-
-288 bytes in 12 blocks are possibly lost in loss record 730 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by tsearch (in ./bin/StitchBlobs)
-  by darshan_track_common_val_counters (in darshan-common.c:238)
-  by pread (in darshan-posix.c:952)
-  by H5FD__sec2_read (in ./bin/StitchBlobs)
-  by H5FD_read (in ./bin/StitchBlobs)
-  by H5F__accum_read (in ./bin/StitchBlobs)
-  by H5PB_read (in ./bin/StitchBlobs)
-  by H5F_block_read (in ./bin/StitchBlobs)
-  by H5C_protect (in ./bin/StitchBlobs)
-  by H5AC_protect (in ./bin/StitchBlobs)
-  by H5HF__hdr_protect (in ./bin/StitchBlobs)
-
-
-RANKS: <0>
-
-288 bytes in 12 blocks are possibly lost in loss record 731 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by tsearch (in ./bin/StitchBlobs)
-  by darshan_track_common_val_counters (in darshan-common.c:238)
-  by pread (in darshan-posix.c:952)
-  by H5FD__sec2_read (in ./bin/StitchBlobs)
-  by H5FD_read (in ./bin/StitchBlobs)
-  by H5F__accum_read (in ./bin/StitchBlobs)
-  by H5PB_read (in ./bin/StitchBlobs)
-  by H5F_block_read (in ./bin/StitchBlobs)
-  by H5C_protect (in ./bin/StitchBlobs)
-  by H5AC_protect (in ./bin/StitchBlobs)
-  by H5HF__man_dblock_protect (in ./bin/StitchBlobs)
-
-
-RANKS: <0>
-
-288 bytes in 12 blocks are possibly lost in loss record 732 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by tsearch (in ./bin/StitchBlobs)
-  by darshan_track_common_val_counters (in darshan-common.c:238)
-  by pread (in darshan-posix.c:952)
-  by H5FD__sec2_read (in ./bin/StitchBlobs)
-  by H5FD_read (in ./bin/StitchBlobs)
-  by H5F__accum_read (in ./bin/StitchBlobs)
-  by H5PB_read (in ./bin/StitchBlobs)
-  by H5F_block_read (in ./bin/StitchBlobs)
-  by H5C_protect (in ./bin/StitchBlobs)
-  by H5AC_protect (in ./bin/StitchBlobs)
-  by H5HG__protect (in ./bin/StitchBlobs)
-
-
-RANKS: <0>
-
-288 bytes in 12 blocks are possibly lost in loss record 733 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by tsearch (in ./bin/StitchBlobs)
-  by darshan_track_common_val_counters (in darshan-common.c:238)
-  by pread (in darshan-posix.c:952)
-  by H5FD__sec2_read (in ./bin/StitchBlobs)
-  by H5FD_read (in ./bin/StitchBlobs)
-  by H5F__accum_read (in ./bin/StitchBlobs)
-  by H5PB_read (in ./bin/StitchBlobs)
-  by H5F_block_read (in ./bin/StitchBlobs)
-  by H5C_protect (in ./bin/StitchBlobs)
-  by H5AC_protect (in ./bin/StitchBlobs)
-  by H5B_find (in ./bin/StitchBlobs)
-
-
-RANKS: <0>
-
-288 bytes in 12 blocks are possibly lost in loss record 734 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by tsearch (in ./bin/StitchBlobs)
-  by darshan_track_common_val_counters (in darshan-common.c:238)
-  by pwrite (in darshan-posix.c:973)
-  by H5FD__sec2_write (in ./bin/StitchBlobs)
-  by H5FD_write (in ./bin/StitchBlobs)
-  by H5F__accum_write (in ./bin/StitchBlobs)
-  by H5PB_write (in ./bin/StitchBlobs)
-  by H5F_shared_block_write (in ./bin/StitchBlobs)
-  by H5D__contig_writevv_sieve_cb (in ./bin/StitchBlobs)
-  by H5VM_opvv (in ./bin/StitchBlobs)
-  by H5D__contig_fill (in ./bin/StitchBlobs)
-
-
-RANKS: <0>
-
-288 bytes in 12 blocks are possibly lost in loss record 735 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by tsearch (in ./bin/StitchBlobs)
-  by darshan_track_common_val_counters (in darshan-common.c:238)
-  by pwrite (in darshan-posix.c:973)
-  by H5FD__sec2_write (in ./bin/StitchBlobs)
-  by H5FD_write (in ./bin/StitchBlobs)
-  by H5F__accum_write (in ./bin/StitchBlobs)
-  by H5PB_write (in ./bin/StitchBlobs)
-  by H5F_shared_block_write (in ./bin/StitchBlobs)
-  by H5D__contig_writevv_sieve_cb (in ./bin/StitchBlobs)
-  by H5VM_opvv (in ./bin/StitchBlobs)
-  by H5D__contig_fill (in ./bin/StitchBlobs)
+165 bytes in 1 blocks are definitely lost
+  at realloc (in vg_replace_malloc.c:1690)
+  by __vasprintf_internal (in ./src/blobs/StitchBlobs)
+  by opal_vasprintf (in ./src/blobs/StitchBlobs)
+  by opal_asprintf (in ./src/blobs/StitchBlobs)
+  by mca_btl_ofi_component_register (in ./src/blobs/StitchBlobs)
+  by mca_base_framework_components_register (in ./src/blobs/StitchBlobs)
+  by mca_base_framework_register (in ./src/blobs/StitchBlobs)
+  by mca_base_framework_open (in ./src/blobs/StitchBlobs)
+  by mca_base_framework_open (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_init (in ./src/blobs/StitchBlobs)
 
 
 RANKS: <0>
@@ -568,10 +2488,10 @@ RANKS: <0>
   at operator new[](unsigned long) (in vg_replace_malloc.c:725)
   by NcValues_char::as_string(long) const (in ncvalues.cpp:354)
   by NcTypedComponent::as_string(long) const (in netcdf.cpp:557)
-  by ReadCFTimeDataFromNcFile(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcTimeDimension&, bool) (in NetCDFUtilities.cpp:740)
+  by ReadCFTimeDataFromNcFile(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcTimeDimension&, bool) (in NetCDFUtilities.cpp:742)
   by NcFileVector::InsertFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long) (in NcFileVector.cpp:87)
-  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:134)
-  by main (in StitchBlobs.cpp:2931)
+  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:138)
+  by main (in StitchBlobs.cpp:2818)
 
 
 RANKS: <0>
@@ -580,10 +2500,10 @@ RANKS: <0>
   at operator new[](unsigned long) (in vg_replace_malloc.c:725)
   by NcValues_char::as_string(long) const (in ncvalues.cpp:354)
   by NcTypedComponent::as_string(long) const (in netcdf.cpp:557)
-  by ReadCFTimeDataFromNcFile(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcTimeDimension&, bool) (in NetCDFUtilities.cpp:740)
+  by ReadCFTimeDataFromNcFile(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcTimeDimension&, bool) (in NetCDFUtilities.cpp:742)
   by NcFileVector::InsertFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long) (in NcFileVector.cpp:87)
-  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:134)
-  by main (in StitchBlobs.cpp:3023)
+  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:138)
+  by main (in StitchBlobs.cpp:2910)
 
 
 RANKS: <0>
@@ -593,8 +2513,8 @@ RANKS: <0>
   by NcVar::get_att(char const*) const (in netcdf.cpp:677)
   by ReadCFTimeDataFromNcFile(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcTimeDimension&, bool) (in NetCDFUtilities.cpp:717)
   by NcFileVector::InsertFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long) (in NcFileVector.cpp:87)
-  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:134)
-  by main (in StitchBlobs.cpp:2931)
+  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:138)
+  by main (in StitchBlobs.cpp:2818)
 
 
 RANKS: <0>
@@ -604,8 +2524,8 @@ RANKS: <0>
   by NcVar::get_att(char const*) const (in netcdf.cpp:677)
   by ReadCFTimeDataFromNcFile(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcTimeDimension&, bool) (in NetCDFUtilities.cpp:717)
   by NcFileVector::InsertFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long) (in NcFileVector.cpp:87)
-  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:134)
-  by main (in StitchBlobs.cpp:3023)
+  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:138)
+  by main (in StitchBlobs.cpp:2910)
 
 
 RANKS: <0>
@@ -615,8 +2535,8 @@ RANKS: <0>
   by NcVar::get_att(char const*) const (in netcdf.cpp:677)
   by ReadCFTimeDataFromNcFile(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcTimeDimension&, bool) (in NetCDFUtilities.cpp:703)
   by NcFileVector::InsertFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long) (in NcFileVector.cpp:87)
-  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:134)
-  by main (in StitchBlobs.cpp:2931)
+  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:138)
+  by main (in StitchBlobs.cpp:2818)
 
 
 RANKS: <0>
@@ -626,195 +2546,66 @@ RANKS: <0>
   by NcVar::get_att(char const*) const (in netcdf.cpp:677)
   by ReadCFTimeDataFromNcFile(NcFile*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcTimeDimension&, bool) (in NetCDFUtilities.cpp:703)
   by NcFileVector::InsertFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long) (in NcFileVector.cpp:87)
-  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:134)
-  by main (in StitchBlobs.cpp:3023)
+  by NcFileVector::ParseFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) (in NcFileVector.cpp:138)
+  by main (in StitchBlobs.cpp:2910)
 
 
 RANKS: <0>
 
-576 bytes in 24 blocks are possibly lost in loss record 829 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by tsearch (in ./bin/StitchBlobs)
-  by darshan_track_common_val_counters (in darshan-common.c:238)
-  by pwrite (in darshan-posix.c:973)
-  by H5FD__sec2_write (in ./bin/StitchBlobs)
-  by H5FD_write (in ./bin/StitchBlobs)
-  by H5F__accum_write (in ./bin/StitchBlobs)
-  by H5PB_write (in ./bin/StitchBlobs)
-  by H5F_block_write (in ./bin/StitchBlobs)
-  by H5C__flush_single_entry (in ./bin/StitchBlobs)
-  by H5C__flush_ring (in ./bin/StitchBlobs)
-  by H5C_flush_cache (in ./bin/StitchBlobs)
+1,104 bytes in 4 blocks are definitely lost
+  at calloc (in vg_replace_malloc.c:1595)
+  by cxil_get_svc_list (in libcxi.c:243)
+  by cxip_nic_get_best_rgroup_vni (in cxip_nic.c:163)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_alloc (in cxip_nic.c:338)
+  by cxip_info_alloc (in cxip_info.c:443)
+  by cxip_info_init (in cxip_info.c:487)
+  by fi_cxi_ini (in cxip_info.c:1323)
+  by fi_ini (in fabric.c:919)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1264)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
 
 
 RANKS: <0>
 
-576 bytes in 24 blocks are possibly lost in loss record 830 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by tsearch (in ./bin/StitchBlobs)
-  by darshan_track_common_val_counters (in darshan-common.c:238)
-  by pwrite (in darshan-posix.c:973)
-  by H5FD__sec2_write (in ./bin/StitchBlobs)
-  by H5FD_write (in ./bin/StitchBlobs)
-  by H5F__accum_write (in ./bin/StitchBlobs)
-  by H5PB_write (in ./bin/StitchBlobs)
-  by H5F_block_write (in ./bin/StitchBlobs)
-  by H5C__flush_single_entry (in ./bin/StitchBlobs)
-  by H5C__flush_ring (in ./bin/StitchBlobs)
-  by H5C_flush_cache (in ./bin/StitchBlobs)
+1,104 bytes in 4 blocks are definitely lost
+  at calloc (in vg_replace_malloc.c:1595)
+  by cxil_get_svc_list (in libcxi.c:243)
+  by cxip_nic_get_best_rgroup_vni (in cxip_nic.c:163)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_alloc (in cxip_nic.c:338)
+  by cxip_info_alloc (in cxip_info.c:443)
+  by cxip_info_init (in cxip_info.c:513)
+  by fi_cxi_ini (in cxip_info.c:1323)
+  by fi_ini (in fabric.c:919)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1264)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
 
 
 RANKS: <0>
 
-1,248 bytes in 12 blocks are possibly lost in loss record 875 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by darshan_track_common_val_counters (in darshan-common.c:228)
-  by pread (in darshan-posix.c:952)
-  by H5FD__sec2_read (in ./bin/StitchBlobs)
-  by H5FD_read (in ./bin/StitchBlobs)
-  by H5FD_locate_signature (in ./bin/StitchBlobs)
-  by H5F__super_read (in ./bin/StitchBlobs)
-  by H5F_open (in ./bin/StitchBlobs)
-  by H5VL__native_file_open (in ./bin/StitchBlobs)
-  by H5VL_file_open (in ./bin/StitchBlobs)
-  by H5F__open_api_common (in ./bin/StitchBlobs)
-  by H5Fopen (in ./bin/StitchBlobs)
-
-
-RANKS: <0>
-
-1,248 bytes in 12 blocks are possibly lost in loss record 876 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by darshan_track_common_val_counters (in darshan-common.c:228)
-  by pread (in darshan-posix.c:952)
-  by H5FD__sec2_read (in ./bin/StitchBlobs)
-  by H5FD_read (in ./bin/StitchBlobs)
-  by H5FD_locate_signature (in ./bin/StitchBlobs)
-  by H5F__super_read (in ./bin/StitchBlobs)
-  by H5F_open (in ./bin/StitchBlobs)
-  by H5VL__native_file_open (in ./bin/StitchBlobs)
-  by H5VL_file_open (in ./bin/StitchBlobs)
-  by H5F__open_api_common (in ./bin/StitchBlobs)
-  by H5Fopen (in ./bin/StitchBlobs)
-
-
-RANKS: <0>
-
-1,248 bytes in 12 blocks are possibly lost in loss record 877 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by darshan_track_common_val_counters (in darshan-common.c:228)
-  by pread (in darshan-posix.c:952)
-  by H5FD__sec2_read (in ./bin/StitchBlobs)
-  by H5FD_read (in ./bin/StitchBlobs)
-  by H5F__accum_read (in ./bin/StitchBlobs)
-  by H5PB_read (in ./bin/StitchBlobs)
-  by H5F_block_read (in ./bin/StitchBlobs)
-  by H5C_protect (in ./bin/StitchBlobs)
-  by H5AC_protect (in ./bin/StitchBlobs)
-  by H5O_protect (in ./bin/StitchBlobs)
-  by H5O_obj_type (in ./bin/StitchBlobs)
-
-
-RANKS: <0>
-
-1,248 bytes in 12 blocks are possibly lost in loss record 878 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by darshan_track_common_val_counters (in darshan-common.c:228)
-  by pread (in darshan-posix.c:952)
-  by H5FD__sec2_read (in ./bin/StitchBlobs)
-  by H5FD_read (in ./bin/StitchBlobs)
-  by H5F__accum_read (in ./bin/StitchBlobs)
-  by H5PB_read (in ./bin/StitchBlobs)
-  by H5F_block_read (in ./bin/StitchBlobs)
-  by H5C_protect (in ./bin/StitchBlobs)
-  by H5AC_protect (in ./bin/StitchBlobs)
-  by H5HF__hdr_protect (in ./bin/StitchBlobs)
-  by H5HF_open (in ./bin/StitchBlobs)
-
-
-RANKS: <0>
-
-1,248 bytes in 12 blocks are possibly lost in loss record 879 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by darshan_track_common_val_counters (in darshan-common.c:228)
-  by pread (in darshan-posix.c:952)
-  by H5FD__sec2_read (in ./bin/StitchBlobs)
-  by H5FD_read (in ./bin/StitchBlobs)
-  by H5F__accum_read (in ./bin/StitchBlobs)
-  by H5PB_read (in ./bin/StitchBlobs)
-  by H5F_block_read (in ./bin/StitchBlobs)
-  by H5C_protect (in ./bin/StitchBlobs)
-  by H5AC_protect (in ./bin/StitchBlobs)
-  by H5HF__man_dblock_protect (in ./bin/StitchBlobs)
-  by H5HF__man_op_real (in ./bin/StitchBlobs)
-
-
-RANKS: <0>
-
-1,248 bytes in 12 blocks are possibly lost in loss record 880 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by darshan_track_common_val_counters (in darshan-common.c:228)
-  by pread (in darshan-posix.c:952)
-  by H5FD__sec2_read (in ./bin/StitchBlobs)
-  by H5FD_read (in ./bin/StitchBlobs)
-  by H5F__accum_read (in ./bin/StitchBlobs)
-  by H5PB_read (in ./bin/StitchBlobs)
-  by H5F_block_read (in ./bin/StitchBlobs)
-  by H5C_protect (in ./bin/StitchBlobs)
-  by H5AC_protect (in ./bin/StitchBlobs)
-  by H5HG__protect (in ./bin/StitchBlobs)
-  by H5HG_read (in ./bin/StitchBlobs)
-
-
-RANKS: <0>
-
-1,248 bytes in 12 blocks are possibly lost in loss record 881 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by darshan_track_common_val_counters (in darshan-common.c:228)
-  by pread (in darshan-posix.c:952)
-  by H5FD__sec2_read (in ./bin/StitchBlobs)
-  by H5FD_read (in ./bin/StitchBlobs)
-  by H5F__accum_read (in ./bin/StitchBlobs)
-  by H5PB_read (in ./bin/StitchBlobs)
-  by H5F_block_read (in ./bin/StitchBlobs)
-  by H5C_protect (in ./bin/StitchBlobs)
-  by H5AC_protect (in ./bin/StitchBlobs)
-  by H5B_find (in ./bin/StitchBlobs)
-  by H5D__btree_idx_get_addr (in ./bin/StitchBlobs)
-
-
-RANKS: <0>
-
-1,248 bytes in 12 blocks are possibly lost in loss record 882 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by darshan_track_common_val_counters (in darshan-common.c:228)
-  by pwrite (in darshan-posix.c:973)
-  by H5FD__sec2_write (in ./bin/StitchBlobs)
-  by H5FD_write (in ./bin/StitchBlobs)
-  by H5F__accum_write (in ./bin/StitchBlobs)
-  by H5PB_write (in ./bin/StitchBlobs)
-  by H5F_shared_block_write (in ./bin/StitchBlobs)
-  by H5D__contig_writevv_sieve_cb (in ./bin/StitchBlobs)
-  by H5VM_opvv (in ./bin/StitchBlobs)
-  by H5D__contig_fill (in ./bin/StitchBlobs)
-  by H5D__init_storage (in ./bin/StitchBlobs)
-
-
-RANKS: <0>
-
-1,248 bytes in 12 blocks are possibly lost in loss record 883 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by darshan_track_common_val_counters (in darshan-common.c:228)
-  by pwrite (in darshan-posix.c:973)
-  by H5FD__sec2_write (in ./bin/StitchBlobs)
-  by H5FD_write (in ./bin/StitchBlobs)
-  by H5F__accum_write (in ./bin/StitchBlobs)
-  by H5PB_write (in ./bin/StitchBlobs)
-  by H5F_shared_block_write (in ./bin/StitchBlobs)
-  by H5D__contig_writevv_sieve_cb (in ./bin/StitchBlobs)
-  by H5VM_opvv (in ./bin/StitchBlobs)
-  by H5D__contig_fill (in ./bin/StitchBlobs)
-  by H5D__init_storage (in ./bin/StitchBlobs)
+1,104 bytes in 4 blocks are definitely lost
+  at calloc (in vg_replace_malloc.c:1595)
+  by cxil_get_svc_list (in libcxi.c:243)
+  by cxip_nic_get_best_rgroup_vni (in cxip_nic.c:163)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_control (in cxip_nic.c:283)
+  by fi_control (in fabric.h:689)
+  by cxip_alter_info (in cxip_info.c:1378)
+  by cxip_getinfo (in cxip_info.c:1762)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1311)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by ompi_mtl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by ompi_mtl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_pml_cm_component_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_base_select (in ./src/blobs/StitchBlobs)
+  by ompi_mpi_instance_init_common (in ./src/blobs/StitchBlobs)
 
 
 RANKS: <0>
@@ -827,7 +2618,7 @@ RANKS: <0>
   by CopyNcVar(NcFile&, NcFile&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool, bool) (in NetCDFUtilities.cpp:501)
   by CopyNcVarIfExists(NcFile&, NcFile&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool, bool) (in NetCDFUtilities.cpp:554)
   by PrepareBlobOutputVar(NcFile&, NcFile&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, SimpleGrid const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcType, NcDim*, NcDim**, NcDim**, NcVar**) (in BlobUtilities.h:105)
-  by main (in StitchBlobs.cpp:4117)
+  by main (in StitchBlobs.cpp:3994)
 
 
 RANKS: <0>
@@ -840,652 +2631,43 @@ RANKS: <0>
   by CopyNcVar(NcFile&, NcFile&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool, bool) (in NetCDFUtilities.cpp:501)
   by CopyNcVarIfExists(NcFile&, NcFile&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool, bool) (in NetCDFUtilities.cpp:554)
   by PrepareBlobOutputVar(NcFile&, NcFile&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, SimpleGrid const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, NcType, NcDim*, NcDim**, NcDim**, NcVar**) (in BlobUtilities.h:104)
-  by main (in StitchBlobs.cpp:4117)
+  by main (in StitchBlobs.cpp:3994)
 
 
 RANKS: <0>
 
-2,496 bytes in 24 blocks are possibly lost in loss record 905 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by darshan_track_common_val_counters (in darshan-common.c:228)
-  by pwrite (in darshan-posix.c:973)
-  by H5FD__sec2_write (in ./bin/StitchBlobs)
-  by H5FD_write (in ./bin/StitchBlobs)
-  by H5F__accum_write (in ./bin/StitchBlobs)
-  by H5PB_write (in ./bin/StitchBlobs)
-  by H5F_block_write (in ./bin/StitchBlobs)
-  by H5C__flush_single_entry (in ./bin/StitchBlobs)
-  by H5C__flush_ring (in ./bin/StitchBlobs)
-  by H5C_flush_cache (in ./bin/StitchBlobs)
-  by H5AC_flush (in ./bin/StitchBlobs)
-
-
-RANKS: <0>
-
-2,496 bytes in 24 blocks are possibly lost in loss record 906 of 941
-  at malloc (in vg_replace_malloc.c:442)
-  by darshan_track_common_val_counters (in darshan-common.c:228)
-  by pwrite (in darshan-posix.c:973)
-  by H5FD__sec2_write (in ./bin/StitchBlobs)
-  by H5FD_write (in ./bin/StitchBlobs)
-  by H5F__accum_write (in ./bin/StitchBlobs)
-  by H5PB_write (in ./bin/StitchBlobs)
-  by H5F_block_write (in ./bin/StitchBlobs)
-  by H5C__flush_single_entry (in ./bin/StitchBlobs)
-  by H5C__flush_ring (in ./bin/StitchBlobs)
-  by H5C_flush_cache (in ./bin/StitchBlobs)
-  by H5AC_flush (in ./bin/StitchBlobs)
+2,208 bytes in 8 blocks are definitely lost
+  at calloc (in vg_replace_malloc.c:1595)
+  by cxil_get_svc_list (in libcxi.c:243)
+  by cxip_nic_get_best_rgroup_vni (in cxip_nic.c:163)
+  by cxip_nic_get_rgroup_vni (in cxip_nic.c:250)
+  by cxip_nic_control (in cxip_nic.c:283)
+  by fi_control (in fabric.h:689)
+  by cxip_alter_info (in cxip_info.c:1378)
+  by cxip_getinfo (in cxip_info.c:1762)
+  by fi_getinfo@@FABRIC_1.7 (in fabric.c:1311)
+  by fi_getinfo@FABRIC_1.3 (in abi_1_0.c:617)
+  by mca_btl_ofi_component_init (in ./src/blobs/StitchBlobs)
+  by mca_btl_base_select (in ./src/blobs/StitchBlobs)
+  by mca_bml_r2_component_init (in ./src/blobs/StitchBlobs)
+  by mca_bml_base_init (in ./src/blobs/StitchBlobs)
+  by mca_pml_ob1_component_init (in ./src/blobs/StitchBlobs)
 
 
 RANKS: <0>
 
 HEAP SUMMARY:
-  in use at exit: 27626 bytes in 517 blocks
+  in use at exit: 12381 bytes in 213 blocks
 
 LEAK SUMMARY:
-   definitely lost: 6634 bytes in 189 blocks
+   definitely lost: 12381 bytes in 213 blocks
    indirectly lost: 0 bytes in 0 blocks
-     possibly lost: 20992 bytes in 328 blocks
+     possibly lost: 0 bytes in 0 blocks
    still reachable: 0 bytes in 0 blocks
 
-ERROR SUMMARY: 8 errors from 1540 contexts (suppressed 676)
+ERROR SUMMARY: 121 errors from 2049 contexts (suppressed 163)
 
-ected: 9
-....Done
-..Time 370 (1984-04-02 12:00:00)
-....Finding blobs (22259 tagged points)
-....Blobs detected: 10
-....Done
-..Time 371 (1984-04-02 18:00:00)
-....Finding blobs (16258 tagged points)
-....Blobs detected: 6
-....Done
-..Time 372 (1984-04-03 00:00:00)
-....Finding blobs (16832 tagged points)
-....Blobs detected: 6
-....Done
-..Time 373 (1984-04-03 06:00:00)
-....Finding blobs (19616 tagged points)
-....Blobs detected: 8
-....Done
-..Time 374 (1984-04-03 12:00:00)
-....Finding blobs (22398 tagged points)
-....Blobs detected: 9
-....Done
-..Time 375 (1984-04-03 18:00:00)
-....Finding blobs (17117 tagged points)
-....Blobs detected: 6
-....Done
-..Time 376 (1984-04-04 00:00:00)
-....Finding blobs (15539 tagged points)
-....Blobs detected: 5
-....Done
-..Time 377 (1984-04-04 06:00:00)
-....Finding blobs (15623 tagged points)
-....Blobs detected: 6
-....Done
-..Time 378 (1984-04-04 12:00:00)
-....Finding blobs (15462 tagged points)
-....Blobs detected: 6
-....Done
-..Time 379 (1984-04-04 18:00:00)
-....Finding blobs (14887 tagged points)
-....Blobs detected: 5
-....Done
-..Time 380 (1984-04-05 00:00:00)
-....Finding blobs (18129 tagged points)
-....Blobs detected: 6
-....Done
-..Time 381 (1984-04-05 06:00:00)
-....Finding blobs (18175 tagged points)
-....Blobs detected: 6
-....Done
-..Time 382 (1984-04-05 12:00:00)
-....Finding blobs (18850 tagged points)
-....Blobs detected: 7
-....Done
-..Time 383 (1984-04-05 18:00:00)
-....Finding blobs (18760 tagged points)
-....Blobs detected: 7
-....Done
-..Time 384 (1984-04-06 00:00:00)
-....Finding blobs (16893 tagged points)
-....Blobs detected: 6
-....Done
-..Time 385 (1984-04-06 06:00:00)
-....Finding blobs (16785 tagged points)
-....Blobs detected: 7
-....Done
-..Time 386 (1984-04-06 12:00:00)
-....Finding blobs (16454 tagged points)
-....Blobs detected: 6
-....Done
-..Time 387 (1984-04-06 18:00:00)
-....Finding blobs (11845 tagged points)
-....Blobs detected: 3
-....Done
-..Time 388 (1984-04-07 00:00:00)
-....Finding blobs (19138 tagged points)
-....Blobs detected: 6
-....Done
-..Time 389 (1984-04-07 06:00:00)
-....Finding blobs (19878 tagged points)
-....Blobs detected: 6
-....Done
-..Time 390 (1984-04-07 12:00:00)
-....Finding blobs (19216 tagged points)
-....Blobs detected: 6
-....Done
-..Time 391 (1984-04-07 18:00:00)
-....Finding blobs (17663 tagged points)
-....Blobs detected: 6
-....Done
-..Time 392 (1984-04-08 00:00:00)
-....Finding blobs (19450 tagged points)
-....Blobs detected: 6
-....Done
-..Time 393 (1984-04-08 06:00:00)
-....Finding blobs (23248 tagged points)
-....Blobs detected: 8
-....Done
-..Time 394 (1984-04-08 12:00:00)
-....Finding blobs (24147 tagged points)
-....Blobs detected: 7
-....Done
-..Time 395 (1984-04-08 18:00:00)
-....Finding blobs (27022 tagged points)
-....Blobs detected: 8
-....Done
-..Time 396 (1984-04-09 00:00:00)
-....Finding blobs (26331 tagged points)
-....Blobs detected: 7
-....Done
-..Time 397 (1984-04-09 06:00:00)
-....Finding blobs (23768 tagged points)
-....Blobs detected: 7
-....Done
-..Time 398 (1984-04-09 12:00:00)
-....Finding blobs (25102 tagged points)
-....Blobs detected: 7
-....Done
-..Time 399 (1984-04-09 18:00:00)
-....Finding blobs (22356 tagged points)
-....Blobs detected: 7
-....Done
-..Time 400 (1984-04-10 00:00:00)
-....Finding blobs (24816 tagged points)
-....Blobs detected: 9
-....Done
-..Time 401 (1984-04-10 06:00:00)
-....Finding blobs (23679 tagged points)
-....Blobs detected: 8
-....Done
-..Time 402 (1984-04-10 12:00:00)
-....Finding blobs (15795 tagged points)
-....Blobs detected: 6
-....Done
-..Time 403 (1984-04-10 18:00:00)
-....Finding blobs (17282 tagged points)
-....Blobs detected: 6
-....Done
-..Time 404 (1984-04-11 00:00:00)
-....Finding blobs (20274 tagged points)
-....Blobs detected: 8
-....Done
-..Time 405 (1984-04-11 06:00:00)
-....Finding blobs (21065 tagged points)
-....Blobs detected: 8
-....Done
-..Time 406 (1984-04-11 12:00:00)
-....Finding blobs (20483 tagged points)
-....Blobs detected: 6
-....Done
-..Time 407 (1984-04-11 18:00:00)
-....Finding blobs (20644 tagged points)
-....Blobs detected: 7
-....Done
-..Time 408 (1984-04-12 00:00:00)
-....Finding blobs (20098 tagged points)
-....Blobs detected: 7
-....Done
-..Time 409 (1984-04-12 06:00:00)
-....Finding blobs (14375 tagged points)
-....Blobs detected: 5
-....Done
-..Time 410 (1984-04-12 12:00:00)
-....Finding blobs (12429 tagged points)
-....Blobs detected: 5
-....Done
-..Time 411 (1984-04-12 18:00:00)
-....Finding blobs (13845 tagged points)
-....Blobs detected: 6
-....Done
-..Time 412 (1984-04-13 00:00:00)
-....Finding blobs (16904 tagged points)
-....Blobs detected: 9
-....Done
-..Time 413 (1984-04-13 06:00:00)
-....Finding blobs (14098 tagged points)
-....Blobs detected: 7
-....Done
-..Time 414 (1984-04-13 12:00:00)
-....Finding blobs (12144 tagged points)
-....Blobs detected: 6
-....Done
-..Time 415 (1984-04-13 18:00:00)
-....Finding blobs (11823 tagged points)
-....Blobs detected: 6
-....Done
-..Time 416 (1984-04-14 00:00:00)
-....Finding blobs (13548 tagged points)
-....Blobs detected: 6
-....Done
-..Time 417 (1984-04-14 06:00:00)
-....Finding blobs (11961 tagged points)
-....Blobs detected: 5
-....Done
-..Time 418 (1984-04-14 12:00:00)
-....Finding blobs (12356 tagged points)
-....Blobs detected: 5
-....Done
-..Time 419 (1984-04-14 18:00:00)
-....Finding blobs (14711 tagged points)
-....Blobs detected: 6
-....Done
-..Time 420 (1984-04-15 00:00:00)
-....Finding blobs (17426 tagged points)
-....Blobs detected: 6
-....Done
-..Time 421 (1984-04-15 06:00:00)
-....Finding blobs (16054 tagged points)
-....Blobs detected: 5
-....Done
-..Time 422 (1984-04-15 12:00:00)
-....Finding blobs (15454 tagged points)
-....Blobs detected: 5
-....Done
-..Time 423 (1984-04-15 18:00:00)
-....Finding blobs (16300 tagged points)
-....Blobs detected: 5
-....Done
-..Time 424 (1984-04-16 00:00:00)
-....Finding blobs (16618 tagged points)
-....Blobs detected: 5
-....Done
-..Time 425 (1984-04-16 06:00:00)
-....Finding blobs (15464 tagged points)
-....Blobs detected: 5
-....Done
-..Time 426 (1984-04-16 12:00:00)
-....Finding blobs (17488 tagged points)
-....Blobs detected: 6
-....Done
-..Time 427 (1984-04-16 18:00:00)
-....Finding blobs (17194 tagged points)
-....Blobs detected: 6
-....Done
-..Time 428 (1984-04-17 00:00:00)
-....Finding blobs (15542 tagged points)
-....Blobs detected: 5
-....Done
-..Time 429 (1984-04-17 06:00:00)
-....Finding blobs (17463 tagged points)
-....Blobs detected: 5
-....Done
-..Time 430 (1984-04-17 12:00:00)
-....Finding blobs (20900 tagged points)
-....Blobs detected: 6
-....Done
-..Time 431 (1984-04-17 18:00:00)
-....Finding blobs (23235 tagged points)
-....Blobs detected: 7
-....Done
-..Time 432 (1984-04-18 00:00:00)
-....Finding blobs (22629 tagged points)
-....Blobs detected: 7
-....Done
-..Time 433 (1984-04-18 06:00:00)
-....Finding blobs (20318 tagged points)
-....Blobs detected: 6
-....Done
-..Time 434 (1984-04-18 12:00:00)
-....Finding blobs (22329 tagged points)
-....Blobs detected: 7
-....Done
-..Time 435 (1984-04-18 18:00:00)
-....Finding blobs (23716 tagged points)
-....Blobs detected: 7
-....Done
-..Time 436 (1984-04-19 00:00:00)
-....Finding blobs (22595 tagged points)
-....Blobs detected: 7
-....Done
-..Time 437 (1984-04-19 06:00:00)
-....Finding blobs (24608 tagged points)
-....Blobs detected: 9
-....Done
-..Time 438 (1984-04-19 12:00:00)
-....Finding blobs (25251 tagged points)
-....Blobs detected: 9
-....Done
-..Time 439 (1984-04-19 18:00:00)
-....Finding blobs (22851 tagged points)
-....Blobs detected: 8
-....Done
-..Time 440 (1984-04-20 00:00:00)
-....Finding blobs (20876 tagged points)
-....Blobs detected: 7
-....Done
-..Time 441 (1984-04-20 06:00:00)
-....Finding blobs (18592 tagged points)
-....Blobs detected: 7
-....Done
-..Time 442 (1984-04-20 12:00:00)
-....Finding blobs (13346 tagged points)
-....Blobs detected: 5
-....Done
-..Time 443 (1984-04-20 18:00:00)
-....Finding blobs (11069 tagged points)
-....Blobs detected: 4
-....Done
-..Time 444 (1984-04-21 00:00:00)
-....Finding blobs (15122 tagged points)
-....Blobs detected: 6
-....Done
-..Time 445 (1984-04-21 06:00:00)
-....Finding blobs (10978 tagged points)
-....Blobs detected: 4
-....Done
-..Time 446 (1984-04-21 12:00:00)
-....Finding blobs (12749 tagged points)
-....Blobs detected: 6
-....Done
-..Time 447 (1984-04-21 18:00:00)
-....Finding blobs (8431 tagged points)
-....Blobs detected: 4
-....Done
-..Time 448 (1984-04-22 00:00:00)
-....Finding blobs (10677 tagged points)
-....Blobs detected: 4
-....Done
-..Time 449 (1984-04-22 06:00:00)
-....Finding blobs (8640 tagged points)
-....Blobs detected: 4
-....Done
-..Time 450 (1984-04-22 12:00:00)
-....Finding blobs (10644 tagged points)
-....Blobs detected: 5
-....Done
-..Time 451 (1984-04-22 18:00:00)
-....Finding blobs (10334 tagged points)
-....Blobs detected: 5
-....Done
-..Time 452 (1984-04-23 00:00:00)
-....Finding blobs (12147 tagged points)
-....Blobs detected: 6
-....Done
-..Time 453 (1984-04-23 06:00:00)
-....Finding blobs (11138 tagged points)
-....Blobs detected: 5
-....Done
-..Time 454 (1984-04-23 12:00:00)
-....Finding blobs (16571 tagged points)
-....Blobs detected: 8
-....Done
-..Time 455 (1984-04-23 18:00:00)
-....Finding blobs (20305 tagged points)
-....Blobs detected: 9
-....Done
-..Time 456 (1984-04-24 00:00:00)
-....Finding blobs (21733 tagged points)
-....Blobs detected: 9
-....Done
-..Time 457 (1984-04-24 06:00:00)
-....Finding blobs (24145 tagged points)
-....Blobs detected: 10
-....Done
-..Time 458 (1984-04-24 12:00:00)
-....Finding blobs (25543 tagged points)
-....Blobs detected: 10
-....Done
-..Time 459 (1984-04-24 18:00:00)
-....Finding blobs (23477 tagged points)
-....Blobs detected: 9
-....Done
-..Time 460 (1984-04-25 00:00:00)
-....Finding blobs (25107 tagged points)
-....Blobs detected: 9
-....Done
-..Time 461 (1984-04-25 06:00:00)
-....Finding blobs (22689 tagged points)
-....Blobs detected: 8
-....Done
-..Time 462 (1984-04-25 12:00:00)
-....Finding blobs (22355 tagged points)
-....Blobs detected: 7
-....Done
-..Time 463 (1984-04-25 18:00:00)
-....Finding blobs (21651 tagged points)
-....Blobs detected: 8
-....Done
-..Time 464 (1984-04-26 00:00:00)
-....Finding blobs (23499 tagged points)
-....Blobs detected: 9
-....Done
-..Time 465 (1984-04-26 06:00:00)
-....Finding blobs (21743 tagged points)
-....Blobs detected: 9
-....Done
-..Time 466 (1984-04-26 12:00:00)
-....Finding blobs (21508 tagged points)
-....Blobs detected: 8
-....Done
-..Time 467 (1984-04-26 18:00:00)
-....Finding blobs (20911 tagged points)
-....Blobs detected: 8
-....Done
-..Time 468 (1984-04-27 00:00:00)
-....Finding blobs (19656 tagged points)
-....Blobs detected: 7
-....Done
-..Time 469 (1984-04-27 06:00:00)
-....Finding blobs (21818 tagged points)
-....Blobs detected: 8
-....Done
-..Time 470 (1984-04-27 12:00:00)
-....Finding blobs (20350 tagged points)
-....Blobs detected: 7
-....Done
-..Time 471 (1984-04-27 18:00:00)
-....Finding blobs (18103 tagged points)
-....Blobs detected: 7
-....Done
-..Time 472 (1984-04-28 00:00:00)
-....Finding blobs (17536 tagged points)
-....Blobs detected: 6
-....Done
-..Time 473 (1984-04-28 06:00:00)
-....Finding blobs (22128 tagged points)
-....Blobs detected: 8
-....Done
-..Time 474 (1984-04-28 12:00:00)
-....Finding blobs (18946 tagged points)
-....Blobs detected: 6
-....Done
-..Time 475 (1984-04-28 18:00:00)
-....Finding blobs (22579 tagged points)
-....Blobs detected: 7
-....Done
-..Time 476 (1984-04-29 00:00:00)
-....Finding blobs (20855 tagged points)
-....Blobs detected: 4
-....Done
-..Time 477 (1984-04-29 06:00:00)
-....Finding blobs (23647 tagged points)
-....Blobs detected: 6
-....Done
-..Time 478 (1984-04-29 12:00:00)
-....Finding blobs (24850 tagged points)
-....Blobs detected: 6
-....Done
-..Time 479 (1984-04-29 18:00:00)
-....Finding blobs (25039 tagged points)
-....Blobs detected: 8
-....Done
-..Time 480 (1984-04-30 00:00:00)
-....Finding blobs (28072 tagged points)
-....Blobs detected: 9
-....Done
-..Time 481 (1984-04-30 06:00:00)
-....Finding blobs (28152 tagged points)
-....Blobs detected: 9
-....Done
-..Time 482 (1984-04-30 12:00:00)
-....Finding blobs (25136 tagged points)
-....Blobs detected: 7
-....Done
-..Time 483 (1984-04-30 18:00:00)
-....Finding blobs (25022 tagged points)
-....Blobs detected: 7
-....Done
-..Time 484 (1984-05-01 00:00:00)
-....Finding blobs (22689 tagged points)
-....Blobs detected: 5
-....Done
-..Time 485 (1984-05-01 06:00:00)
-....Finding blobs (25404 tagged points)
-....Blobs detected: 6
-....Done
-..Time 486 (1984-05-01 12:00:00)
-....Finding blobs (22437 tagged points)
-....Blobs detected: 5
-....Done
-..Time 487 (1984-05-01 18:00:00)
-....Finding blobs (23137 tagged points)
-....Blobs detected: 5
-....Done
-..Time 488 (1984-05-02 00:00:00)
-....Finding blobs (21662 tagged points)
-....Blobs detected: 5
-....Done
-..Time 489 (1984-05-02 06:00:00)
-....Finding blobs (20042 tagged points)
-....Blobs detected: 5
-....Done
-..Time 490 (1984-05-02 12:00:00)
-....Finding blobs (18559 tagged points)
-....Blobs detected: 7
-....Done
-..Time 491 (1984-05-02 18:00:00)
-....Finding blobs (17044 tagged points)
-....Blobs detected: 6
-....Done
-..Time 492 (1984-05-03 00:00:00)
-....Finding blobs (14614 tagged points)
-....Blobs detected: 6
-....Done
-..Time 493 (1984-05-03 06:00:00)
-....Finding blobs (12275 tagged points)
-....Blobs detected: 5
-....Done
-..Time 494 (1984-05-03 12:00:00)
-....Finding blobs (16610 tagged points)
-....Blobs detected: 6
-....Done
-..Time 495 (1984-05-03 18:00:00)
-....Finding blobs (14488 tagged points)
-....Blobs detected: 6
-....Done
-..Time 496 (1984-05-04 00:00:00)
-....Finding blobs (14498 tagged points)
-....Blobs detected: 7
-....Done
-..Time 497 (1984-05-04 06:00:00)
-....Finding blobs (17467 tagged points)
-....Blobs detected: 7
-....Done
-..Time 498 (1984-05-04 12:00:00)
-....Finding blobs (16196 tagged points)
-....Blobs detected: 6
-....Done
-..Time 499 (1984-05-04 18:00:00)
-....Finding blobs (12543 tagged points)
-....Blobs detected: 4
-....Done
-..Time 500 (1984-05-05 00:00:00)
-....Finding blobs (13239 tagged points)
-....Blobs detected: 4
-....Done
-..Time 501 (1984-05-05 06:00:00)
-....Finding blobs (14397 tagged points)
-....Blobs detected: 5
-....Done
-..Time 502 (1984-05-05 12:00:00)
-....Finding blobs (15790 tagged points)
-....Blobs detected: 6
-....Done
-..Time 503 (1984-05-05 18:00:00)
-....Finding blobs (15347 tagged points)
-....Blobs detected: 6
-....Done
-..Time 504 (1984-05-06 00:00:00)
-....Finding blobs (14006 tagged points)
-....Blobs detected: 5
-....Done
-..Time 505 (1984-05-06 06:00:00)
-....Finding blobs (15007 tagged points)
-....Blobs detected: 6
-....Done
-..Time 506 (1984-05-06 12:00:00)
-....Finding blobs (17918 tagged points)
-....Blobs detected: 9
-....Done
-..Time 507 (1984-05-06 18:00:00)
-....Finding blobs (18662 tagged points)
-....Blobs detected: 8
-....Done
-..Time 508 (1984-05-07 00:00:00)
-....Finding blobs (16490 tagged points)
-....Blobs detected: 7
-....Done
-..Time 509 (1984-05-07 06:00:00)
-....Finding blobs (14469 tagged points)
-....Blobs detected: 6
-....Done
-..Time 510 (1984-05-07 12:00:00)
-....Finding blobs (16943 tagged points)
-....Blobs detected: 7
-....Done
-..Time 511 (1984-05-07 18:00:00)
-....Finding blobs (15369 tagged points)
-....Blobs detected: 6
-....Done
-..Time 512 (1984-05-08 00:00:00)
-....Finding blobs (18096 tagged points)
-....Blobs detected: 7
-....Done
-..Time 513 (1984-05-08 06:00:00)
-....Finding blobs (18115 tagged points)
-....Blobs detected: 7
-....Done
-..Time 514 (1984-05-08 12:00:00)
-....Finding blobs (20417 tagged points)
-....Blobs detected: 8
-....Done
-..Time 515 (1984-05-08 18:00:00)
-....Finding blobs (21466 tagged points)
-....Blobs detected: 9
-....Done
-..Time 516 (1984-05-09 00:00:00)
-....Finding blobs (20857 tagged points)
-....Blobs detected: 9
-....Done
-..Time 517 (1984-05-09 06:00:00)
-....Finding blobs (21020 tagged points)
-....Blobs detected: 10
-....Done
-..Time 518 (1984-05-09 12:00:00)
-....Finding blobs (19532 tagged points)
+ts)
 ....Blobs detected: 9
 ....Done
 ..Time 519 (1984-05-09 18:00:00)
@@ -6754,9 +7936,5 @@ Output blobs
 ..Writing file "/global/cfs/projectdirs/m2637/hyvchen/test/ERA5_AR_test/e5.oper.an.vinteg.ar_tags.ll025sc.1984120100_1984123123_output.nc"
 ..Done
 ------------------------------------------------------------
-MPICH ERROR [Rank 0] [job id ] [Tue Mar 11 22:10:48 2025] [nid200059] - Abort(134880771) (rank 0 in comm 0): Fatal error in PMPI_Type_free: Invalid datatype, error stack:
-PMPI_Type_free(158): MPI_Type_free(datatype_p=0x1ffeff76e4) failed
-PMPI_Type_free(92).: Invalid datatype
-
-==2214740== xtree memory report: /global/u1/h/hyvchen/tempestextremes/xtmemory_mpi.0.kcg
-slurmstepd: error: *** STEP 36787070.0 ON nid200059 CANCELLED AT 2025-03-12T05:11:13 ***
+==600092== xtree memory report: /global/u1/h/hyvchen/tempestextremes/xtmemory_mpi.0.kcg
+slurmstepd: error: *** STEP 36790032.0 ON nid200042 CANCELLED AT 2025-03-12T08:37:36 ***
