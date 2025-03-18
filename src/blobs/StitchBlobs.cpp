@@ -2377,7 +2377,7 @@ struct Node3 {
 	// 7. The root processor will build the connectivity graph based on the
 	//    gathered multigraph and then reassign tag numbers
 	// 8. Then root processor will scatter out the updated vecAllBlobTags to
-	//    each processor. (The time.localTagId only update the id, not tag)
+	//    each processor. (should The time.localTagId only update the id, not entire tag)
 	// 9. Each processor will write their local vecAllBlobTags to the output
 	//    file individually. The time of the output file will be identical to
 	//    the input file.
@@ -3609,12 +3609,12 @@ try {
 				multimapTagGraph = MPI_MapGraph.GetGatheredTagGraph();
 			}
 
-			//Gather the setAllTags to P0 (Set All Tags can remain at local)
-			TagCollectiveOP MPI_TagsGather(MPI_REAL_COMM, MPI_exchangedTags->GetOriginalVecAllBlobTags());
-			MPI_TagsGather.Gather();
+			// //Gather the setAllTags to P0 (Set All Tags can remain at local)
+			// TagCollectiveOP MPI_TagsGather(MPI_REAL_COMM, MPI_exchangedTags->GetOriginalVecAllBlobTags());
+			// MPI_TagsGather.Gather();
 
 
-			//And then reduced the original global time to P0 for next step:
+			//And then reduced the original global time (At this point, the "local" Global Times) to P0 for next step:
 			int reducedNGlobalTimes = 0;
 			MPI_Reduce(&original_nGlobalTimes, &reducedNGlobalTimes, 1, MPI_INT, MPI_SUM, 0, MPI_REAL_COMM);
 			if (nMPIRank == 0) {
@@ -3622,10 +3622,10 @@ try {
 			}
 
 			MPI_Barrier(MPI_REAL_COMM);
-			if (nMPIRank == 0){
-				setAllTags = MPI_TagsGather.GetGatheredSetAllTags();
-				vecAllBlobTags = MPI_TagsGather.GetUnserialVecAllTags(1);
-			}
+			// if (nMPIRank == 0){
+			// 	setAllTags = MPI_TagsGather.GetGatheredSetAllTags();
+			// 	vecAllBlobTags = MPI_TagsGather.GetUnserialVecAllTags(1);
+			// }
 			
 		} 
 
