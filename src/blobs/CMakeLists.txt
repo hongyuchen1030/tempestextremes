@@ -1,4 +1,4 @@
-# Copyright (c) 2025      Kian Huang
+# Copyright (c) 2025      Kian Huang, Hongyu Chen
 #
 # Distributed under the Boost Software License, Version 1.0. (See accompanying
 # file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
@@ -40,10 +40,8 @@ target_link_libraries(PersistentBlobs PUBLIC extremesbase netcdf_c++ ${MPI_CXX_L
 add_executable(StitchBlobs ${STITCH_BLOBS_FILES})
 target_link_libraries(StitchBlobs PUBLIC extremesbase netcdf_c++ ${MPI_CXX_LIBRARIES})
 
-add_executable(StitchBlobs_serial StitchBlobs_serial.cpp)
-target_link_libraries(StitchBlobs_serial PUBLIC extremesbase netcdf_c++ ${MPI_CXX_LIBRARIES})
-
-
+# Install executables to the "bin" directory under the installation prefix.
 install(
-  TARGETS BlobStats DetectBlobs PersistentBlobs StitchBlobs StitchBlobs_serial
+  TARGETS BlobStats DetectBlobs PersistentBlobs StitchBlobs
+  RUNTIME DESTINATION bin
 )
