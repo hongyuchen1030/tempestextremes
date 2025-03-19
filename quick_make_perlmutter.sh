@@ -51,10 +51,12 @@ cd "$BUILD_DIR" || { echo "Build directory not found: $BUILD_DIR"; exit 1; }
 # - The source directory is set to SRC_DIR.
 # - The installation prefix is set to INSTALL_PREFIX so that install() will copy targets to ${INSTALL_PREFIX}/bin.
 cmake -DCMAKE_BUILD_TYPE=${BUILD_TYPE} \
+      -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
       -DCMAKE_CXX_FLAGS_DEBUG="${OPTIMIZATION_LEVEL} ${DEBUG_FLAGS}" \
       -DENABLE_MPI=${ENABLE_MPI} \
       -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}" \
       "$SRC_DIR"
+
 
 if [ $? -ne 0 ]; then
   echo "CMake configuration failed. Exiting."
@@ -79,5 +81,5 @@ echo "Build and installation completed successfully."
 
 # For end users who want a clean structure, you can remove the build directory.
 # Developers or those debugging might prefer to keep it for faster incremental builds.
-make clean
-echo "Cleaned up the ${SRC_DIR}/build directory. All executables are located in ${INSTALL_PREFIX}/bin."
+# make clean
+# echo "Cleaned up the ${SRC_DIR}/build directory. All executables are located in ${INSTALL_PREFIX}/bin."
